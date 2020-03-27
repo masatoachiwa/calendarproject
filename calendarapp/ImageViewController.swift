@@ -61,10 +61,11 @@ class ImageViewController: UIViewController {
                 switch TalkManager.shared.currentType {
                 case .good:
                        speechText.text = TalkManager.shared.numberOfLabel().0
+                         jkImage.image = TalkManager.shared.numberOfLabel().1
                        
                 case .bad:
                        speechText.text = TalkManager.shared.badOfLabel().0
-                        
+                         jkImage.image = TalkManager.shared.badOfLabel().1
 
                 }
         }

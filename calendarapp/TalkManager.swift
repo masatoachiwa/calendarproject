@@ -705,135 +705,135 @@ class TalkManager {
                         switch currentTotalbadPoint {
                                 
                         case 1:
-                                return ("今日はゆっくりしてね",image2!)
+                                return ("今日はゆっくりしてね",image15!)
                                 
                         case 2:
-                                return ("気にしない気にしない",image2!)
+                                return ("気にしない気にしない",image24!)
                         case 3:
-                                return ("そんな時だってあるよ！",image2!)
+                                return ("そんな時だってあるよ！",image17!)
                         case 4:
-                                return ("〇〇も休むことあるんだね",image2!)
+                                return ("〇〇もさぼることあるんだね",image2!)
                         case 5:
-                                return( "疲れていたんだよ。だから大丈夫",image2!)
+                                return( "疲れていたんだよ。だから大丈夫",image8!)
                         case 6:
-                                return ("明日やればいいさー！",image2!)
+                                return ("明日やればいいさー！",image6!)
                         case 7:
-                                return ("誰だってできない時はあるよね",image2!)
+                                return ("誰だってできない時はあるよね",image23!)
                         case 8:
-                                return ("まだまだ全然大丈夫。明日取り戻そ！",image2!)
+                                return ("まだまだ全然大丈夫。明日取り戻そ！",image15!)
                         case 9:
-                                return ("疲れちゃった？そんな日もあっていいいと思うよ",image2!)
+                                return ("疲れちゃった？そんな日もあっていいいと思うよ",image11!)
                         case 10:
-                                return( "私は信じてるから諦めないでね",image2!)
+                                return( "私は信じてるから諦めないでね",image7!)
                         case 11:
-                                return ("〇〇なら絶対やり遂げられるよ。",image2!)
+                                return ("〇〇なら絶対やり遂げられるよ。",image24!)
                         case 12:
-                                return ("頑張って5分だけやってみると意外とそこからやり続けちゃうんだよ",image2!)
+                                return ("頑張って5分だけやってみると意外とそこからやり続けちゃうよ",image14!)
                         case 13:
-                                return ("どんまい。そんな日もあるよ",image2!)
+                                return ("どんまい。そんな日もあるよ",image26!)
                         case 14:
-                                return ("今日できなかったことよりも、明日再開することが大事だよ",image2!)
+                                return ("今日できなかったことよりも、明日再開することが大事だよ",image12!)
                         case 15:
-                                return ("人間なんだからたまにはさぼらなくっちゃw",image2!)
+                                return ("人間なんだからたまにはさぼらなくっちゃw",image17!)
                         case 16:
-                                return ("毎日続けるって難しいよね、分かるよ",image2!)
+                                return ("毎日続けるって難しいよね、分かるよ",image23!)
                                 
                         case 17:
-                                return( "たまにはサボりたくなっちゃうよね。明日頑張ろ！",image2!)
+                                return( "さてはまたさぼったな",image3!)
                         case 18:
-                                return ("息抜きも大事だから気にしないでね",image2!)
+                                return ("息抜きも大事だから気にしないでね",image18!)
                         case 19:
-                                return ("フレーフレー〇〇！",image2!)
+                                return ("フレーフレー〇〇！",image6!)
                         case 20:
-                                return ("まだまだこれからだよ、ファイト",image2!)
+                                return ("まだまだこれからだよ、ファイト",image8!)
                         case 21:
-                                return ("目標を小刻みに決めると達成しやすいよ",image2!)
+                                return ("目標を小刻みに決めると達成しやすいよ",image14!)
                         case 22:
-                                return ("まだまだだよ、挽回しよ",image2!)
+                                return ("まだまだだよ、挽回しよ",image26!)
                         case 23:
-                                return ("今が踏ん張り時だから一緒に頑張ろ",image2!)
+                                return ("今が踏ん張り時だから一緒に頑張ろ",image24!)
                         case 24:
-                                return ("少しでも頑張れたなら「達成できた」って押してもいいと思うよ",image2!)
+                                return ("少しでも頑張れたなら「達成できた」って押してもいいと思うよ",image16!)
                         case 25:
-                                return ("今日は疲れちゃったね。おやすみなさい",image2!)
+                                return ("今日は疲れちゃったね。おやすみなさい",image18!)
                         case 26:
-                                return ("達成できた〇〇の顔が見たいから明日は頑張ってね",image2!)
+                                return ("達成できた〇〇の顔が見たいから明日は頑張ってね",image8!)
                         case 27:
-                                return ("サボったことがない人間なんて絶対いないから大丈夫だよ",image2!)
+                                return ("サボったことがない人間なんて絶対いないから大丈夫だよ",image10!)
                         case 28:
-                                return ("youtube見てたんでしょ？",image2!)
+                                return ("youtube見てたんでしょ？",image3!)
                         case 29:
-                                return ("毎日続けるって意外と難しいよね。でも○○はできるよ",image2!)
+                                return ("毎日続けるって意外と難しいよね。でも○○はできるよ",image12!)
                         case 30:
-                                return ("ちょっとサボりぐせでてきたぞー、ファイトだよ",image2!)
+                                return ("ちょっとサボりぐせでてきたぞー、ファイトだよ",image6!)
                         case 31:
-                                return ("急用が入った時とかは「本日はお休み」を押してくれていいからね",image2!)
+                                return ("急用が入った時とかは「本日はお休み」を押してくれていいからね",image9!)
                         case 32:
-                                return ("絶対、絶対諦めちゃダメだから",image2!)
+                                return ("絶対、絶対諦めちゃダメだから",image24!)
                         case 33:
-                                return ("〇〇ができなかった時は私も辛いんだよ",image2!)
+                                return ("〇〇ができなかった時は私も辛いんだよ",image23!)
                         case 34:
-                                return ("そんな日もあるさー！。今日のことは忘れて",image2!)
+                                return ("そんな日もあるさー！。今日のことは忘れて",image18!)
                         case 35:
-                                return("大丈夫？最近辛くない？",image2!)
+                                return("大丈夫？最近辛くない？",image25!)
                         case 36:
-                                return ("まだあれだよね、想定内の範囲だよね？",image2!)
+                                return ("まだあれだよね、想定内の範囲だよね？",image14!)
                         case 37:
-                                return ("結果も大事だけど、今は過程が大事だよ！ファイト！",image2!)
+                                return ("結果も大事だけど、今は過程が大事だよ！ファイト！",image7!)
                         case 38:
-                                return ("次サボったら、罰としてジュースおごってもらうよ",image2!)
+                                return ("次サボったら、罰としてジュースおごってもらうよ",image22!)
                         case 39:
-                                return ("ジュースごちそうさまです",image2!)
+                                return ("ジュースごちそうさまです",image21!)
                         case 40:
-                                return ("次は何奢ってもらおうかな？...冗談だよ",image2!)
+                                return ("次は何奢ってもらおうかな？...冗談だよ",image13!)
                         case 41:
-                                return ("努力は楽しんだ方が勝ちだよ。ほら笑って ",image2!)
+                                return ("努力は楽しんだ方が勝ちだよ。ほら笑って ",image8!)
                         case 42:
-                                return ("明日はやるんだよ！",image2!)
+                                return ("明日は達成しようね",image26!)
                         case 43:
-                                return ("ちょっと〜。２日に１回はさぼってるよ。気を入れ直して！",image2!)
+                                return ("ちょっと〜。２日に１回はさぼってるよ。気を入れ直して！",image20!)
                         case 44:
-                                return ("大分ペースダウンしてない？大丈夫",image2!)
+                                return ("大分ペースダウンしてない？大丈夫",image22!)
                         case 45:
-                                return ("大丈夫！全てが計画通りにいく人なんていないと思うよ",image2!)
+                                return ("大丈夫！全てが計画通りにいく人なんていないと思うよ",image16!)
                         case 46:
-                                return ("少しでも頑張れたなら達成できたって押してもいいと思うよ",image2!)
+                                return ("少しでも頑張れたなら達成できたって押してもいいと思うよ",image11!)
                                 
                         case 47:
-                                return ("辛い時は音楽とか聞くといいよ！",image2!)
+                                return ("辛い時は音楽とか聞くといいよ！",image15!)
                         case 48:
-                                return ("諦めてないよね？諦めるなんて絶対嫌だからね",image2!)
+                                return ("諦めてないよね？諦めるなんて絶対嫌だからね",image9!)
                         case 49:
-                                return ("ファイト！始めた時の〇〇の目は本気だったよ、もう一回がんばろ",image2!)
+                                return ("ファイト！始めた時の〇〇の目は本気だったよ、もう一回がんばろ",image10!)
                         case 50:
-                                return ("もう辛いの？",image2!)
+                                return ("もう辛いの？",image26!)
                         case 51:
-                                return ("もしかして辞めようとしてる？",image2!)
+                                return ("もしかして辞めようとしてる？",image25!)
                         case 52:
-                                return ("根性よ！〇〇根性！",image2!)
+                                return ("根性よ！〇〇根性！",image27!)
                         case 53:
-                                return ("もう一回頑張ったら？",image2!)
+                                return ("もう一回頑張ったら？",image23!)
                         case 54:
-                                return ("本当に辞めるの？",image2!)
+                                return ("本当に辞めるの？",image26!)
                         case 55:
-                                return ("それで納得できるの？",image2!)
+                                return ("それで納得できるの？",image24!)
                         case 56:
-                                return ("最後までやりとげる〇〇見たかった...",image2!)
+                                return ("最後までやりとげる〇〇見たかった...",image9!)
                         case 57:
-                                return( "そうやっていつも逃げてばかりなんだから",image2!)
+                                return( "そうやっていつも逃げてばかりなんだから",image24!)
                         case 58:
-                                return ("〇〇のバカ",image2!)
+                                return ("〇〇のバカ",image22!)
                         case 59:
-                                return ("最低",image2!)
+                                return ("最低",image27!)
                         case 60:
-                                return ("嫌い",image2!)
+                                return ("嫌い",image28!)
                         case 61:
-                                return ("近寄らないで",image2!)
+                                return ("近寄らないで",image29!)
                         case 62:
-                                return ("...",image2!)
+                                return ("...",image1!)
                       
                         default:
-                                return ("バイバイ",image2!)
+                                return ("バイバイ",image29!)
                         
                         
                         }
@@ -848,213 +848,213 @@ class TalkManager {
         case 2:
         return ("気にしない気にしない",image2!)
         case 3:
-        return ("そんな時だってあるよ！",image2!)
+        return ("そんな時だってあるよ！",image17!)
         case 4:
-        return ("〇〇も休むことあるんだね。",image2!)
+        return ("〇〇もさぼることあるんだね。",image3!)
         case 5:
-        return( "疲れていたんだよ。だから大丈夫。",image2!)
+        return( "疲れていたんだよ。だから大丈夫。",image8!)
         case 6:
-        return ("明日やればいいさー！",image2!)
+        return ("明日やればいいさー！",image6!)
         case 7:
-        return ("誰だってできない時はあるよね。",image2!)
+        return ("誰だってできない時はあるよね。",image23!)
         case 8:
-        return ( "まだまだ全然大丈夫。明日取り戻そ！",image2!)
+        return ( "まだまだ全然大丈夫。明日取り戻そ！",image15!)
         case 9:
-        return ("疲れちゃった？そんな日もあっていいいと思うよ",image2!)
+        return ("疲れちゃった？そんな日もあっていいいと思うよ",image11!)
         case 10:
-        return ("順調だね！全然問題ないよ。",image2!)
+        return ("順調だね！全然問題ないよ。",image18!)
         case 11:
-        return ("たまにはサボらないと壊れちゃうよ",image2!)
+        return ("たまにはサボらないと壊れちゃうよ",image14!)
         case 12:
-        return ("こんなに頑張ってるんだから少しくらい気にしないで。",image2!)
+        return ("こんなに頑張っているんだから少しくらい気にしないで。",image10!)
         case 13:
-        return ("どんまい。そんな日もあるよ。",image2!)
+        return ("どんまい。そんな日もあるよ。",image26!)
         case 14:
-        return ("今日できなかったことよりも、明日再開することが大事だよ。" ,image2!)
+        return ("今日できなかったことよりも、明日再開することが大事だよ。" ,image12!)
         case 15:
-        return ("人間なんだからたまにはさぼらなくっちゃw",image2!)
+        return ("人間なんだからたまにはさぼらなくっちゃ。",image17!)
         case 16:
-        return ("毎日続けるって難しいよね、分かるよ。",image2!)
+        return ("たまにはサボりたくなっちゃうよね。明日頑張ろ！",image8!)
         
         case 17:
-        return ("たまにはサボりたくなっちゃうよね。明日頑張ろ！",image2!)
+        return ("さてはまたさぼったな",image3!)
         case 18:
-        return( "息抜きも大事だから気にしないでね。",image2!)
+        return( "息抜きも大事だから気にしないでね。",image18!)
         case 19:
-        return ("フレーフレー〇〇！",image2!)
+        return ("フレーフレー〇〇！",image6!)
         case 20:
-        return ("まだまだこれからだよ、ファイト。",image2!)
+        return ("まだまだこれからだよ、ファイト。",image8!)
         case 21:
-        return ("目標を小刻みに決めると達成しやすいよ。",image2!)
+        return ("目標を小刻みに決めると達成しやすいよ。",image14!)
         case 22:
-        return ("まだまだだよ、挽回しよ。",image2!)
+        return ("まだまだだよ、挽回しよ。",image26!)
         case 23:
         return ("今が踏ん張り時だから一緒に頑張ろ。",image2!)
         case 24:
-        return ("少しでも頑張れたなら「達成できた」って押してもいいと思うよ。",image2!)
+        return ("少しでも頑張れたなら「達成できた」って押してもいいと思うよ。",image24!)
         case 25:
-        return ("今日は疲れちゃったね。おやすみなさい。",image2!)
+        return ("今日は疲れちゃったね。おやすみなさい。",image18!)
         case 26:
-        return ("達成できた〇〇の顔が見たいから明日は頑張ってね。",image2!)
+        return ("達成できた〇〇の顔が見たいから明日は頑張ってね。",image8!)
         case 27:
-        return ("サボったことがない人間なんて絶対いないから大丈夫だよ。",image2!)
+        return ("サボったことがない人間なんて絶対いないから大丈夫だよ。",image10!)
         case 28:
-        return ("youtube見てたんでしょ？",image2!)
+        return ("youtube見てたんでしょ？",image3!)
         case 29:
-        return ("毎日続けるって意外と難しいよね。でも○○はできるよ。",image2!)
+        return ("毎日続けるって意外と難しいよね。でも○○はできるよ。",image12!)
         case 30:
-        return ("ちょっとサボりぐせでてきたぞー、ファイトだよ。",image2!)
+        return ("ちょっとサボりぐせでてきたぞー、ファイトだよ。",image6!)
         case 31:
-        return ("急用が入った時とかは「本日はお休み」を押してくれていいからね。",image2!)
+        return ("急用が入った時とかは「本日はお休み」を押してくれていいからね。",image9!)
         case 32:
-        return ("絶対、絶対諦めちゃダメだから。", image2!)
+        return ("絶対、絶対諦めちゃダメだから。", image24!)
         case 33:
-        return ("〇〇ができなかった時は私も辛いんだよ。",image2!)
+        return ("〇〇ができなかった時は私も辛いんだよ。",image23!)
         case 34:
-        return ("そんな日もあるさー！。今日のことは忘れて。",image2!)
+        return ("そんな日もあるさー！。今日のことは忘れて。",image18!)
         case 35:
-        return ("毎日続けるなんて辛いから、たまにはさぼらないと笑",image2!)
+        return ("毎日続けるなんて辛いから、たまにはさぼらないと笑",image17!)
         case 36:
-        return( "まだあれだよね、想定内の範囲だよね？",image2!)
+        return( "まだあれだよね、想定内の範囲だよね？",image14!)
         case 37:
-        return ("結果も大事だけど、今は過程が大事だよ！ファイト！",image2!)
+        return ("結果も大事だけど、今は過程が大事だよ！ファイト！",image7!)
         case 38:
-        return( "次サボったら、罰としてジュースおごってもらうよ。",image2!)
+        return( "次サボったら、罰としてジュースおごってもらうよ。",image22!)
         case 39:
         return( "ジュースごちそうさまです。",image2!)
         case 40:
-        return ("次は何奢ってもらおうかな？...冗談だよ。",image2!)
+        return ("次は何奢ってもらおうかな？...冗談だよ。",image13!)
         case 41:
-        return ("努力は楽しんだ方が勝ちだよ。ほら笑って ",image2!)
+        return ("努力は楽しんだ方が勝ちだよ。ほら笑って ",image8!)
         case 42:
-        return ("明日はやるんだよ！",image2!)
+        return ("明日は達成しようね",image26!)
         case 43:
-        return ("ちょっと〜。２日に１回はさぼってるよ。気を入れ直して！",image2!)
+        return ("ちょっと〜。２日に１回はさぼってるよ。気を入れ直して！",image20!)
         case 44:
-        return ("大分ペースダウンしてない？大丈夫？",image2!)
+        return ("大分ペースダウンしてない？大丈夫？",image22!)
         case 45:
-        return ("大丈夫！全てが計画通りにいく人なんていないと思うよ。",image2!)
+        return ("大丈夫！全てが計画通りにいく人なんていないと思うよ。",image16!)
         case 46:
-        return ("少しでも頑張れたなら達成できたって押してもいいと思うよ。",image2!)
+        return ("少しでも頑張れたなら達成できたって押してもいいと思うよ。",image11!)
         
         case 47:
-        return ("辛い時は音楽とか聞くといいよ！",image2!)
+        return ("辛い時は音楽とか聞くといいよ！",image15!)
         case 48:
-                return ("私は信じてるから諦めないでね。",image2!)
+                return ("私は信じてるから諦めないでね。",image10!)
         case 49:
-                return ("〇〇なら絶対やり遂げられるよ。",image2!)
+                return ("〇〇なら絶対やり遂げられるよ。",image17!)
         case 50:
-                return ("頑張って5分だけやってみると意外とそこからやり続けちゃうんだよ",image2!)
+                return ("50日目のさぼりで〜す。",image50a!)
         case 51:
-                return ("大丈夫？最近辛くない？",image2!)
+                return ("初心に戻って頑張ろうよ",image1!)
         case 52:
-                return ("せっかく３ヶ月以上頑張ったんだから正念場だよ。",image2!)
+                return ("せっかく３ヶ月以上頑張ったんだから正念場だよ。",image24!)
         case 53:
-                return ("〇〇は努力がしたくてたまらなくなーる、おまじないだよ",image2!)
+                return ("〇〇は努力がしたくてたまらなくなーる、おまじないだよ",image3!)
         case 54:
-                return ("まだまだ諦めてないよね？",image2!)
+                return ("まだまだ諦めてないよね？",image9!)
         case 55:
-                return ("〇〇の夢絶対叶えてね。",image2!)
+                return ("〇〇の夢絶対叶えてね。",image10!)
         case 56:
-                return ("最近頑張りすぎて疲れちゃったね。明日がんばろ。",image2!)
+                return ("最近頑張りすぎて疲れちゃったね。明日がんばろ。",image16!)
                 
         case 57:
-                return ("努力する前のルーティンを見つけると、スッと行動に移せるみたいだよ。",image2!)
+                return ("努力する前のルーティンを見つけると、スッと行動に移せるみたいだよ。",image18!)
         case 58:
-                return ("分かったよ。気を取り直して明日だね。",image2!)
+                return ("分かったよ。気を取り直して明日だね。",image8!)
         case 59:
-                return ("SNSばかり見てちゃだめだよ",image2!)
+                return ("SNSばかり見てちゃだめだよ",image3!)
         case 60:
-                return ("辛いのは分かるけど一緒に頑張ろう",image2!)
+                return ("辛いのは分かるけど一緒に頑張ろう",image25!)
         case 61:
-                return ("サボりぐせつけちゃダメだよ",image2!)
+                return ("サボりぐせつけちゃダメだよ",image26!)
         case 62:
-                return ("頑張ってだしんよー！えへ。",image2!)
+                return ("頑張ってだしんよー！えへ。",image6!)
         case 63:
-                return ("ここで諦めたら絶対にもったいないよ。",image2!)
+                return ("ここで諦めたら絶対にもったいないよ。",image23!)
         case 64:
-                return("ファイトだよ！本当にファイト！",image2!)
+                return("ファイトだよ！本当にファイト！",image24!)
         case 65:
-                return ("努力を始める前のルーティンを見つけると、スッと行動に移せるみたいだよ。",image2!)
+                return ("自分に負けちゃダメだよ",image10!)
         case 66:
-                return ("ざぜんを組むなんてどうかな？",image2!)
+                return ("明日やるんだよ！あ・し・た！",image22!)
         case 67:
-                return ("ストレッチをするとかも良いかも",image2!)
+                return ("勉強をする前にストレッチをするとかも良いかも",image19!)
         case 68:
-                return ("やめたいって思うのはみんなあるけど、そこでやめないことで成長できると思うよ。",image2!)
+                return ("やめたいって思うのはみんなあるけど、そこでやめないことで成長できると思うよ。",image16!)
         case 69:
-                return ("１日のノルマを少なくして、毎日達成できた実感を得る作戦にしてもいいかも。",image2!)
+                return ("１日のノルマを少なくして、毎日達成できた実感を得る作戦にしてもいいかも。",image11!)
         case 70:
-                return ("こんなところで止まっちゃダメだよ。突き抜けて。",image2!)
+                return ("こんなところで止まっちゃダメだよ。突き抜けて。",image27!)
         case 71:
-                return ("辛い時は息抜きも大事だよ",image2!)
+                return ("辛い時は息抜きも大事だよ",image4!)
         case 72:
-                return ("大丈夫？相談にのろうか？",image2!)
+                return ("大丈夫？相談にのろうか？",image9!)
         case 73:
-                return ("辛いのは分かるよ。でもここまできたんだからラストスパート頑張ろ！",image2!)
+                return ("辛いのは分かるよ。でもここまできたんだからラストスパート頑張ろ！",image23!)
         case 74:
-                return ("絶対に最後までやり遂げよう。妥協しちゃダメだよ",image2!)
+                return ("絶対に最後までやり遂げよう。妥協しちゃダメだよ",image26!)
         case 75:
-                return( "気にしないで、リセットして次回は絶対やろう。",image2!)
+                return( "気にしないで、リセットして次回は絶対やろう。",image10!)
         case 76:
-                return ("ファイトファイト！",image2!)
+                return ("ファイトファイト！",image6!)
         case 77:
-                return ("〇〇なら絶対にできるよ！",image2!)
+                return ("〇〇なら絶対にできるよ！",image24!)
         case 78:
-                return ("目標を達成した時の喜びを想像して...やりたくなってきた？",image2!)
+                return ("目標を達成した時の喜びを想像して...やりたくなってきた？",image7!)
         case 79:
-                return ("ここまできたら月に変わって諦めさせないよ。",image2!)
+                return ("ここまできたら月に変わって諦めさせないよ。",image17!)
         case 80:
-                return ("あとちょっとだから、負けないで",image2!)
+                return ("あとちょっとだから、負けないで",image25!)
         case 81:
-                return (" ここまできたら己との勝負だよ",image2!)
+                return (" ここまできたら自分との勝負だよ",image9!)
         case 82:
-                return ("少しでも頑張れたなら「達成できたボタン」を押すのもいいと思うよ",image2!)
+                return ("少しでも頑張れたなら「達成できたボタン」を押すのもいいと思うよ",image11!)
         case 83:
-                return( "辛くない？大丈夫？",image2!)
+                return( "辛くない？大丈夫？",image12!)
         case 84:
-                return ("あとちょっとじゃん！正念場だよ。",image2!)
+                return ("あとちょっとじゃん！正念場だよ。",image23!)
         case 85:
-                return ("〇〇なら絶対いけるって",image2!)
+                return ("〇〇なら絶対いけるーーーーーーーーー！！！！",image24!)
         case 86:
-                return ("私が言うんだから絶対いける！",image2!)
+                return ("私が言うんだから絶対いけるよ！",image22!)
         case 87:
-                return ("〇〇は諦めないって私信じてるから",image2!)
+                return ("〇〇は諦めないって私信じてるから",image18!)
         case 88:
-        return( "諦めてないよね？諦めるなんて絶対嫌だからね",image2!)
+        return( "諦めてないよね？諦めるなんて絶対嫌だからね",image9!)
         case 89:
-        return ("ファイト！始めた時の〇〇の目は本気だったよ、もう一回がんばろ",image2!)
+        return ("ファイト！始めた時の〇〇の目は本気だったよ、もう一回がんばろ",image10!)
         case 90:
-        return ("やっぱり...辛いの？",image2!)
+        return ("やっぱり...辛いの？",image26!)
         case 91:
-        return ("もしかして辞めようとしてる？",image2!)
+        return ("もしかして辞めようとしてる？",image25!)
         case 92:
-        return( "根性よ！〇〇根性！",image2!)
+        return( "根性よ！〇〇根性！",image27!)
         case 93:
-        return ("もう一回頑張ったら？",image2!)
+        return ("もう一回頑張ったら？",image23!)
         case 94:
-        return ("本当に辞めるの？",image2!)
+        return ("本当に辞めるの？",image26!)
         case 95:
-        return ("それで納得できるの？",image2!)
+        return ("それで納得できるの？",image24!)
         case 96:
-        return ("最後までやりとげる〇〇見たかった...",image2!)
+        return ("最後までやりとげる〇〇見たかった...",image9!)
         case 97:
-        return ("そうやっていつも逃げてばかりなんだから",image2!)
+        return ("そうやっていつも逃げてばかりなんだから",image24!)
         case 98:
-        return ("〇〇のバカ",image2!)
+        return ("〇〇のバカ",image22!)
         case 99:
-        return ("最低",image2!)
+        return ("最低",image27!)
         case 100:
-        return ("嫌い",image2!)
+        return ("嫌い",image28!)
         case 101:
-        return ("近寄らないで",image2!)
+        return ("近寄らないで",image29!)
         case 102:
-        return ("...",image2!)
+        return ("...",image1!)
         
         
 
         default:
-        return ("バイバイ",image2!)
+        return ("バイバイ",image29!)
         
         
 
@@ -1064,7 +1064,7 @@ class TalkManager {
         }
                         
                 else {
-                        return("バイバイ",image2!)
+                        return("バイバイ",image9!)
                 }
                 
         }
