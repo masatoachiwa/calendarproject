@@ -47,23 +47,25 @@ class ImageViewController: UIViewController {
 
         
         override func viewWillAppear(_ animated: Bool) {
-               
+               let talkManager = TalkManager.shared
+                
+              
                 loveBar.setProgress(Float(Double(TalkManager.shared.currentTotalPoint) * 0.005555), animated: true)
 
-                let num = loveBar.progress * 100
+                let num = loveBar.progress  * 100
                 progressLabel.text = "\(ceil(num * 10)/10)%"
                 
                 count.text = String(TalkManager.shared.currentTotalPoint)
                 
-                switch TalkManager.shared.currentType {
+                switch talkManager.currentType {
                 case .good:
-                       speechText.text = TalkManager.shared.numberOfLabel().0
-                         jkImage.image = TalkManager.shared.numberOfLabel().1
+                       speechText.text = talkManager.numberOfLabel().0
+                         jkImage.image = talkManager.numberOfLabel().1
                        
                 case .bad:
-                       speechText.text = TalkManager.shared.badOfLabel().0
-                         jkImage.image = TalkManager.shared.badOfLabel().1
-
+                       speechText.text = talkManager.badOfLabel().0
+                         jkImage.image = talkManager.badOfLabel().1
+ 
                 }
         }
 

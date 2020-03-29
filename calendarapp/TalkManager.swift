@@ -14,6 +14,8 @@ class TalkManager {
         static  let shared = TalkManager() //staticがないとエラー
         private  init(){}
         
+   
+       
         var badPoint = 0{
                 willSet {
                         UserDefaults.standard.set(newValue, forKey: "badpoint") //新しい値をnewValueに保存
