@@ -31,7 +31,7 @@ class ImageViewController: UIViewController {
         let transform1 = CGAffineTransform(scaleX: 1, y: 10)
         let transform2 = CGAffineTransform(rotationAngle: CGFloat(-Double.pi / 2))
         
-         let talkManager = TalkManager.shared
+       
         
         
         
@@ -47,15 +47,15 @@ class ImageViewController: UIViewController {
 
         
         override func viewWillAppear(_ animated: Bool) {
-               let talkManager = TalkManager.shared
-                
+      
+                let talkManager = TalkManager()
               
-                loveBar.setProgress(Float(Double(TalkManager.shared.currentTotalPoint) * 0.005555), animated: true)
+                loveBar.setProgress(Float(Double(talkManager.currentTotalPoint) * 0.005555), animated: true)
 
                 let num = loveBar.progress  * 100
                 progressLabel.text = "\(ceil(num * 10)/10)%"
                 
-                count.text = String(TalkManager.shared.currentTotalPoint)
+                count.text = String(talkManager.currentTotalPoint)
                 
                 switch talkManager.currentType {
                 case .good:

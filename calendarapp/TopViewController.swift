@@ -44,7 +44,7 @@ class TopViewController: UIViewController {
         let datemanager = DateManager()
         
         
-        let talkManager = TalkManager.shared
+        let talkManager = TalkManager()
       
         let date = Date() //本日の日付取得
         let dateFormatter = DateFormatter() //文字列からDate型の日付を生成できる（インスタンスの作成）
@@ -71,13 +71,13 @@ class TopViewController: UIViewController {
                 doLabel.text = effort + "を"
                do2Label.text = period + unit + "する"
                 
-                   switch TalkManager.shared.currentType { //---------------デバック用ポイント確認コード---
+                   switch talkManager.currentType { //---------------デバック用ポイント確認コード---
        
                    case .good:
-                        kariLabel.text = TalkManager.shared.numberOfLabel().0
-                          pointLabel.text = String(TalkManager.shared.currentTotalPoint)
+                        kariLabel.text = talkManager.numberOfLabel().0
+                          pointLabel.text = String(talkManager.currentTotalPoint)
                 case .bad:
-                        kariLabel.text = TalkManager.shared.badOfLabel().0
+                        kariLabel.text = talkManager.badOfLabel().0
                         
                 }
                 pointLabel.text = String(talkManager.currentTotalPoint)
@@ -147,10 +147,10 @@ class TopViewController: UIViewController {
      ////--------------ここまで--------
         
         @IBAction func goodButton(_ sender: Any) {
-                TalkManager.shared.currentType = .good
-                TalkManager.shared.point += 1
-                kariLabel.text = TalkManager.shared.numberOfLabel().0
-                pointLabel.text = String(TalkManager.shared.currentTotalPoint)
+                talkManager.currentType = .good
+                talkManager.point += 1
+                kariLabel.text = talkManager.numberOfLabel().0
+                pointLabel.text = String(talkManager.currentTotalPoint)
         
                 
                 dateFormatter.dateFormat = "yyyyMMd" //yyMMddの形式で日付を生成する
@@ -172,10 +172,10 @@ class TopViewController: UIViewController {
         
         
         @IBAction func badButton(_ sender: Any) {
-                TalkManager.shared.currentType = .bad
-                TalkManager.shared.badPoint += 1
-                kariLabel.text = TalkManager.shared.badOfLabel().0
-                badLabel.text = String(TalkManager.shared.currentTotalbadPoint)
+                talkManager.currentType = .bad
+                talkManager.badPoint += 1
+                kariLabel.text = talkManager.badOfLabel().0
+                badLabel.text = String(talkManager.currentTotalbadPoint)
                 
                 dateFormatter.dateFormat = "yyyyMMd" //yyMMddの形式で日付を生成する
              //   print(dateFormatter.string(from: date)) //本日の日付を取得
@@ -208,10 +208,10 @@ class TopViewController: UIViewController {
         }
         
         @IBAction func risettButton(_ sender: Any) {
-                TalkManager.shared.resetPoint()
+                talkManager.resetPoint()
        //         kariLabel.text = TalkManager.shared.numberOfLabel()
-                pointLabel.text = String(TalkManager.shared.point)
-                badLabel.text = String(TalkManager.shared.badPoint)
+                pointLabel.text = String(talkManager.point)
+                badLabel.text = String(talkManager.badPoint)
                 
               
                talkManager.remove()

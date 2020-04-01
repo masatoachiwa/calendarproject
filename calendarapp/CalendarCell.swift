@@ -22,7 +22,7 @@ class CalendarCell: UICollectionViewCell {
      
         
         let datemanager = DateManager()
-        let talkmanager = TalkManager.shared
+        let talkmanager = TalkManager()
         
         required init?(coder aDecoder: NSCoder) {
                 
