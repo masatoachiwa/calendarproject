@@ -28,8 +28,8 @@ class ImageViewController: UIViewController {
         
         var cu : Int = 0
         
-        let transform1 = CGAffineTransform(scaleX: 1, y: 10)
-        let transform2 = CGAffineTransform(rotationAngle: CGFloat(-Double.pi / 2))
+      let transform1 = CGAffineTransform(scaleX: 1, y: 10)
+    //   let transform2 = CGAffineTransform(rotationAngle: CGFloat(-Double.pi / 2))
         
        
         
@@ -37,8 +37,13 @@ class ImageViewController: UIViewController {
         
     override func viewDidLoad() {
         super.viewDidLoad()
-
-  loveBar.transform = transform1.concatenating(transform2)
+        
+        loveBar.transform = transform1
+       loveBar.frame = CGRect(x: 200, y: 550, width :100, height: 500)
+        
+        
+        
+        //  loveBar.transform = transform1.concatenating(transform2)
         speechText.padding = UIEdgeInsets(top: 8, left: 8, bottom: 8, right: 8)
       
         

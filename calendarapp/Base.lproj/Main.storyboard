@@ -514,17 +514,11 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.80000000000000004" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="classroom-2093743_1280" translatesAutoresizingMaskIntoConstraints="NO" id="JjD-WD-5tx">
-                                <rect key="frame" x="0.0" y="44" width="375" height="812"/>
+                                <rect key="frame" x="0.0" y="44" width="375" height="568.33333333333337"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="haruko1" translatesAutoresizingMaskIntoConstraints="NO" id="m7i-QS-dz4">
                                 <rect key="frame" x="0.0" y="125.33333333333331" width="375" height="405.99999999999994"/>
                             </imageView>
-                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Z7n-kD-oft">
-                                <rect key="frame" x="184" y="87" width="150" height="2"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="progressTintColor" red="1" green="0.23399375920000001" blue="0.059851128109999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <color key="trackTintColor" red="0.3279644692" green="0.44996789380000002" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            </progressView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sda-wz-7AY">
                                 <rect key="frame" x="211" y="135" width="96" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -581,10 +575,16 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </label>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Z7n-kD-oft">
+                                <rect key="frame" x="265" y="405" width="68" height="2"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="progressTintColor" red="1" green="0.23399375920000001" blue="0.059851128109999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="trackTintColor" red="1" green="0.57810515169999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </progressView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="JjD-WD-5tx" firstAttribute="height" secondItem="4nL-3S-ttL" secondAttribute="height" id="1eQ-pk-sjL"/>
+                            <constraint firstItem="JjD-WD-5tx" firstAttribute="height" secondItem="4nL-3S-ttL" secondAttribute="height" multiplier="0.7" id="1eQ-pk-sjL"/>
                             <constraint firstItem="jVr-7h-eNR" firstAttribute="leading" secondItem="znG-Wb-QBV" secondAttribute="leading" id="2pt-h2-CY4"/>
                             <constraint firstItem="jVr-7h-eNR" firstAttribute="top" secondItem="znG-Wb-QBV" secondAttribute="top" id="CBX-pU-1DD"/>
                             <constraint firstItem="JjD-WD-5tx" firstAttribute="leading" secondItem="znG-Wb-QBV" secondAttribute="leading" id="D64-HD-scw"/>
@@ -614,7 +614,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Tso-hK-cif" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-552.17391304347825" y="361.60714285714283"/>
+            <point key="canvasLocation" x="-552.79999999999995" y="361.33004926108379"/>
         </scene>
         <!--Setup View Controller-->
         <scene sceneID="EfR-qh-L0Y">
