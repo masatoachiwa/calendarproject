@@ -64,10 +64,11 @@ class TopViewController: UIViewController {
                
                 yearLabel.text = "\(String(datemanager.year))年\(String(datemanager.month))月\(String(datemanager.day))日"
                
-                let effort: String = UserDefaults.standard.string(forKey: "effort")!
-              let period: String = UserDefaults.standard.string(forKey: "period")!
-                 let unit: String = UserDefaults.standard.string(forKey: "unit")!
-                
+                let effort: String = (UserDefaults.standard.string(forKey: "effort") ?? "田中")
+              let period: String = (UserDefaults.standard.string(forKey: "period") ?? "21")
+                 let unit: String = (UserDefaults.standard.string(forKey: "unit") ?? "")
+             
+             
                 doLabel.text = effort + "を"
                do2Label.text = period + unit + "する"
                 
@@ -88,6 +89,10 @@ class TopViewController: UIViewController {
                 talkManager.badDate(abcd:dateFormatter.string(from: date) )
                 talkManager.restDate(abcd:dateFormatter.string(from: date) )
               
+                talkManager.point = talkManager.currentTotalPoint
+                talkManager.badPoint = talkManager.currentTotalbadPoint
+                
+                
                
 
                 if datemanager.month < 10 {  //----------------アプリ落としてもボタン押せない処理---------------------------------------
@@ -124,9 +129,9 @@ class TopViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
      
-        let effort: String = UserDefaults.standard.string(forKey: "effort")!
-        let period: String = UserDefaults.standard.string(forKey: "period")!
-        let unit: String = UserDefaults.standard.string(forKey: "unit")!
+        let effort: String = (UserDefaults.standard.string(forKey: "effort") ?? "努力")
+        let period: String = (UserDefaults.standard.string(forKey: "period") ?? "今すぐ")
+        let unit: String = (UserDefaults.standard.string(forKey: "unit") ?? "")
         
         doLabel.text = effort + "を"
         do2Label.text = period + unit + "する"

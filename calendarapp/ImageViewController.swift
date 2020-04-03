@@ -37,15 +37,37 @@ class ImageViewController: UIViewController {
         
     override func viewDidLoad() {
         super.viewDidLoad()
+     
+        let talkManager = TalkManager()
+        
+        
+        switch talkManager.currentType {
+        case .good:
+                speechText.text = talkManager.numberOfLabel().0
+                jkImage.image = talkManager.numberOfLabel().1
+                
+        case .bad:
+                speechText.text = talkManager.badOfLabel().0
+                jkImage.image = talkManager.badOfLabel().1
+                
+        }
+        
+        
         
         loveBar.transform = transform1
        loveBar.frame = CGRect(x: 200, y: 550, width :100, height: 500)
         
-        
-        
+
         //  loveBar.transform = transform1.concatenating(transform2)
         speechText.padding = UIEdgeInsets(top: 8, left: 8, bottom: 8, right: 8)
       
+        
+        
+        
+        
+        
+        
+        
         
         }
         

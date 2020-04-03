@@ -37,6 +37,7 @@ class CallenderViewController: UIViewController,UICollectionViewDataSource, UICo
         @IBOutlet var collectionView: UICollectionView!
      
         let daysPerWeek = 7
+        let cellMargin : CGFloat = 2.0
         let weekArray = ["日","月","火","水","木","金","土",]
         let numOfDays = 7
         var monthCounter = 0
@@ -49,9 +50,10 @@ class CallenderViewController: UIViewController,UICollectionViewDataSource, UICo
         override func viewDidLoad() {
                 super.viewDidLoad()
                 
-              // correlction.reloadData()
-               
-               datemanager.dateManager(datemanager.year,datemanager.month)
+         //  headTitle.backgroundColor = UIColor(red: 0.28, green: 0.53, blue: 0.75, alpha: 1.0)
+                self.correlction.backgroundColor = UIColor(red: 0.28, green: 0.53, blue: 0.75, alpha: 1.0)
+                
+                datemanager.dateManager(datemanager.year,datemanager.month)
             
                 headTitle.text = "\(String(datemanager.year))年\(String(datemanager.month))月\(String(datemanager.day))日"
                 
@@ -63,7 +65,7 @@ class CallenderViewController: UIViewController,UICollectionViewDataSource, UICo
                 
                 // レイアウトを調整
                 let layout = UICollectionViewFlowLayout() //UICollectionVIewLayoutの調整。Cellの大きさを動的な変更ができない
-                collectionView.collectionViewLayout = layout
+               collectionView.collectionViewLayout = layout
                 
                 
                 
@@ -111,24 +113,36 @@ class CallenderViewController: UIViewController,UICollectionViewDataSource, UICo
 
         
         func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+              let numberOfMargin:CGFloat = 8.0
                 //横方向のスペース調整
-                let horizontalSpace : CGFloat = 2
+       //         let horizontalSpace : CGFloat = 2
                 let _ : CGFloat = 1
                 //セルの大きさ（viewの横幅/5-2)
-                let cellSize : CGFloat = self.view.bounds.width / 8  - horizontalSpace //画面の横幅/5-2することで5等分より少し小さいcellの大きさに設定しようとすることであっていますか？
+           // let cellSize : CGFloat = self.view.bounds.width / 9.1  - horizontalSpace 
+               //let cellSize : CGFloat = CGFloat(Int(collectionView.frame.width) / 9)
+                let cellSize : CGFloat = (collectionView.frame.size.width - cellMargin * numberOfMargin) / CGFloat(7)
                 return CGSize(width: cellSize, height: cellSize)
         }
-        // アイテム表示領域全体の上下左右の余白を設定（UICollectionViewDelegateFlowLayout が必要）
+        // セクションの行間（UICollectionViewDelegateFlowLayout が必要）
         func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
-                let a : CGFloat = 1
-                let inset = a  //(self.view.frame.width / 8) / 8
-                
-                return UIEdgeInsets(top: inset, left: inset, bottom: inset, right: inset)
+  
+                return UIEdgeInsets(top: cellMargin, left: 0.0, bottom: 15, right: 0.0)
         }
    
         func numberOfSections(in collectionView: UICollectionView) -> Int {  //セクションの数
                 return 2
         }
+        
+        func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat { //垂直方向のマージン
+                return 0
+        }
+        
+        func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat { //水平
+                return cellMargin
+        }
+        
+        
+        
         
         @IBAction func nextButton(_ sender: Any) {
                 monthCounter = monthCounter + 1
