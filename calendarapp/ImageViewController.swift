@@ -28,7 +28,7 @@ class ImageViewController: UIViewController {
         
         var cu : Int = 0
         
-      let transform1 = CGAffineTransform(scaleX: 1, y: 10)
+    //  let transform1 = CGAffineTransform(scaleX: 1, y: 10)
     //   let transform2 = CGAffineTransform(rotationAngle: CGFloat(-Double.pi / 2))
         
        
@@ -54,10 +54,17 @@ class ImageViewController: UIViewController {
         
         
         
-        loveBar.transform = transform1
-       loveBar.frame = CGRect(x: 200, y: 550, width :100, height: 500)
+    //   loveBar.transform = transform1
+    loveBar.frame = CGRect(x:0, y: 0, width :0, height: 0) //優先度が低い
+       // view.layoutIfNeeded()
+        loveBar.translatesAutoresizingMaskIntoConstraints = false //制約をかける合図
+        loveBar.widthAnchor.constraint(equalToConstant: 150).isActive = true
+        loveBar.heightAnchor.constraint(equalToConstant: 50).isActive = true
+       loveBar.rightAnchor.constraint(equalTo: view.rightAnchor, constant: -20).isActive = true
+        loveBar.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -20).isActive = true
         
-
+        
+        
         //  loveBar.transform = transform1.concatenating(transform2)
         speechText.padding = UIEdgeInsets(top: 8, left: 8, bottom: 8, right: 8)
       
