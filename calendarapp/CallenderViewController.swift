@@ -114,14 +114,19 @@ class CallenderViewController: UIViewController,UICollectionViewDataSource, UICo
         
         func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
               let numberOfMargin:CGFloat = 8.0
-                //横方向のスペース調整
-       //         let horizontalSpace : CGFloat = 2
+   
                 let _ : CGFloat = 1
-                //セルの大きさ（viewの横幅/5-2)
-           // let cellSize : CGFloat = self.view.bounds.width / 9.1  - horizontalSpace 
-               //let cellSize : CGFloat = CGFloat(Int(collectionView.frame.width) / 9)
+                if(indexPath.section) == 0
+                        {
+                       
+                        let cellSize : CGFloat = (collectionView.frame.size.width - cellMargin * numberOfMargin) / CGFloat(7)
+                        return CGSize(width: cellSize, height: cellSize/1.5)
+                        
+                }else{
                 let cellSize : CGFloat = (collectionView.frame.size.width - cellMargin * numberOfMargin) / CGFloat(7)
-                return CGSize(width: cellSize, height: cellSize)
+                return CGSize(width: cellSize, height: cellSize*1.3)
+                }
+                
         }
         // セクションの行間（UICollectionViewDelegateFlowLayout が必要）
         func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
