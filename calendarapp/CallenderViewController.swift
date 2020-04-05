@@ -31,6 +31,7 @@ class CallenderViewController: UIViewController,UICollectionViewDataSource, UICo
         @IBOutlet var correlction: UICollectionView!
         
         @IBOutlet var headTitle: UILabel!
+   
         
         let datemanager = DateManager()
         
@@ -55,7 +56,8 @@ class CallenderViewController: UIViewController,UICollectionViewDataSource, UICo
                 
                 datemanager.dateManager(datemanager.year,datemanager.month)
             
-                headTitle.text = "\(String(datemanager.year))年\(String(datemanager.month))月\(String(datemanager.day))日"
+              
+                headTitle.text = "\(String(datemanager.year))年 \(String(datemanager.month))月\(String(datemanager.day))日"
                 
                 // タイトルを更新するタイミングで、nowYearとnowMonthを更新
                 updateYearAndMonth(year: datemanager.year, month: datemanager.month)
