@@ -544,7 +544,7 @@
                                 <rect key="frame" x="0.0" y="44" width="375" height="568.33333333333337"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="haruko1" translatesAutoresizingMaskIntoConstraints="NO" id="m7i-QS-dz4">
-                                <rect key="frame" x="0.0" y="125.33333333333331" width="375" height="405.99999999999994"/>
+                                <rect key="frame" x="0.0" y="52" width="375" height="406"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sda-wz-7AY">
                                 <rect key="frame" x="211" y="135" width="96" height="21"/>
@@ -560,32 +560,22 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gbB-Zb-Mps">
-                                <rect key="frame" x="5" y="663" width="106" height="111"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="77"/>
-                                <state key="normal" title="⬅️"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gbB-Zb-Mps">
+                                <rect key="frame" x="10" y="622.33333333333337" width="30" height="65"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <state key="normal" title="《"/>
                                 <connections>
                                     <action selector="backButton:" destination="lTS-4W-tcp" eventType="touchUpInside" id="013-go-l27"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gva-XK-KBG">
-                                <rect key="frame" x="308" y="663" width="106" height="111"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="77"/>
-                                <state key="normal" title="➡️"/>
-                                <connections>
-                                    <action selector="goButton:" destination="lTS-4W-tcp" eventType="touchUpInside" id="HhI-Bg-yBe"/>
-                                </connections>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jVr-7h-eNR">
-                                <rect key="frame" x="0.0" y="43.999999999999993" width="375" height="81.333333333333314"/>
+                                <rect key="frame" x="0.0" y="44" width="375" height="8"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="最近頑張っているみたいだね！" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ubs-Uc-1Ou" customClass="CustomLabel" customModule="calendarapp" customModuleProvider="target">
-                                <rect key="frame" x="28" y="531.33333333333337" width="319" height="162.33333333333337"/>
+                                <rect key="frame" x="28" y="438.00000000000006" width="319" height="162.66666666666669"/>
                                 <color key="backgroundColor" red="0.0" green="0.56284224989999998" blue="0.31881666180000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -608,6 +598,37 @@
                                 <color key="progressTintColor" red="1" green="0.23399375920000001" blue="0.059851128109999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="trackTintColor" red="1" green="0.57810515169999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </progressView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="努力値累計" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="HJk-D1-ksL" customClass="CustomLabel" customModule="calendarapp" customModuleProvider="target">
+                                <rect key="frame" x="119" y="639" width="92" height="82"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="15"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lwP-m0-wUA">
+                                <rect key="frame" x="75" y="622.33333333333337" width="225" height="65"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <state key="normal" title="最初から見る"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gva-XK-KBG">
+                                <rect key="frame" x="335" y="618" width="30" height="65"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <state key="normal" title="》"/>
+                                <connections>
+                                    <action selector="goButton:" destination="lTS-4W-tcp" eventType="touchUpInside" id="HhI-Bg-yBe"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -616,14 +637,26 @@
                             <constraint firstItem="jVr-7h-eNR" firstAttribute="top" secondItem="znG-Wb-QBV" secondAttribute="top" id="CBX-pU-1DD"/>
                             <constraint firstItem="JjD-WD-5tx" firstAttribute="leading" secondItem="znG-Wb-QBV" secondAttribute="leading" id="D64-HD-scw"/>
                             <constraint firstItem="JjD-WD-5tx" firstAttribute="trailing" secondItem="znG-Wb-QBV" secondAttribute="trailing" id="DZ2-Lv-biw"/>
+                            <constraint firstItem="gva-XK-KBG" firstAttribute="width" secondItem="4nL-3S-ttL" secondAttribute="width" multiplier="0.08" id="G1v-5W-u3m"/>
+                            <constraint firstItem="lwP-m0-wUA" firstAttribute="top" secondItem="JjD-WD-5tx" secondAttribute="bottom" constant="10" id="IbJ-Sr-B1M"/>
                             <constraint firstItem="jVr-7h-eNR" firstAttribute="trailing" secondItem="znG-Wb-QBV" secondAttribute="trailing" id="KNB-xz-EHF"/>
-                            <constraint firstItem="ubs-Uc-1Ou" firstAttribute="top" secondItem="m7i-QS-dz4" secondAttribute="bottom" id="LqI-qI-EYl"/>
-                            <constraint firstItem="jVr-7h-eNR" firstAttribute="height" secondItem="4nL-3S-ttL" secondAttribute="height" multiplier="0.1" id="NIm-sd-Nge"/>
+                            <constraint firstItem="ubs-Uc-1Ou" firstAttribute="top" secondItem="m7i-QS-dz4" secondAttribute="bottom" constant="-20" id="LqI-qI-EYl"/>
+                            <constraint firstItem="gbB-Zb-Mps" firstAttribute="height" secondItem="4nL-3S-ttL" secondAttribute="height" multiplier="0.08" id="Mcc-in-Q52"/>
+                            <constraint firstItem="jVr-7h-eNR" firstAttribute="height" secondItem="4nL-3S-ttL" secondAttribute="height" multiplier="0.01" id="NIm-sd-Nge"/>
+                            <constraint firstItem="lwP-m0-wUA" firstAttribute="height" secondItem="4nL-3S-ttL" secondAttribute="height" multiplier="0.08" id="P4j-sW-W6q"/>
+                            <constraint firstItem="gva-XK-KBG" firstAttribute="top" secondItem="JjD-WD-5tx" secondAttribute="bottom" constant="5.6699999999999999" id="PH3-w0-LII"/>
                             <constraint firstItem="m7i-QS-dz4" firstAttribute="top" secondItem="jVr-7h-eNR" secondAttribute="bottom" id="PIa-mp-ud8"/>
+                            <constraint firstItem="lwP-m0-wUA" firstAttribute="width" secondItem="4nL-3S-ttL" secondAttribute="width" multiplier="0.6" id="TMO-bd-tTx"/>
+                            <constraint firstItem="gva-XK-KBG" firstAttribute="height" secondItem="4nL-3S-ttL" secondAttribute="height" multiplier="0.08" id="YbK-5w-2Tw"/>
+                            <constraint firstItem="lwP-m0-wUA" firstAttribute="centerX" secondItem="4nL-3S-ttL" secondAttribute="centerX" id="Zd4-Np-t6x"/>
+                            <constraint firstItem="gbB-Zb-Mps" firstAttribute="leading" secondItem="znG-Wb-QBV" secondAttribute="leading" constant="10" id="azy-C1-Ka4"/>
+                            <constraint firstItem="gbB-Zb-Mps" firstAttribute="top" secondItem="JjD-WD-5tx" secondAttribute="bottom" constant="10" id="bgI-AP-b87"/>
                             <constraint firstItem="JjD-WD-5tx" firstAttribute="top" secondItem="znG-Wb-QBV" secondAttribute="top" id="c79-Er-c2j"/>
+                            <constraint firstAttribute="trailing" secondItem="gva-XK-KBG" secondAttribute="trailing" constant="10" id="clQ-wq-FkF"/>
                             <constraint firstItem="ubs-Uc-1Ou" firstAttribute="centerX" secondItem="4nL-3S-ttL" secondAttribute="centerX" id="efr-wJ-Wtv"/>
                             <constraint firstItem="m7i-QS-dz4" firstAttribute="height" secondItem="4nL-3S-ttL" secondAttribute="height" multiplier="0.5" id="fB8-vl-h6L"/>
                             <constraint firstItem="m7i-QS-dz4" firstAttribute="centerX" secondItem="4nL-3S-ttL" secondAttribute="centerX" id="grb-HF-rZ3"/>
+                            <constraint firstItem="gbB-Zb-Mps" firstAttribute="width" secondItem="4nL-3S-ttL" secondAttribute="width" multiplier="0.08" id="iJB-kD-cq9"/>
                             <constraint firstItem="m7i-QS-dz4" firstAttribute="width" secondItem="4nL-3S-ttL" secondAttribute="width" id="klt-PG-lsi"/>
                             <constraint firstItem="ubs-Uc-1Ou" firstAttribute="height" secondItem="4nL-3S-ttL" secondAttribute="height" multiplier="0.2" id="qys-We-uJ1"/>
                             <constraint firstItem="ubs-Uc-1Ou" firstAttribute="width" secondItem="4nL-3S-ttL" secondAttribute="width" multiplier="0.85" id="wth-oa-Q8e"/>
@@ -633,6 +666,7 @@
                     <tabBarItem key="tabBarItem" title="クラスメート" image="zyosi1" id="QQB-G6-f97"/>
                     <connections>
                         <outlet property="count" destination="oo0-FU-7tV" id="hIi-0K-2HN"/>
+                        <outlet property="doryokuLabel" destination="HJk-D1-ksL" id="vCW-0C-loy"/>
                         <outlet property="jkImage" destination="m7i-QS-dz4" id="iUM-zN-K0E"/>
                         <outlet property="loveBar" destination="Z7n-kD-oft" id="Qg9-B8-8Rn"/>
                         <outlet property="progressLabel" destination="Sda-wz-7AY" id="Cnu-0Z-bkV"/>
