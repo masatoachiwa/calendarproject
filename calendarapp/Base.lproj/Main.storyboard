@@ -633,6 +633,9 @@
                                 <rect key="frame" x="10.000000000000004" y="597.33333333333337" width="56.333333333333343" height="122"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="3"/>
                                 <state key="normal" title="Button" image="friend2"/>
+                                <connections>
+                                    <segue destination="Qsl-7i-hef" kind="presentation" id="b3t-xz-7k7"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -816,7 +819,70 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xjY-NG-PGr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="416.80000000000001" y="355.41871921182269"/>
+            <point key="canvasLocation" x="1362" y="361"/>
+        </scene>
+        <!--Image Second View Controller-->
+        <scene sceneID="nLi-xd-Oea">
+            <objects>
+                <viewController modalTransitionStyle="flipHorizontal" id="Qsl-7i-hef" customClass="ImageSecondViewController" customModule="calendarapp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="zZ9-9u-CV9">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="gakusei" translatesAutoresizingMaskIntoConstraints="NO" id="fbK-Wf-M59">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="487.33333333333331"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qfh-G6-M8W" customClass="CustomLabel" customModule="calendarapp" customModuleProvider="target">
+                                <rect key="frame" x="9.3333333333333428" y="487.33333333333326" width="356.33333333333326" height="203"/>
+                                <color key="backgroundColor" red="0.0" green="0.56284224989999998" blue="0.31881666180000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="18"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="7"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cwT-8U-eai">
+                                <rect key="frame" x="10.000000000000004" y="690.33333333333337" width="56.333333333333343" height="121.66666666666663"/>
+                                <state key="normal" title="Button" image="jk"/>
+                                <connections>
+                                    <action selector="jkButton:" destination="Qsl-7i-hef" eventType="touchUpInside" id="Yzv-Jx-b0j"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="fbK-Wf-M59" firstAttribute="width" secondItem="zZ9-9u-CV9" secondAttribute="width" id="9qw-dx-Fvj"/>
+                            <constraint firstItem="fbK-Wf-M59" firstAttribute="leading" secondItem="5kH-BD-vqF" secondAttribute="leading" id="AKR-k9-arM"/>
+                            <constraint firstItem="qfh-G6-M8W" firstAttribute="top" secondItem="fbK-Wf-M59" secondAttribute="bottom" id="Anb-zf-udD"/>
+                            <constraint firstItem="cwT-8U-eai" firstAttribute="height" secondItem="zZ9-9u-CV9" secondAttribute="height" multiplier="0.15" id="F1g-8r-fkV"/>
+                            <constraint firstItem="fbK-Wf-M59" firstAttribute="height" secondItem="zZ9-9u-CV9" secondAttribute="height" multiplier="0.6" id="HSF-se-MUq"/>
+                            <constraint firstItem="qfh-G6-M8W" firstAttribute="width" secondItem="zZ9-9u-CV9" secondAttribute="width" multiplier="0.95" id="IWq-dv-xSL"/>
+                            <constraint firstItem="cwT-8U-eai" firstAttribute="width" secondItem="zZ9-9u-CV9" secondAttribute="width" multiplier="0.15" id="Qfr-I3-kFf"/>
+                            <constraint firstItem="cwT-8U-eai" firstAttribute="top" secondItem="qfh-G6-M8W" secondAttribute="bottom" id="SnE-LA-kjx"/>
+                            <constraint firstItem="qfh-G6-M8W" firstAttribute="centerX" secondItem="zZ9-9u-CV9" secondAttribute="centerX" id="ic6-Az-Gt2"/>
+                            <constraint firstItem="qfh-G6-M8W" firstAttribute="height" secondItem="zZ9-9u-CV9" secondAttribute="height" multiplier="0.25" id="jdq-x9-kFE"/>
+                            <constraint firstItem="cwT-8U-eai" firstAttribute="leading" secondItem="5kH-BD-vqF" secondAttribute="leading" constant="10" id="nRS-Xz-0Fz"/>
+                            <constraint firstItem="fbK-Wf-M59" firstAttribute="trailing" secondItem="5kH-BD-vqF" secondAttribute="trailing" id="qOp-Qm-n6x"/>
+                            <constraint firstItem="fbK-Wf-M59" firstAttribute="top" secondItem="zZ9-9u-CV9" secondAttribute="top" id="xxM-iC-LEQ"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="5kH-BD-vqF"/>
+                    </view>
+                    <connections>
+                        <outlet property="gakuseiLabel" destination="qfh-G6-M8W" id="dRC-zl-Dtq"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hOk-Rd-Jsf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="437.60000000000002" y="360.59113300492612"/>
         </scene>
         <!--設定-->
         <scene sceneID="jpz-sa-FnS">
@@ -923,9 +989,11 @@
         <image name="balloons-3730830_1920" width="1276" height="1920"/>
         <image name="classroom-2093743_1280" width="1280" height="914"/>
         <image name="friend2" width="128" height="128"/>
+        <image name="gakusei" width="1200" height="1200"/>
         <image name="gia2" width="42.666667938232422" height="42.666667938232422"/>
         <image name="haruko1" width="400" height="300"/>
         <image name="home1" width="42.666667938232422" height="42.666667938232422"/>
+        <image name="jk" width="64" height="64"/>
         <image name="karenda1" width="42.666667938232422" height="42.666667938232422"/>
         <image name="money1" width="42.666667938232422" height="42.666667938232422"/>
         <image name="zyosi1" width="42.666667938232422" height="42.666667938232422"/>
