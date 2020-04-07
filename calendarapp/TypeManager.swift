@@ -11,6 +11,7 @@ import UIKit
 enum Type: Int {
         case good 
         case bad
+        case rest
 
         
         

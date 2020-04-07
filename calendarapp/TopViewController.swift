@@ -79,6 +79,8 @@ class TopViewController: UIViewController {
                           pointLabel.text = String(talkManager.currentTotalPoint)
                 case .bad:
                         kariLabel.text = talkManager.badOfLabel().0
+                   case.rest:
+                        kariLabel.text = talkManager.restOfLabel().0
                         
                 }
                 pointLabel.text = String(talkManager.currentTotalPoint)
@@ -198,11 +200,17 @@ class TopViewController: UIViewController {
         }
         
         @IBAction func restButton(_ sender: Any) {
+               talkManager.currentType = .rest
+               let num = arc4random_uniform(3)
+                talkManager.randomPoint = Int(num)
+                print(talkManager.randomPoint)
+                print(num)
                 dateFormatter.dateFormat = "yyyyMMd" //yyMMddの形式で日付を生成する
       //          print(dateFormatter.string(from: date)) //本日の日付を取得
                 
                 talkManager.restDate(abcd:dateFormatter.string(from: date) )
                 talkManager.allDate(abcd:dateFormatter.string(from: date) )
+            
                 
 //                badButton.isEnabled = false // ボタン無効
 //               restButton.isEnabled = false

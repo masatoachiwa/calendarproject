@@ -25,6 +25,7 @@ class ImageViewController: UIViewController {
         @IBOutlet var count: UILabel!
 
         
+        @IBOutlet var friendButton: UIButton!
         
         
         var cu : Int = 0
@@ -39,6 +40,14 @@ class ImageViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
      
+//        friendButton.imageView?.contentMode = .scaleAspectFit
+//     friendButton.contentHorizontalAlignment = .fill
+//        friendButton.contentVerticalAlignment = .fill
+        
+        
+        
+        
+        
         let talkManager = TalkManager()
 //        speechText.adjustsFontSizeToFitWidth = true 効果なし
 //        speechText.minimumScaleFactor = 10
@@ -52,6 +61,9 @@ class ImageViewController: UIViewController {
                 speechText.text = talkManager.badOfLabel().0
                 jkImage.image = talkManager.badOfLabel().1
                 
+        case .rest:
+                speechText.text = talkManager.badOfLabel().0
+                jkImage.image = talkManager.badOfLabel().1
         }
         
         
@@ -63,13 +75,13 @@ class ImageViewController: UIViewController {
         loveBar.widthAnchor.constraint(equalTo: self.view.widthAnchor, multiplier: 0.4).isActive = true
         loveBar.heightAnchor.constraint(equalTo: self.view.heightAnchor, multiplier: 0.04).isActive = true
        loveBar.rightAnchor.constraint(equalTo: view.rightAnchor, constant: -20).isActive = true
-        loveBar.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -20).isActive = true
+        loveBar.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -10).isActive = true
         
         doryokuLabel.translatesAutoresizingMaskIntoConstraints = false
         doryokuLabel.widthAnchor.constraint(equalTo: self.view.widthAnchor, multiplier: 0.4).isActive = true
         doryokuLabel.heightAnchor.constraint(equalTo: self.view.heightAnchor, multiplier: 0.04).isActive = true
         doryokuLabel.rightAnchor.constraint(equalTo: loveBar.leftAnchor, constant: -20).isActive = true
-        doryokuLabel.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -20).isActive = true
+        doryokuLabel.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -10).isActive = true
         
         //  loveBar.transform = transform1.concatenating(transform2)
         speechText.padding = UIEdgeInsets(top: 8, left: 8, bottom: 8, right: 8)
@@ -105,6 +117,9 @@ class ImageViewController: UIViewController {
                 case .bad:
                        speechText.text = talkManager.badOfLabel().0
                          jkImage.image = talkManager.badOfLabel().1
+                case.rest:
+                        speechText.text = talkManager.restOfLabel().0
+                        jkImage.image  = talkManager.restOfLabel().1
  
                 }
         }

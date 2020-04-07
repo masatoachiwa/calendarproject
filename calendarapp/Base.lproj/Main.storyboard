@@ -365,7 +365,7 @@
             </objects>
             <point key="canvasLocation" x="-469.60000000000002" y="-314.03940886699507"/>
         </scene>
-        <!--Item-->
+        <!--課金・その他-->
         <scene sceneID="EkD-um-8Ol">
             <objects>
                 <viewController id="gKa-DM-rea" customClass="tableViewViewController" customModule="calendarapp" customModuleProvider="target" sceneMemberID="viewController">
@@ -392,7 +392,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="yXu-Ud-uqJ"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="gqK-yC-aGn"/>
+                    <tabBarItem key="tabBarItem" title="課金・その他" image="money1" id="gqK-yC-aGn"/>
                     <connections>
                         <outlet property="tableView" destination="Nph-1V-7Ez" id="DDy-rG-5E9"/>
                     </connections>
@@ -561,7 +561,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gbB-Zb-Mps">
-                                <rect key="frame" x="10" y="622.33333333333337" width="30" height="65"/>
+                                <rect key="frame" x="76.333333333333329" y="622.33333333333337" width="30" height="65"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <state key="normal" title="《"/>
                                 <connections>
@@ -606,7 +606,7 @@
                                 <nil key="highlightedColor"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                        <real key="value" value="15"/>
+                                        <real key="value" value="5"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
                                         <color key="value" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
@@ -617,7 +617,7 @@
                                 </userDefinedRuntimeAttributes>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lwP-m0-wUA">
-                                <rect key="frame" x="75" y="622.33333333333337" width="225" height="65"/>
+                                <rect key="frame" x="116.33333333333331" y="622.33333333333337" width="225" height="65"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <state key="normal" title="最初から見る"/>
                             </button>
@@ -629,16 +629,25 @@
                                     <action selector="goButton:" destination="lTS-4W-tcp" eventType="touchUpInside" id="HhI-Bg-yBe"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jz3-uY-nQH">
+                                <rect key="frame" x="10.000000000000004" y="597.33333333333337" width="56.333333333333343" height="122"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="3"/>
+                                <state key="normal" title="Button" image="friend2"/>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="JjD-WD-5tx" firstAttribute="height" secondItem="4nL-3S-ttL" secondAttribute="height" multiplier="0.7" id="1eQ-pk-sjL"/>
                             <constraint firstItem="jVr-7h-eNR" firstAttribute="leading" secondItem="znG-Wb-QBV" secondAttribute="leading" id="2pt-h2-CY4"/>
+                            <constraint firstItem="gbB-Zb-Mps" firstAttribute="leading" secondItem="Jz3-uY-nQH" secondAttribute="trailing" constant="10" id="3Uv-Nr-r4T"/>
+                            <constraint firstItem="Jz3-uY-nQH" firstAttribute="top" secondItem="JjD-WD-5tx" secondAttribute="bottom" constant="-15" id="43Q-Rs-Nf2"/>
+                            <constraint firstItem="Jz3-uY-nQH" firstAttribute="leading" secondItem="znG-Wb-QBV" secondAttribute="leading" constant="10" id="4rV-Sa-XlI"/>
+                            <constraint firstItem="Jz3-uY-nQH" firstAttribute="width" secondItem="4nL-3S-ttL" secondAttribute="width" multiplier="0.15" id="5k5-ti-Cye"/>
+                            <constraint firstItem="Jz3-uY-nQH" firstAttribute="height" secondItem="4nL-3S-ttL" secondAttribute="height" multiplier="0.15" id="BOk-RU-Vyo"/>
                             <constraint firstItem="jVr-7h-eNR" firstAttribute="top" secondItem="znG-Wb-QBV" secondAttribute="top" id="CBX-pU-1DD"/>
                             <constraint firstItem="JjD-WD-5tx" firstAttribute="leading" secondItem="znG-Wb-QBV" secondAttribute="leading" id="D64-HD-scw"/>
                             <constraint firstItem="JjD-WD-5tx" firstAttribute="trailing" secondItem="znG-Wb-QBV" secondAttribute="trailing" id="DZ2-Lv-biw"/>
                             <constraint firstItem="gva-XK-KBG" firstAttribute="width" secondItem="4nL-3S-ttL" secondAttribute="width" multiplier="0.08" id="G1v-5W-u3m"/>
-                            <constraint firstItem="lwP-m0-wUA" firstAttribute="top" secondItem="JjD-WD-5tx" secondAttribute="bottom" constant="10" id="IbJ-Sr-B1M"/>
                             <constraint firstItem="jVr-7h-eNR" firstAttribute="trailing" secondItem="znG-Wb-QBV" secondAttribute="trailing" id="KNB-xz-EHF"/>
                             <constraint firstItem="ubs-Uc-1Ou" firstAttribute="top" secondItem="m7i-QS-dz4" secondAttribute="bottom" constant="-20" id="LqI-qI-EYl"/>
                             <constraint firstItem="gbB-Zb-Mps" firstAttribute="height" secondItem="4nL-3S-ttL" secondAttribute="height" multiplier="0.08" id="Mcc-in-Q52"/>
@@ -648,11 +657,11 @@
                             <constraint firstItem="m7i-QS-dz4" firstAttribute="top" secondItem="jVr-7h-eNR" secondAttribute="bottom" id="PIa-mp-ud8"/>
                             <constraint firstItem="lwP-m0-wUA" firstAttribute="width" secondItem="4nL-3S-ttL" secondAttribute="width" multiplier="0.6" id="TMO-bd-tTx"/>
                             <constraint firstItem="gva-XK-KBG" firstAttribute="height" secondItem="4nL-3S-ttL" secondAttribute="height" multiplier="0.08" id="YbK-5w-2Tw"/>
-                            <constraint firstItem="lwP-m0-wUA" firstAttribute="centerX" secondItem="4nL-3S-ttL" secondAttribute="centerX" id="Zd4-Np-t6x"/>
-                            <constraint firstItem="gbB-Zb-Mps" firstAttribute="leading" secondItem="znG-Wb-QBV" secondAttribute="leading" constant="10" id="azy-C1-Ka4"/>
+                            <constraint firstItem="lwP-m0-wUA" firstAttribute="top" secondItem="JjD-WD-5tx" secondAttribute="bottom" constant="10" id="aBD-hs-bcs"/>
                             <constraint firstItem="gbB-Zb-Mps" firstAttribute="top" secondItem="JjD-WD-5tx" secondAttribute="bottom" constant="10" id="bgI-AP-b87"/>
                             <constraint firstItem="JjD-WD-5tx" firstAttribute="top" secondItem="znG-Wb-QBV" secondAttribute="top" id="c79-Er-c2j"/>
                             <constraint firstAttribute="trailing" secondItem="gva-XK-KBG" secondAttribute="trailing" constant="10" id="clQ-wq-FkF"/>
+                            <constraint firstItem="lwP-m0-wUA" firstAttribute="leading" secondItem="gbB-Zb-Mps" secondAttribute="trailing" constant="10" id="efe-LP-oTD"/>
                             <constraint firstItem="ubs-Uc-1Ou" firstAttribute="centerX" secondItem="4nL-3S-ttL" secondAttribute="centerX" id="efr-wJ-Wtv"/>
                             <constraint firstItem="m7i-QS-dz4" firstAttribute="height" secondItem="4nL-3S-ttL" secondAttribute="height" multiplier="0.5" id="fB8-vl-h6L"/>
                             <constraint firstItem="m7i-QS-dz4" firstAttribute="centerX" secondItem="4nL-3S-ttL" secondAttribute="centerX" id="grb-HF-rZ3"/>
@@ -667,6 +676,7 @@
                     <connections>
                         <outlet property="count" destination="oo0-FU-7tV" id="hIi-0K-2HN"/>
                         <outlet property="doryokuLabel" destination="HJk-D1-ksL" id="vCW-0C-loy"/>
+                        <outlet property="friendButton" destination="Jz3-uY-nQH" id="xJ0-xH-5Zr"/>
                         <outlet property="jkImage" destination="m7i-QS-dz4" id="iUM-zN-K0E"/>
                         <outlet property="loveBar" destination="Z7n-kD-oft" id="Qg9-B8-8Rn"/>
                         <outlet property="progressLabel" destination="Sda-wz-7AY" id="Cnu-0Z-bkV"/>
@@ -912,10 +922,12 @@
         <image name="balloon-2514738" width="1112" height="1920"/>
         <image name="balloons-3730830_1920" width="1276" height="1920"/>
         <image name="classroom-2093743_1280" width="1280" height="914"/>
+        <image name="friend2" width="128" height="128"/>
         <image name="gia2" width="42.666667938232422" height="42.666667938232422"/>
         <image name="haruko1" width="400" height="300"/>
         <image name="home1" width="42.666667938232422" height="42.666667938232422"/>
         <image name="karenda1" width="42.666667938232422" height="42.666667938232422"/>
+        <image name="money1" width="42.666667938232422" height="42.666667938232422"/>
         <image name="zyosi1" width="42.666667938232422" height="42.666667938232422"/>
     </resources>
 </document>

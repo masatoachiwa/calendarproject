@@ -27,6 +27,15 @@ class TalkManager {
                 }
         }
         
+        var randomPoint = 0 {
+                willSet {
+                        UserDefaults.standard.set(newValue, forKey: "rondompoint") //新しい値をnewValueに保存
+                        UserDefaults.standard.synchronize()
+                }
+        }
+        
+        
+        
         var currentTotalPoint: Int {
                 get{
                         return  UserDefaults.standard.integer(forKey: "goodpoint")
@@ -37,6 +46,16 @@ class TalkManager {
                         return  UserDefaults.standard.integer(forKey: "badpoint")
                 }
         }
+        
+        var currentTotalrandomPoint: Int {
+                get{
+                        return  UserDefaults.standard.integer(forKey: "rondompoint")
+                }
+        }
+        
+        
+        
+        
         
         var lovePoint: Double = 0 {
                 willSet {
@@ -1067,6 +1086,29 @@ class TalkManager {
                 }
                 
         }
+       
+        func  restOfLabel()->(String, UIImage){
+                switch currentTotalrandomPoint {
+        
+                case 0:
+                          return ("ランダム0",image1!)
+                       
+                case 1:
+                          return ("ランダム1",image2!)
+                case 2:
+                          return ("ランダム2",image3!)
+                        
+                default:
+                        return("",image22!)
+                }
+        
+        
+        
+        }
+        
+        
+        
+        
         
         
 }
