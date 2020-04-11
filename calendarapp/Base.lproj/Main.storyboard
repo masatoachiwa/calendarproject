@@ -547,7 +547,7 @@
                                 <rect key="frame" x="0.0" y="52" width="375" height="406"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sda-wz-7AY">
-                                <rect key="frame" x="211" y="135" width="96" height="21"/>
+                                <rect key="frame" x="211" y="135" width="96" height="82"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
@@ -562,7 +562,7 @@
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gbB-Zb-Mps">
                                 <rect key="frame" x="76.333333333333329" y="622.33333333333337" width="30" height="65"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="34"/>
                                 <state key="normal" title="《"/>
                                 <connections>
                                     <action selector="backButton:" destination="lTS-4W-tcp" eventType="touchUpInside" id="013-go-l27"/>
@@ -617,13 +617,16 @@
                                 </userDefinedRuntimeAttributes>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lwP-m0-wUA">
-                                <rect key="frame" x="116.33333333333331" y="622.33333333333337" width="225" height="65"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                <state key="normal" title="最初から見る"/>
+                                <rect key="frame" x="116.33333333333334" y="622.33333333333337" width="112.33333333333334" height="65"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                <state key="normal" title="最初から"/>
+                                <connections>
+                                    <action selector="firstButton:" destination="lTS-4W-tcp" eventType="touchUpInside" id="K3v-oY-OOh"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gva-XK-KBG">
                                 <rect key="frame" x="335" y="618" width="30" height="65"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="33"/>
                                 <state key="normal" title="》"/>
                                 <connections>
                                     <action selector="goButton:" destination="lTS-4W-tcp" eventType="touchUpInside" id="HhI-Bg-yBe"/>
@@ -658,7 +661,7 @@
                             <constraint firstItem="lwP-m0-wUA" firstAttribute="height" secondItem="4nL-3S-ttL" secondAttribute="height" multiplier="0.08" id="P4j-sW-W6q"/>
                             <constraint firstItem="gva-XK-KBG" firstAttribute="top" secondItem="JjD-WD-5tx" secondAttribute="bottom" constant="5.6699999999999999" id="PH3-w0-LII"/>
                             <constraint firstItem="m7i-QS-dz4" firstAttribute="top" secondItem="jVr-7h-eNR" secondAttribute="bottom" id="PIa-mp-ud8"/>
-                            <constraint firstItem="lwP-m0-wUA" firstAttribute="width" secondItem="4nL-3S-ttL" secondAttribute="width" multiplier="0.6" id="TMO-bd-tTx"/>
+                            <constraint firstItem="lwP-m0-wUA" firstAttribute="width" secondItem="4nL-3S-ttL" secondAttribute="width" multiplier="0.3" id="TMO-bd-tTx"/>
                             <constraint firstItem="gva-XK-KBG" firstAttribute="height" secondItem="4nL-3S-ttL" secondAttribute="height" multiplier="0.08" id="YbK-5w-2Tw"/>
                             <constraint firstItem="lwP-m0-wUA" firstAttribute="top" secondItem="JjD-WD-5tx" secondAttribute="bottom" constant="10" id="aBD-hs-bcs"/>
                             <constraint firstItem="gbB-Zb-Mps" firstAttribute="top" secondItem="JjD-WD-5tx" secondAttribute="bottom" constant="10" id="bgI-AP-b87"/>
@@ -679,6 +682,7 @@
                     <connections>
                         <outlet property="count" destination="oo0-FU-7tV" id="hIi-0K-2HN"/>
                         <outlet property="doryokuLabel" destination="HJk-D1-ksL" id="vCW-0C-loy"/>
+                        <outlet property="firstButton" destination="lwP-m0-wUA" id="ChH-hG-bgq"/>
                         <outlet property="friendButton" destination="Jz3-uY-nQH" id="xJ0-xH-5Zr"/>
                         <outlet property="jkImage" destination="m7i-QS-dz4" id="iUM-zN-K0E"/>
                         <outlet property="loveBar" destination="Z7n-kD-oft" id="Qg9-B8-8Rn"/>

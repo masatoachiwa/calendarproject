@@ -94,7 +94,7 @@ class TalkManager {
         var baddayArray : [String] =  (UserDefaults.standard.array(forKey: {"baddayArray"}())as? [String] ?? [""])
         var restdayArray : [String] =  (UserDefaults.standard.array(forKey: {"restdayArray"}())as? [String] ?? [""])
          var alldayArray : [String] =  (UserDefaults.standard.array(forKey: {"restdayArray"}())as? [String] ?? [""])
-        
+    var kakindayArray : [Int] =  (UserDefaults.standard.array(forKey: {"kakindayArray"}())as? [Int] ?? [0])
         
         func date(abcd:String){ //yymmddの追加と値の保存
           
@@ -130,24 +130,32 @@ class TalkManager {
                 
                 let defaults = UserDefaults.standard
                 defaults.set(alldayArray, forKey: "alldayArray")
-        
 
         }
-        
+        func kakinDate(abcd:Int){ // OFLabelのInt型のリターン
+                
+                kakindayArray.append(abcd)
+                
+                let defaults = UserDefaults.standard
+                defaults.set(kakindayArray, forKey: "kakindayArray")
+                
+        }
         
         
         
         func remove(){
                 let defaults = UserDefaults.standard
-                dayArray.removeAll() //配列空にする
-                defaults.set(dayArray, forKey: "dayArray")
-                baddayArray.removeAll() //配列空にする
-                defaults.set(baddayArray, forKey: "baddayArray")
-                restdayArray.removeAll() //配列空にする
-                defaults.set(restdayArray, forKey: "restdayArray")
+//                dayArray.removeAll() //配列空にする
+//                defaults.set(dayArray, forKey: "dayArray")
+//                baddayArray.removeAll() //配列空にする
+//                defaults.set(baddayArray, forKey: "baddayArray")
+//                restdayArray.removeAll() //配列空にする
+//                defaults.set(restdayArray, forKey: "restdayArray")
                 
                 alldayArray.removeAll()
                  defaults.set(alldayArray, forKey: "alldayArray")
+                kakindayArray.removeAll()
+                defaults.set(kakindayArray, forKey: "kakindayArray")
         }
         
 

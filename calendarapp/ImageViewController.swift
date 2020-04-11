@@ -24,8 +24,12 @@ class ImageViewController: UIViewController {
         
         @IBOutlet var count: UILabel!
 
+        var n = 0
         
         @IBOutlet var friendButton: UIButton!
+        
+        @IBOutlet var firstButton: UIButton!
+        
         
         
         var cu : Int = 0
@@ -102,6 +106,7 @@ class ImageViewController: UIViewController {
       
                 let talkManager = TalkManager()
               
+                
                 loveBar.setProgress(Float(Double(talkManager.currentTotalPoint) * 0.005555), animated: true)
 
                 let num = loveBar.progress  * 100
@@ -126,20 +131,475 @@ class ImageViewController: UIViewController {
 
   
         @IBAction func goButton(_ sender: Any) {
+        let outArray = (UserDefaults.standard.array(forKey: {"kakindayArray"}())as? [Int] ?? [0]) //達成できたボタン押した回数
+                let numArray = outArray.count-1
+                if n >= numArray{                 //nが配列の個数以上だったら（nはタップ回数）
+                  n = numArray
+                        print(n)
+                        return
+                        
+                }else{
+                n = n + 1
+             print(n)
+//                let next = outArray[n]
+//                print(next)
+                speechText.text = numberOfLabel().0
+                jkImage.image = numberOfLabel().1
+                }
         }
         
         
         @IBAction func backButton(_ sender: Any) {
+                if n == 0{
+                        return
+                }else{
+                n = n - 1
+               
+                let outArray = UserDefaults.standard.array(forKey: "kakindayArray")
+                let back = outArray![n]
+                print(back)
+        
+                speechText.text = numberOfLabel().0
+                jkImage.image = numberOfLabel().1
+                }
         }
         
         
+        @IBAction func firstButton(_ sender: Any) {
+               n = 0
+                let kakindayArray : [Int] =  (UserDefaults.standard.array(forKey: {"kakindayArray"}())as? [Int] ?? [0])
+                let outArray = kakindayArray
+                let a = outArray[n]
+                print(a)
+                speechText.text = numberOfLabel().0
+                jkImage.image = numberOfLabel().1
+        }
+      
+        let image1 = UIImage(named:"1")
+        let image2 = UIImage(named:"2")
+        let image3 = UIImage(named:"3")
+        let image4 = UIImage(named:"4")
+        let image5 = UIImage(named:"5")
+        let image6 = UIImage(named:"6")
+        let image7 = UIImage(named:"7")
+        let image8 = UIImage(named:"8")
+        let image9 = UIImage(named:"9")
+        let image10 = UIImage(named:"10")
+        let image11 = UIImage(named:"11")
+        let image12 = UIImage(named:"12")
+        let image13 = UIImage(named:"13")
+        let image14 = UIImage(named:"14")
+        let image15 = UIImage(named:"15")
+        let image16 = UIImage(named:"16")
+        let image17 = UIImage(named:"17")
+        let image18 = UIImage(named:"18")
+        let image19 = UIImage(named:"19")
+        let image20 = UIImage(named:"20")
+        let image21 = UIImage(named:"21")
+        let image22 = UIImage(named:"22")
+        let image23 = UIImage(named:"23")
+        let image24 = UIImage(named:"24")
+        let image25 = UIImage(named:"25")
+        let image26 = UIImage(named:"26")
+        let image27 = UIImage(named:"27")
+        let image28 = UIImage(named:"28")
+        let image29 = UIImage(named:"29")
+        let image10a = UIImage(named:"10a")
+        let image20a = UIImage(named:"20a")
+        let image30a = UIImage(named:"30a")
+        let image40a = UIImage(named:"40a")
+        let image50a = UIImage(named:"50a")
+        let image60a = UIImage(named:"60a")
+        let image70a = UIImage(named:"70a")
+        let image80a = UIImage(named:"80a")
+        let image90a = UIImage(named:"90a")
+        let image100a = UIImage(named:"100a")
+        let image110a = UIImage(named:"110a")
+        let image120a = UIImage(named:"120a")
+        let image130a = UIImage(named:"130a")
+        let image140a = UIImage(named:"140a")
+        let image150a = UIImage(named:"150a")
+        let image160a = UIImage(named:"160a")
+        let image170a = UIImage(named:"170a")
+        let image180a = UIImage(named:"180a")
+        
+        let name = (UserDefaults.standard.string(forKey: "name") ?? "田中")
+        let effort = (UserDefaults.standard.string(forKey: "effort") ?? "努力")
         
         
-        
-        
-
+        func numberOfLabel() -> (String, UIImage) {
+                switch n {
+                case 0:
+                        return ("\(name)聞いたよー。\(effort)始めたんだってね？何日続くんだろうね？（笑",image1!)
+                case 1:
+                        return ("早速\(effort)やったんだ。",image2!)
+                case 2:
+                        return ("やるじゃん！絶対やめたと思った。",image14!)
+                case 3:
+                        return ("3日続いたね。エライ！",image6!)
+                case 4:
+                        return ("そろそろ飽きたころでしょ？",image3!)
+                case 5:
+                        return ("最近雨が多いのは\(name)が珍しく頑張ってるから？",image18!)
+                case 6:
+                        return( "\(effort)続いているみたいだね。頑張って。", image8!)
+                case 7:
+                        return( "一週間もったね。応援してるよ。",image10!)
+                case 8:
+                        return ("今日も\(effort)してたんだね。お疲れ様。",image15!)
+                case 9:
+                        return ("\(name)お疲れ様。はい、ジュース。",image4!)
+                case 10:
+                        return ("10日目達成だね。ちょっと見直したな。",image10a!)
+                case 11:
+                        return ("ここまできたら諦めたらだめだよ。",image8!)
+                case 12:
+                        return ("最近頑張ってるね。感心、感心（笑）",image18!)
+                case 13:
+                        return ("頑張るのもいいけど、たまには息抜きも必要だよ。",image10!)
+                case 14:
+                        return ("二週間経ったね。ちょっと尊敬するかも。", image6!)
+                case 15:
+                        return ("頑張って半年は続けることね！",image8!)
+                case 16:
+                        return ("私も\(effort)やろうかなー？",image7!)
+                case 17:
+                        return ("あーごめん笑。結局\(effort)やってない。でもね、私は小さい頃からピアノずっと続けれてるからいいの。",image18!)
+                case 18:
+                        return ("お疲れ様。今日も飽きずに\(effort)してるね。",image17!)
+                case 19:
+                        return ("最近\(name)が頑張っても雨降らなくなったね。",image1!)
+                case 20:
+                        return( "２０日達成したよー。へい、へい。",image20a!)
+                case 21:
+                        return ("もうすぐ１ヶ月だねー。しみじみだね。",image7!)
+                case 22:
+                        return ("\(name)が頑張ってると、なんだか私も頑張らなきゃって思うよ。",image8!)
+                case 23:
+                        return ("焦らずに行こうね。急がば回れだよ。",image12!)
+                case 24:
+                        return ("さっき友達に\(name)のこと話したら褒めてたよ。",image18!)
+                case 25:
+                        return ("今日も頑張ったんだね。飛ばしすぎちゃだめだよ。",image10!)
+                case 26:
+                        return ("疲れ溜まってない？大丈夫？",image11!)
+                case 27:
+                        return ("お疲れ、昨日は何時まで\(effort)してたの？",image1!)
+                case 28:
+                        return ("\(name)の努力が早く実るといいね",image8!)
+                case 29:
+                        return ("えへへ。安定の努力家ですね！",image15!)
+                case 30:
+                        return ("30日経ったよ！これから苦しくなるかもしれないけど応援してるから！",image30a!)
+                case 31:
+                        return ("まだまだこれからだよ！",image10!)
+                case 32:
+                        return ("やっぱり努力してる人って素敵だな。",image5!)
+                case 33:
+                        return ("もうすぐ定期試験だね。二足のわらじも大変だけど頑張ろ。",image6!)
+                case 34:
+                        return ("やっぱり両立って難しいよね。できる\(name)のこと尊敬するなー。",image15!)
+                case 35:
+                        return("昨日は疲れて全然勉強できなかったー。\(name)と違って私だめだなー。",image16!)
+                case 36:
+                        return ("テストできたの？\(effort)しながらよく頑張ったね",image2!)
+                case 37:
+                        return ("テスト終わったね。また\(effort)頑張ろー！",image6!)
+                case 38:
+                        return ("\(name)ってさあ、\(effort)始める前よりもテストの点あがってない？",image11!)
+                case 39:
+                        return ("一つのことを努力する習慣がつくと、他のこともできるようになるのかな？",image14!)
+                case 40:
+                        return ("クラスメートも\(name)が変わったことに気がつきはじめたかもね。",image18!)
+                case 41:
+                        return ("私は最初から\(name)はやればできるって知ってたよ。",image10!)
+                case 42:
+                        return ("お疲れ様、\(name)の集中力を分けて欲しいよ。",image20!)
+                case 43:
+                        return ("たまには休息もとらないとダメだよ。",image9!)
+                case 44:
+                        return ("\(name)は彼女いないの？",image3!)
+                case 45:
+                        return ("いないんだー。ごめん、変なこときいて。",image15!)
+                case 46:
+                        return ("今は\(effort)を頑張ってるから彼女なんていらないよね。",image12!)
+                case 47:
+                        return ("あっ、もうすぐ５０日だよ。ファイトー！",image6!)
+                case 48:
+                        return ("お疲れ！ちゃんと息抜きしてる？これ飲んで",image4!)
+                case 49:
+                        return ("感心、感心",image8!)
+                case 50:
+                        return ("５０日ー！おめでとー！",image50a!)
+                case 51:
+                        return ("とりあえず半年は頑張って！私にできることは協力するから。",image8!)
+                case 52:
+                        return ("後１３０日！道のりは長いよ！",image22!)
+                case 53:
+                        return ("\(name)なら絶対できるよ！",image24!)
+                case 54:
+                        return ("もう\(effort)しないと気持ち悪いんじゃない？",image16!)
+                case 55:
+                        return ("不思議だね。私も\(name)が\(effort)してないって聞くと、何かあったの？って思うようになっちゃった。",image2!)
+                case 56:
+                        return ("なんだか\(name)が頑張ってる姿見ると私も嬉しくなっちゃう。",image7!)
+                case 57:
+                        return ("今日も頑張ったね！私もピアノの練習頑張らなくっちゃ",image15!)
+                case 58:
+                        return ("今度私にも\(effort)教えて欲しいなー。",image12!)
+                case 59:
+                        return ("やりすぎは体に毒だから、飛ばしすぎないでね。",image9!)
+                case 60:
+                        return ("６０日できたね。３分の１終わったよ！",image60a!)
+                case 61:
+                        return ("お疲れ！ねえ、\(name)はなんで\(effort)を始めたの？",image3!)
+                case 62:
+                        return ("みんなそれぞれいろんな理由があるけど、頑張っている人はかっこいいと思うよ。",image5!)
+                case 63:
+                        return ("だから、\(name)も今かっこいいよ。",image7!)
+                case 64:
+                        return ("照れてるのー？",image3!)
+                case 65:
+                        return ("その表情マルですね。",image3!)
+                case 66:
+                        return ("今これ流行ってるんだよ。\(name)は毎日頑張ってるから知らないかもね。",image17!)
+                case 67:
+                        return ("お疲れ様。良かったら一緒に帰ろ。",image8!)
+                case 68:
+                        return ("私ね、最近\(name)の影響なのかピアノの練習が前より楽しいんだ。",image7!)
+                case 69:
+                        return ("類は友を呼ぶっていうからかな、\(name)見てると私も頑張らなくちゃって思うの。",image18!)
+                case 70:
+                        return ("\(effort)を続けて思うような結果がでなかったらどうしようとか、そんなことを考えたりはしない？",image25!)
+                case 71:
+                        return ("どうせうまくいかないから、頑張っても意味ないんじゃないか、とかね。",image27!)
+                case 72:
+                        return ("私がそうだったらか、\(name)は同じや悩み抱えていないか心配だったから。",image9!)
+                case 73:
+                        return ("やっぱりあるんだね。でもここまで続けてきた\(name)ならきっとうまくいくよ。",image16!)
+                case 74:
+                        return ("それに私が応援しているんだから絶対うまくいくよ。",image17!)
+                case 75:
+                        return ("あっーー！今日で\(effort)始めてから達成できた日が75日経ってる。70日目伝えるの忘れてた。",image8!)
+                case 76:
+                        return ("正しくは76日目だよ",image70a!)
+                case 77:
+                        return ("私が\(name)の努力した日数をちゃんと数えてるからね！",image5!)
+                case 78:
+                        return ("言わなくても分かるよ、お疲れ様。",image15!)
+                case 79:
+                        return ("いつも以上に頑張らなくてもいいからね！いつも通りで。",image14!)
+                case 80:
+                        return ("８０日経ったよー。いえーい！",image80a!)
+                case 81:
+                        return ("\(name)は結果と過程どっちが大切派？",image11!)
+                case 82:
+                        return ("私は過程派だな。甘いかな？",image1!)
+                case 83:
+                        return ("努力しても結果が出ないことはあっても、結果を出す人に努力してない人はいないと思うんだ。",image8!)
+                case 84:
+                        return ("誰かの受け売りだけどね。私もそう思うな",image18!)
+                case 85:
+                        return ("あせらずに頑張ってね。必ず成功するって信じてるから。",image12!)
+                case 86:
+                        return ("頑張れ！頑張れ！\(name)",image6!)
+                case 87:
+                        return ("毎日頑張っていることって、辛いことじゃなくて楽しいことなんだって\(name)見てたら思うようになったな。",image15!)
+                case 88:
+                        return ("眠たい時とかは、無理して頑張るんじゃなくてちょっと仮眠してからするといいよ。",image18!)
+                case 89:
+                        return ("私はそのまま朝まで寝ちゃうから、向いてない人もるけど。",image20!)
+                case 90:
+                        return ("９０日経ったよー。半分行きました。残り９０日！",image90a!)
+                case 91:
+                        return ("今日もお疲れ。３ヶ月あっという間だったね。長かった？",image7!)
+                case 92:
+                        return ("折り返し地点を過ぎたって考えると残りはもうすぐだね。",image10!)
+                case 93:
+                        return ("なんだかやり終えた\(name)を想像するとワクワクするね。",image5!)
+                case 94:
+                        return ("最後まで応援するからよろしくね。",image15!)
+                case 95:
+                        return ("お疲様、本当に\(name)毎日が楽しそうで羨ましい。",image17!)
+                case 96:
+                        return ("クラスの友達も\(name)の顔つきが変わった？！っていってたよ。",image2!)
+                case 97:
+                        return ("努力を楽しめる人って本当に素敵だと思うな。",image8!)
+                case 98:
+                        return ("そういう人は壁にぶち当たっても、それを突破するのが楽しんだろうな。",image10!)
+                case 99:
+                        return ("私はそんな\(name)を見てるのが楽しいよ。",image1!)
+                case 100:
+                        return ("おめでとう！１００日目だよ。３桁いきましたね。",image100a!)
+                case 101:
+                        return ("もう続けることは苦にならないよね？",image12!)
+                case 102:
+                        return ("今日も１日お疲れ様です。",image4!)
+                case 103:
+                        return("私正直いうとね、一週間で辞めると思っていたんだよ。",image13!)
+                case 104:
+                        return ("これだけ続けていられるのは本当に\(name)が変わろうと決心しただよ。",image10!)
+                case 105:
+                        return ("それと少しは私のお陰もあるのかな？",image15!)
+                case 106:
+                        return ("嘘嘘、全部\(name)の力だよ。私は応援してるだけですから。",image18!)
+                case 107:
+                        return ("これからも\(name)のこと応援させてね。",image6!)
+                case 108:
+                        return( "何の得にもならないのにどうして応援してくれるのかって？",image11!)
+                case 109:
+                        return ("何だか楽しいんだよね。\(name)の成長見てると。",image17!)
+                case 110:
+                        return ("１１０日経ったよ！あと７０日だよ。",image110a!)
+                case 111:
+                        return ("ねー聞いて。私ね、一回だけピアノの練習を辞めた時期があるんだ。",image25!)
+                case 112:
+                        return ("自分より年下で自分より後にピアノを始めたのに、自分よりピアノがうまいこがいてバカらしくなっちゃったの。",image26!)
+                case 113:
+                        return ("レッスンの日は休んだり、行っても練習してないからすぐにバレたんだ。",image14!)
+                case 114:
+                        return ("それで先生に辞めたいって言ったんだ。理由も正直に話した。",image13!)
+                case 115:
+                        return ("そしたら先生に「人と比べるんじゃなくて、昨日の自分を超えることを考えて」って言われたの。",image1!)
+                case 116:
+                        return ("先生は続けてこう言ったの。「人と比べるより、昨日の自分に勝つことができる子が伸びるの。",image1!)
+                case 117:
+                        return ("どんなに才能があっても、人と比べているだけで満足してたら絶対にどこかで止まるわ。",image1!)
+                case 118:
+                        return ("だから、自分に負けないで」って。それでもう一度やってみようと思ったんだ。",image1!)
+                case 119:
+                        return ("ごめんね。こんな話して、ちょっと嫉妬しちゃったんだ。毎日目標に向けて突っ走る〇〇を見て。",image16!)
+                case 120:
+                        return ("あっ、ごめん。今日で１２０日目だよ。いえーい！",image120a!)
+                case 121:
+                        return ("きっと\(name)は\(effort)の才能があるんだろうなー",image13!)
+                case 122:
+                        return ("もし私みたいに、辞めたい時期がきたら私に相談してくれると嬉しいな。",image12!)
+                case 123:
+                        return ("でもこれは、その…\(name)のこといつか挫折するって疑っているわけじゃないからね。",image24!)
+                case 124:
+                        return ("絶対に成功するって分かってるから。ちょっとだけ私の気持ちも知って欲しかっただけ。",image23!)
+                case 125:
+                        return ("変なこと言ってごめんね。また明日からも頑張ろー！",image17!)
+                case 126:
+                        return ("お疲れ様。一緒に帰ろ。",image8!)
+                case 127:
+                        return ("いえい！相変わらず絶好調だね。",image6!)
+                case 128:
+                        return( "人生のターニングポイントはいつですか？ふふ。将来絶対聞かれるよ。",image18!)
+                case 129:
+                        return ("お疲れ様。ルーティン化されてきて、やらない日がほとんどなくなったね。",image15!)
+                case 130:
+                        return ("１３０日達成だよ！あと５０日。",image130a!)
+                case 131:
+                        return ("ここから先がファイトだよ！意外と前半頑張りすぎて後半しぼんできちゃう人もいるから。",image22!)
+                case 132:
+                        return ("お疲れ様。毎日頑張りすぎないように頑張ろうね笑",image10!)
+                case 133:
+                        return ("すごいよ\(name)。本当にすごい。",image5!)
+                case 134:
+                        return ("お疲れ様。今日も頑張りすぎてない？",image13!)
+                case 135:
+                        return ("友達が\(name)のこと最近かっこいいって言ってたよ。",image3!)
+                case 136:
+                        return ("えっ？私は\(name)のことかっこいいと思わないのかって？",image11!)
+                case 137:
+                        return ("へへ。秘密です。",image15!)
+                case 138:
+                        return ("最後までやり遂げたらかっこいいかな？",image18!)
+                case 139:
+                        return ("もう心配無用だね。このままゴールまであと一息だよ",image6!)
+                case 140:
+                        return ("１４０日達成！！後４０日だよ。",image140a!)
+                case 141:
+                        return ("これならゴールを半年じゃなくて１年でもいけそうだね。伸ばす？",image13!)
+                case 142:
+                        return ("冗談だよ。半年の目標を終わらせてから次は考えよ。",image17!)
+                case 143:
+                        return ("ねー。\(name)は好きな人とかいるの？",image3!)
+                case 144:
+                        return ("えっ。いいじゃん。聞いたって。",image10!)
+                case 145:
+                        return ("逆に私はどうかって？うーん。いるよ。",image3!)
+                case 146:
+                        return ("へへ、誰かは秘密。そのうち教えてあげてもいいけど、今は恥ずかしいな。",image12!)
+                case 147:
+                        return ("そのうちっていつかって？うーん。",image16!)
+                case 148:
+                        return ("目標の１８０日達成したらかな。",image15!)
+                case 149:
+                        return ("そういえば\(name)が好きな人いるか聞いてない！",image24!)
+                case 150:
+                        return ("１５０日達成したよ。ラスト３０日！",image150a!)
+                case 151:
+                        return ("いよいよ１ヶ月切ったね。長かったような、短かったような。",image7!)
+                case 152:
+                        return ("今日もお疲れ様。風引かないようにゆっくりしてね。",image10!)
+                case 153:
+                        return ("お疲れ様、気を緩めずに行こうね。",image17!)
+                case 154:
+                        return ("季節もすっかり変わっちゃったけどまだまだ行くよ！",image6!)
+                case 155:
+                        return( "今日もお疲れ様！このセリフ何回ぐらい言ったんだろう？",image15!)
+                case 156:
+                        return ("あとちょっとでお疲れ様って言えなくなっちゃうの寂しいな。",image16!)
+                case 157:
+                        return ("最初は\(name)のことバカにしてる人もいたけど、もうみんな応援してるよ。",image5!)
+                case 158:
+                        return ("私は最初からバカになんかしてないからね。",image8!)
+                case 159:
+                        return ("続かないとはちょっとだけ思ってたかも笑",image3!)
+                case 160:
+                        return ("１６０日達成。あと２０日。ゴールが見えてきたね。",image160a!)
+                case 161:
+                        return ("なんだか\(name)か遠い存在の人になってきちゃったな。",image25!)
+                case 162:
+                        return ("最後までいっても応援し続けるからね。",image9!)
+                case 163:
+                        return ("すごいよ。もうゴールが近いのにどんどん集中力上がってきてるね。",image7!)
+                case 164:
+                        return ("今日もお疲れ様！最後の最後までこのまま駆け抜けて。",image6!)
+                case 165:
+                        return ("ここだけの話、\(name)の努力する姿見てると私の方が励みになっているんだよ。",image12!)
+                case 166:
+                        return ("不思議だね。応援している私の方が力もらっちゃうなんて",image7!)
+                case 167:
+                        return( "\(name)の頑張る姿見るたびに私も頑張ってたんだよ。褒めて。",image17!)
+                case 168:
+                        return ("自分より努力してる人に褒められると、嬉しいな。",image8!)
+                case 169:
+                        return( "そういえば覚えてる？ゴールになったら私の好きな人いう話？",image16!)
+                case 170:
+                        return ("１７０日達成！ラスト１０日だよーー！",image170a!)
+                case 171:
+                        return ("ラスト９日！体調崩さないようにね！",image6!)
+                case 172:
+                        return ("ラスト８日！\(name)の応援できて本当によかった。",image7!)
+                case 173:
+                        return ("ラスト７日！もう少しだよ。",image8!)
+                case 174:
+                        return ("ラスト６日！あー！楽しかった時間が終わっちゃうね。",image12!)
+                case 175:
+                        return ("ラスト５日！お疲れ様。良かったら一緒に帰ろ？",image15!)
+                case 176:
+                        return ("ラスト４日！お疲れ様。本当に\(name)のこと尊敬してるよ。",image18!)
+                case 177:
+                        return ("ラスト３日！いよいよだね。なんだか分かんないけど泣けてきた。",image23!)
+                case 178:
+                        return ("ラスト２日！ヘイ、ヘイ^^",image6!)
+                case 179:
+                        return ("ラスト１日！本当にお疲れ様！私に素敵な体験さえてくれてありがとう。",image17!)
+                case 180:
+                        return ("おめでとう。\(name)のことが大好きです。",image19!)
+                
+                
+                
+                
+                default:
+                        return ("最後まで一緒に頑張ってくれて本当にありがとうございます。これからは私がいなくても一人で努力できるよね？もちろん私は\(name)のこと応援し続けるよ。",image17!)
+                }
         
 }
 
 
-
+}
