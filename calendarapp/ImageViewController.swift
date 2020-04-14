@@ -1067,26 +1067,64 @@ class ImageViewController: UIViewController {
                                                 return ("バイバイ",image29!)
                                         case 406:
                                                 return("バイバイ",image9!)
+                case 407:
+                        return ("あらかじめお休みの日を決めておくことは全然悪いことじゃないよ",image10!)
                         
+                case 408:
+                        return ("体力回復したー？",image15!)
+                case 409:
+                        return ("お休みの日は何してるの？",image11!)
+                case 410:
+                        return ("やっぱりお休みの日は外で体動かしたいよねー。",image6!)
+                        
+                case 411:
+                        return ("続けるにはメリハリが大事だよ。だから今日は必要なお休み！",image16!)
+                case 412:
+                        return ("\(effort)が趣味になると最強だけど、中々難しいよね",image14!)
+                case 413:
+                        return ("今は超回復期間だね。また明日がんばろー！",image17!)
+                case 414:
+                        return ("お休みの日も中々外出できないから辛いよね",image9!)
+                case 415:
+                        return ("\(name)は好きなyoutubeとかあるの？",image11!)
+                        
+                case 416:
+                        return ("クラスメートの噂なんて気にしちゃダメだからね",image8!)
+                case 417:
+                        return ("\(name)の悪口？う〜ん。私は聞いたことないよ。",image13!)
+                case 418:
+                        return ("急用でできなかった時はいいけど、自分の意思に負けて\(effort)できなかった時は、「本日はお休み」押したらダメだからね！",image22!)
+                case 419:
+                        return ("詰め込みすぎるより、適度なお休みがあった方が絶対に長続きすると思うから安心して休んで",image1!)
+                case 420:
+                        return ("今日はお休み？私が代わりにやってあげるよー",image6!)
+                        
+                case 421:
+                        return ("\(name)はだんだん\(effort)がやりたくてたまらなくな〜る。どう？やりたくなった？",image3!)
+                case 422:
+                        return ("私おはぎが大好きなんだよねー。おはぎ食べたら明日も頑張れる笑",image17!)
+                case 423:
+                        return ("\(name)はなんで\(effort)をやろうと思ったの？？",image7!)
+                case 424:
+                        return ("\(name)は朝派？夜派？私は断然朝だなー。",image8!)
+                case 425:
+                        return ("量より質っていうけど、ある程度の量を確保しないと質って保てないよね？",image14!)
+                        
+                case 426:
+                        return ("休みだ！休みだー！イエーイ！",image6!)
+                case 427:
+                        return ("自粛ムードだからこそ\(effort)頑張って！",image18!)
+                        
+                case 428:
+                        return("",image1!)
+              
                 default:
                         return ("",image17!)
+                
+                
                 }
+                
         
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
                 
                 
 }

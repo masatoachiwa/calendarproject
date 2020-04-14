@@ -1093,19 +1093,59 @@ class TalkManager {
                 
         }
        
-        func  restOfLabel()->(String, UIImage){
+        func  restOfLabel()->(String, UIImage,Int){
                 switch currentTotalrandomPoint {
         
                 case 0:
-                          return ("ランダム0",image1!)
+                          return ("あらかじめお休みの日を決めておくことは全然悪いことじゃないよ",image10!,407)
                        
                 case 1:
-                          return ("ランダム1",image2!)
+                          return ("体力回復したー？",image15!,408)
                 case 2:
-                          return ("ランダム2",image3!)
+                          return ("お休みの日は何してるの？",image11!,409)
+                case 3:
+                        return ("やっぱりお休みの日は外で体動かしたいよねー。",image6!,410)
+                        
+                case 4:
+                        return ("続けるにはメリハリが大事だよ。だから今日は必要なお休み！",image16!,411)
+                case 5:
+                        return ("\(effort)が趣味になると最強だけど、中々難しいよね",image14!,412)
+                case 6:
+                        return ("今は超回復期間だね。また明日がんばろー！",image17!,413)
+                case 7:
+                        return ("お休みの日も中々外出できないから辛いよね",image9!,414)
+                case 8:
+                        return ("\(name)は好きなyoutubeとかあるの？",image11!,415)
+                        
+                case 9:
+                        return ("クラスメートの噂なんて気にしちゃダメだからね",image8!,416)
+                case 10:
+                        return ("\(name)の悪口？う〜ん。私は聞いたことないよ。",image13!,417)
+                case 11:
+                        return ("急用でできなかった時はいいけど、自分の意思に負けて\(effort)できなかった時は、「本日はお休み」押したらダメだからね！",image22!,418)
+                case 12:
+                        return ("詰め込みすぎるより、適度なお休みがあった方が絶対に長続きすると思うから安心して休んで",image1!,419)
+                case 13:
+                        return ("今日はお休み？私が代わりにやってあげるよー",image6!,420)
+                        
+                case 14:
+                        return ("\(name)はだんだん\(effort)がやりたくてたまらなくな〜る。どう？やりたくなった？",image3!,421)
+                case 15:
+                        return ("私おはぎが大好きなんだよねー。おはぎ食べたら明日も頑張れる笑",image17!,422)
+                case 16:
+                        return ("\(name)はなんで\(effort)をやろうと思ったの？？",image7!,423)
+                case 17:
+                        return ("\(name)は朝派？夜派？私は断然朝だなー。",image8!,424)
+                case 18:
+                        return ("量より質っていうけど、ある程度の量を確保しないと質って保てないよね？",image14!,425)
+                        
+                case 19:
+                        return ("休みだ！休みだー！イエーイ！",image6!,426)
+                case 20:
+                        return ("自粛ムードだからこそ\(effort)頑張って！",image18!,427)
                         
                 default:
-                        return("",image22!)
+                        return("",image1!,428)
                 }
         
         

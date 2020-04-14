@@ -202,7 +202,7 @@ class TopViewController: UIViewController {
         
         @IBAction func restButton(_ sender: Any) {
                talkManager.currentType = .rest
-               let num = arc4random_uniform(3)
+               let num = arc4random_uniform(21)
                 talkManager.randomPoint = Int(num)
                 print(talkManager.randomPoint)
                 print(num)
