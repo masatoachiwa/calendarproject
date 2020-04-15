@@ -211,7 +211,7 @@ class TopViewController: UIViewController {
                 
                 talkManager.restDate(abcd:dateFormatter.string(from: date) )
                 talkManager.allDate(abcd:dateFormatter.string(from: date) )
-             talkManager.kakinDate(abcd: talkManager.numberOfLabel().2)
+                talkManager.kakinDate(abcd: talkManager.restOfLabel().2)
                 
 //                badButton.isEnabled = false // ボタン無効
 //               restButton.isEnabled = false

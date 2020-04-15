@@ -22,13 +22,20 @@ class ImageViewController: UIViewController {
         
         @IBOutlet var progressLabel: UILabel!
         
-        @IBOutlet var count: UILabel!
+
 
         var n = 0
         
         @IBOutlet var friendButton: UIButton!
         
         @IBOutlet var firstButton: UIButton!
+        
+        @IBOutlet var nextButton: UIButton!
+        
+        @IBOutlet var backButton: UIButton!
+        
+        
+        
         
         var kakinNum = 0
         
@@ -48,8 +55,8 @@ class ImageViewController: UIViewController {
 //     friendButton.contentHorizontalAlignment = .fill
 //        friendButton.contentVerticalAlignment = .fill
         
-        
-        
+        nextButton.isEnabled = false
+         backButton.isEnabled = false
         
         
         let talkManager = TalkManager()
@@ -110,9 +117,10 @@ class ImageViewController: UIViewController {
                 loveBar.setProgress(Float(Double(talkManager.currentTotalPoint) * 0.005555), animated: true)
 
                 let num = loveBar.progress  * 100
-                doryokuLabel.text = "努力値累計  " +  "\(ceil(num * 10)/10)%"
-                
-                count.text = String(talkManager.currentTotalPoint)
+         
+                 doryokuLabel.text = " 努力値累計 " +  "\(talkManager.currentTotalPoint)回" + "（ \(ceil(num * 10)/10)%）"
+           
+            
                 
                 switch talkManager.currentType {
                 case .good:
@@ -141,7 +149,7 @@ class ImageViewController: UIViewController {
                 }else{
                
                         n = n + 1
-        
+       
                  self.kakinNum = outArray[n]
    print(n,kakinNum)
                 speechText.text = numberOfLabel().0
@@ -173,6 +181,11 @@ class ImageViewController: UIViewController {
                 let outArray = kakindayArray
                 self.kakinNum = outArray[n]
                print(n,kakinNum)
+                
+                nextButton.isEnabled = true
+                backButton.isEnabled = true
+                
+                
                 
                 speechText.text = numberOfLabel().0
                 jkImage.image = numberOfLabel().1
