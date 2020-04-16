@@ -24,6 +24,7 @@
 		EE50D1902427C29E0021B126 /* CustomLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE50D18F2427C29E0021B126 /* CustomLabel.swift */; };
 		EEA1164723A8B6C300213FBB /* TopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEA1164623A8B6C300213FBB /* TopViewController.swift */; };
 		EEA1164923A8BD1E00213FBB /* TalkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEA1164823A8BD1E00213FBB /* TalkManager.swift */; };
+		EEB5A19924489C150058F8A4 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EEB5A19824489C150058F8A4 /* MessageUI.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +47,7 @@
 		EE50D18F2427C29E0021B126 /* CustomLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomLabel.swift; sourceTree = "<group>"; };
 		EEA1164623A8B6C300213FBB /* TopViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopViewController.swift; sourceTree = "<group>"; };
 		EEA1164823A8BD1E00213FBB /* TalkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TalkManager.swift; sourceTree = "<group>"; };
+		EEB5A19824489C150058F8A4 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +55,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EEB5A19924489C150058F8A4 /* MessageUI.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -64,6 +67,7 @@
 			children = (
 				EE0417D3235229010011D305 /* calendarapp */,
 				EE0417D2235229010011D305 /* Products */,
+				EEB5A19724489C150058F8A4 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -98,6 +102,14 @@
 				EE0417DD235229040011D305 /* LaunchScreen.storyboard */,
 			);
 			path = calendarapp;
+			sourceTree = "<group>";
+		};
+		EEB5A19724489C150058F8A4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				EEB5A19824489C150058F8A4 /* MessageUI.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

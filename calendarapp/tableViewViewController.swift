@@ -7,18 +7,19 @@
 //
 
 import UIKit
+import MessageUI
 
 let sectionTitle = ["課金","アプリについて",]
 let section0 = [("広告非表示"),("応援履歴")]
-let section1 = [("お問い合わせ"),("レビューを書く"),("開発者のツイート")]
+let section1 = [("お問い合わせ"),("レビューを書く"),("開発者のツイートを見る")]
 
 
 let tableDate = [section0,section1]
 
 
-class tableViewViewController: UIViewController ,UITableViewDelegate, UITableViewDataSource {
+class tableViewViewController: UIViewController ,UITableViewDelegate, UITableViewDataSource,MFMailComposeViewControllerDelegate {
       
-
+   
         
         @IBOutlet var tableView: UITableView!
       
@@ -56,13 +57,80 @@ class tableViewViewController: UIViewController ,UITableViewDelegate, UITableVie
                 return sectionTitle.count
         }
         
+        func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+                
+                if indexPath.section == 0{
+                switch indexPath.row {
+                 case 0:
+                   print("おはようuuuuuuuu")
+                case 1:
+                     print("\(indexPath.row)番目の行が選択されました。aaaaaa")
+             
+                default:
+                        print("\(indexPath.row)番目の行が選択されました。いううううう")
+                        }
+                }
+                        else if indexPath.section == 1{
+                        switch indexPath.row {
+                        case 0:
+                        
+                          self.sendMail()
+                        case 1:
+              
+                            print("おはよう")
+                
+                        case 2:
+                        print("\(indexPath.row)番目の行が選択されました。")
+                        let url = NSURL(string: "twitter://user?id=progateofreon")!
+                        if (UIApplication.shared.canOpenURL(url as URL)) {
+                                UIApplication.shared.openURL(url as URL)
+                                }
+                                
+                        default:
+                        print("\(indexPath.row)番目の行が選択されました。")
+                      
+                        
+                        }
+                        
+                }
+              
+        }
         
+        private func sendMail() {
+                if MFMailComposeViewController.canSendMail() {
+                        let mail = MFMailComposeViewController()
+                        mail.mailComposeDelegate = self
+                        mail.setToRecipients(["xxxx@yahoo.co.jp"]) // 宛先アドレス
+                        mail.setSubject("お問い合わせ") // 件名
+                        mail.setMessageBody("ここに本文が入ります。", isHTML: false) // 本文
+                        present(mail, animated: true, completion: nil)
+                } else {
+                        print("送信できません")
+                }
+        }
+        func mailComposeController(_ controller: MFMailComposeViewController, didFinishWith result: MFMailComposeResult, error: Error?) {
+                switch result {
+                case .cancelled:
+                        print("Email Send Cancelled")
+                        break
+                case .saved:
+                        print("Email Saved as a Draft")
+                        break
+                case .sent:
+                        print("Email Sent Successfully")
+                        break
+                case .failed:
+                        print("Email Send Failed")
+                        break
+                default:
+                        break
+                }
+                controller.dismiss(animated: true, completion: nil)
+        }
+    
         
-        
-        
-        
-        
+}
         
         
 
-}
+
