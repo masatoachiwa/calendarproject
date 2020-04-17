@@ -10,7 +10,7 @@ import UIKit
 import MessageUI
 
 let sectionTitle = ["課金","アプリについて",]
-let section0 = [("広告非表示"),("応援履歴")]
+let section0 = [("広告非表示"),("応援履歴を見れるようにしたい")]
 let section1 = [("お問い合わせ"),("レビューを書く"),("開発者のツイートを見る")]
 
 
@@ -80,12 +80,22 @@ class tableViewViewController: UIViewController ,UITableViewDelegate, UITableVie
                             print("おはよう")
                 
                         case 2:
-                        print("\(indexPath.row)番目の行が選択されました。")
-                        let url = NSURL(string: "twitter://user?id=progateofreon")!
-                        if (UIApplication.shared.canOpenURL(url as URL)) {
-                                UIApplication.shared.openURL(url as URL)
+                                if UIApplication.shared.canOpenURL(URL(string: "twitter")!) {
+                                        // xxxアプリがインストールされている
+                                        guard let twitterUrl = URL(string: "twitter://user?id=1073957131345260545") else { return }
+                                        UIApplication.shared.open(twitterUrl)
+                                        
+                                        
+                                } else {
+                                        // xxxアプリがインストールされていない
+                                        let url = NSURL(string: "https://twitter.com/progateofreon")
+                                        if UIApplication.shared.canOpenURL(url! as URL){
+                                                UIApplication.shared.open(url! as URL, options: [:], completionHandler: nil)
+                                        
+                                        
+                                                }
+                                        
                                 }
-                                
                         default:
                         print("\(indexPath.row)番目の行が選択されました。")
                       
