@@ -280,15 +280,15 @@ class ImageViewController: UIViewController {
                 case 16:
                         return ("私も\(effort)やろうかなー？",image7!)
                 case 17:
-                        return ("あーごめん笑。結局\(effort)やってない。でもね、私は小さい頃からピアノずっと続けれてるからいいの。",image18!)
+                        return ("あーごめん笑。結局\(effort)やってない。私は小さい頃からピアノをずっと続けられているからいいの笑",image18!)
                 case 18:
-                        return ("お疲れ様。今日も飽きずに\(effort)してるね。",image17!)
+                        return ("お疲れ様。今日も飽きずに\(effort)できたね。",image17!)
                 case 19:
-                        return ("最近\(name)が頑張っても雨降らなくなったね。",image1!)
+                        return ("最近\(name)が頑張っても雨降らなくなったね笑",image1!)
                 case 20:
-                        return( "２０日達成したよー。へい、へい。",image20a!)
+                        return( "２０日達成したよー。へい、へーい！",image20a!)
                 case 21:
-                        return ("もうすぐ１ヶ月だねー。しみじみだね。",image7!)
+                        return ("もうすぐ１ヶ月だねー。なんだかしみじみするね。",image7!)
                 case 22:
                         return ("\(name)が頑張ってると、なんだか私も頑張らなきゃって思うよ。",image8!)
                 case 23:
@@ -300,37 +300,37 @@ class ImageViewController: UIViewController {
                 case 26:
                         return ("疲れ溜まってない？大丈夫？",image11!)
                 case 27:
-                        return ("お疲れ、昨日は何時まで\(effort)してたの？",image1!)
+                        return ("お疲れ、今日は何時まで\(effort)してたの？",image1!)
                 case 28:
-                        return ("\(name)の努力が早く実るといいね",image8!)
+                        return ("\(name)の努力が早く実るといいね。",image8!)
                 case 29:
                         return ("えへへ。安定の努力家ですね！",image15!)
                 case 30:
                         return ("30日経ったよ！これから苦しくなるかもしれないけど応援してるから！",image30a!)
                 case 31:
-                        return ("まだまだこれからだよ！",image10!)
+                        return ("まだまだこれからだよ！うん。",image10!)
                 case 32:
                         return ("やっぱり努力してる人って素敵だな。",image5!)
                 case 33:
                         return ("もうすぐ定期試験だね。二足のわらじも大変だけど頑張ろ。",image6!)
                 case 34:
-                        return ("やっぱり両立って難しいよね。できる\(name)のこと尊敬するなー。",image15!)
+                        return ("やっぱり定期試験の勉強との両立って難しいよね。できる\(name)のこと尊敬するなー。",image15!)
                 case 35:
-                        return("昨日は疲れて全然勉強できなかったー。\(name)と違って私だめだなー。",image16!)
+                        return("今日は私疲れちゃって全然勉強できなかったー。\(name)と違って私だめだなー。",image16!)
                 case 36:
-                        return ("テストできたの？\(effort)しながらよく頑張ったね",image2!)
+                        return ("今日もお疲れ様！明日は定期テストだよ。",image5!)
                 case 37:
-                        return ("テスト終わったね。また\(effort)頑張ろー！",image6!)
+                        return ("定期テストできたの？\(effort)しながらよく頑張ったね。",image2!)
                 case 38:
                         return ("\(name)ってさあ、\(effort)始める前よりもテストの点あがってない？",image11!)
                 case 39:
                         return ("一つのことを努力する習慣がつくと、他のこともできるようになるのかな？",image14!)
                 case 40:
-                        return ("クラスメートも\(name)が変わったことに気がつきはじめたかもね。",image18!)
+                        return ("クラスメートも\(name)が変わったことに気がつき始めたかもね。",image18!)
                 case 41:
                         return ("私は最初から\(name)はやればできるって知ってたよ。",image10!)
                 case 42:
-                        return ("お疲れ様、\(name)の集中力を分けて欲しいよ。",image20!)
+                        return ("お疲れ様、本当にすごいね。\(name)の集中力を分けて欲しいよ。",image20!)
                 case 43:
                         return ("たまには休息もとらないとダメだよ。",image9!)
                 case 44:
@@ -342,25 +342,25 @@ class ImageViewController: UIViewController {
                 case 47:
                         return ("あっ、もうすぐ５０日だよ。ファイトー！",image6!)
                 case 48:
-                        return ("お疲れ！ちゃんと息抜きしてる？これ飲んで",image4!)
+                        return ("お疲れ！ちゃんと息抜きしてる？これ飲んで。",image4!)
                 case 49:
-                        return ("感心、感心",image8!)
+                        return ("感心、感心！",image8!)
                 case 50:
                         return ("５０日ー！おめでとー！",image50a!)
                 case 51:
                         return ("とりあえず半年は頑張って！私にできることは協力するから。",image8!)
                 case 52:
-                        return ("後１３０日！道のりは長いよ！",image22!)
+                        return ("だから後１３０日！道のりは長いよ！",image22!)
                 case 53:
                         return ("\(name)なら絶対できるよ！",image24!)
                 case 54:
                         return ("もう\(effort)しないと気持ち悪いんじゃない？",image16!)
                 case 55:
-                        return ("不思議だね。私も\(name)が\(effort)してないって聞くと、何かあったの？って思うようになっちゃった。",image2!)
+                        return ("不思議だね。私も\(name)が今日は\(effort)してないって聞くと、何かあったの？って思うようになっちゃった。",image2!)
                 case 56:
-                        return ("なんだか\(name)が頑張ってる姿見ると私も嬉しくなっちゃう。",image7!)
+                        return ("なんだか\(name)の頑張ってる姿を見ると私も嬉しくなっちゃう。",image7!)
                 case 57:
-                        return ("今日も頑張ったね！私もピアノの練習頑張らなくっちゃ",image15!)
+                        return ("今日も頑張ったね！私もピアノの練習頑張らなくっちゃ。",image15!)
                 case 58:
                         return ("今度私にも\(effort)教えて欲しいなー。",image12!)
                 case 59:
@@ -386,21 +386,21 @@ class ImageViewController: UIViewController {
                 case 69:
                         return ("類は友を呼ぶっていうからかな、\(name)見てると私も頑張らなくちゃって思うの。",image18!)
                 case 70:
-                        return ("\(effort)を続けて思うような結果がでなかったらどうしようとか、そんなことを考えたりはしない？",image25!)
+                        return ("\(effort)を続けて思うような結果がでなかったらどうしようとか、そんなことを考えたりはしてないよね？",image25!)
                 case 71:
-                        return ("どうせうまくいかないから、頑張っても意味ないんじゃないか、とかね。",image27!)
+                        return ("他には、どうせうまくいかないから頑張っても意味ないんじゃないか、とかね。",image23!)
                 case 72:
-                        return ("私がそうだったらか、\(name)は同じや悩み抱えていないか心配だったから。",image9!)
+                        return ("私がそうだったから...\(name)も同じ悩みを抱えていないか心配だったの。",image9!)
                 case 73:
-                        return ("やっぱりあるんだね。でもここまで続けてきた\(name)ならきっとうまくいくよ。",image16!)
+                        return ("でもここまで続けてきた\(name)ならきっとうまくいくよ。",image16!)
                 case 74:
-                        return ("それに私が応援しているんだから絶対うまくいくよ。",image17!)
+                        return ("それに私が応援しているんだから絶対に大丈夫（笑）",image17!)
                 case 75:
                         return ("あっーー！今日で\(effort)始めてから達成できた日が75日経ってる。70日目伝えるの忘れてた。",image8!)
                 case 76:
-                        return ("正しくは76日目だよ",image70a!)
+                        return ("看板もう描いちゃってたから許してね。正しくは76日目達成！",image70a!)
                 case 77:
-                        return ("私が\(name)の努力した日数をちゃんと数えてるからね！",image5!)
+                        return ("私が\(name)の努力した日数を毎日ちゃんと数えてるからね！",image5!)
                 case 78:
                         return ("言わなくても分かるよ、お疲れ様。",image15!)
                 case 79:
@@ -414,31 +414,31 @@ class ImageViewController: UIViewController {
                 case 83:
                         return ("努力しても結果が出ないことはあっても、結果を出す人に努力してない人はいないと思うんだ。",image8!)
                 case 84:
-                        return ("誰かの受け売りだけどね。私もそう思うな",image18!)
+                        return ("誰かの受け売りだけどね。私もそう思うな。",image18!)
                 case 85:
                         return ("あせらずに頑張ってね。必ず成功するって信じてるから。",image12!)
                 case 86:
-                        return ("頑張れ！頑張れ！\(name)",image6!)
+                        return ("頑張れ！頑張れ！\(name)！",image6!)
                 case 87:
                         return ("毎日頑張っていることって、辛いことじゃなくて楽しいことなんだって\(name)見てたら思うようになったな。",image15!)
                 case 88:
                         return ("眠たい時とかは、無理して頑張るんじゃなくてちょっと仮眠してからするといいよ。",image18!)
                 case 89:
-                        return ("私はそのまま朝まで寝ちゃうから、向いてない人もるけど。",image20!)
+                        return ("私は仮眠するとそのまま朝まで寝ちゃうから、向いてない人もいるけど。",image20!)
                 case 90:
-                        return ("９０日経ったよー。半分行きました。残り９０日！",image90a!)
+                        return ("９０日おめでとう！あっという間だった？長かった？何はともわれ残り９０日！",image90a!)
                 case 91:
-                        return ("今日もお疲れ。３ヶ月あっという間だったね。長かった？",image7!)
+                        return ("今日もお疲れ様。３ヶ月あっという間だったなー。",image7!)
                 case 92:
                         return ("折り返し地点を過ぎたって考えると残りはもうすぐだね。",image10!)
                 case 93:
-                        return ("なんだかやり終えた\(name)を想像するとワクワクするね。",image5!)
+                        return ("なんだか最後までやり終えた\(name)を想像するとワクワクするね。",image5!)
                 case 94:
-                        return ("最後まで応援するからよろしくね。",image15!)
+                        return ("絶対に最後まで応援するからよろしくね。",image15!)
                 case 95:
-                        return ("お疲様、本当に\(name)毎日が楽しそうで羨ましい。",image17!)
+                        return ("お疲様、本当に\(name)が毎日楽しそうで羨ましい。",image17!)
                 case 96:
-                        return ("クラスの友達も\(name)の顔つきが変わった？！っていってたよ。",image2!)
+                        return ("クラスの友達も最近\(name)の顔つきが変わった？って言ってたよ。",image2!)
                 case 97:
                         return ("努力を楽しめる人って本当に素敵だと思うな。",image8!)
                 case 98:
@@ -446,19 +446,19 @@ class ImageViewController: UIViewController {
                 case 99:
                         return ("私はそんな\(name)を見てるのが楽しいよ。",image1!)
                 case 100:
-                        return ("おめでとう！１００日目だよ。３桁いきましたね。",image100a!)
+                        return ("おめでとう！１００日目だよ。ついに３桁いきましたね。",image100a!)
                 case 101:
-                        return ("もう続けることは苦にならないよね？",image12!)
+                        return ("もう\(effort)し続けることは苦にならないよね？",image12!)
                 case 102:
-                        return ("今日も１日お疲れ様です。",image4!)
+                        return ("今日も１日お疲れ様です。これ飲んで休憩しよ。",image4!)
                 case 103:
-                        return("私正直いうとね、一週間で辞めると思っていたんだよ。",image13!)
+                        return("私正直いうとね、\(effort)一週間でやめると思っていたんだよ。",image13!)
                 case 104:
-                        return ("これだけ続けていられるのは本当に\(name)が変わろうと決心しただよ。",image10!)
+                        return ("これだけ続けていられるのは本当に\(name)が変わろうと決心したからだよ。",image10!)
                 case 105:
                         return ("それと少しは私のお陰もあるのかな？",image15!)
                 case 106:
-                        return ("嘘嘘、全部\(name)の力だよ。私は応援してるだけですから。",image18!)
+                        return ("嘘々、全部\(name)の力だよ。私は応援してるだけですから。",image18!)
                 case 107:
                         return ("これからも\(name)のこと応援させてね。",image6!)
                 case 108:
@@ -466,31 +466,31 @@ class ImageViewController: UIViewController {
                 case 109:
                         return ("何だか楽しいんだよね。\(name)の成長見てると。",image17!)
                 case 110:
-                        return ("１１０日経ったよ！あと７０日だよ。",image110a!)
+                        return ("ジャーン！１１０日経ったよ！あと７０日だね。",image110a!)
                 case 111:
-                        return ("ねー聞いて。私ね、一回だけピアノの練習を辞めた時期があるんだ。",image25!)
+                        return ("そう言えば私ね、一回だけピアノの練習をやめた時期があるんだ。",image25!)
                 case 112:
-                        return ("自分より年下で自分より後にピアノを始めたのに、自分よりピアノがうまいこがいてバカらしくなっちゃったの。",image26!)
+                        return ("私より年下で私より後にピアノを始めたのに、本当に才能があるこですぐに抜かされたの。",image26!)
                 case 113:
-                        return ("レッスンの日は休んだり、行っても練習してないからすぐにバレたんだ。",image14!)
+                        return ("だか練習するのがバカらしくなって休んだり、レッスンに行っても練習してないからすぐにバレたんだ。",image20!)
                 case 114:
-                        return ("それで先生に辞めたいって言ったんだ。理由も正直に話した。",image13!)
+                        return ("それで先生にやめたいって言ったんだ。理由も正直に話したわ。",image13!)
                 case 115:
-                        return ("そしたら先生に「人と比べるんじゃなくて、昨日の自分を超えることを考えて」って言われたの。",image1!)
+                        return ("そしたら先生に「人と比べるんじゃなくて、昨日の自分を超えることを考えて」って言われたの。",image18!)
                 case 116:
-                        return ("先生は続けてこう言ったの。「人と比べるより、昨日の自分に勝つことができる子が伸びるの。",image1!)
+                        return ("先生は続けてこう言ったの。「人と比べるより、昨日の自分に勝つことができる子が伸びるの。",image18!)
                 case 117:
-                        return ("どんなに才能があっても、人と比べているだけで満足してたら絶対にどこかで止まるわ。",image1!)
+                        return ("どんなに才能があっても、人と比べているだけで満足してたら絶対にどこかで止まるわ。",image18!)
                 case 118:
-                        return ("だから、自分に負けないで」って。それでもう一度やってみようと思ったんだ。",image1!)
+                        return ("だから、自分に負けないで」って。それでもう一度やってみようと思ったんだ。",image17!)
                 case 119:
-                        return ("ごめんね。こんな話して、ちょっと嫉妬しちゃったんだ。毎日目標に向けて突っ走る〇〇を見て。",image16!)
+                        return ("ごめんね。こんな話して、ちょっと嫉妬しちゃったんだ。毎日目標に向けて突っ走る\(name)を見て。",image16!)
                 case 120:
                         return ("あっ、ごめん。今日で１２０日目だよ。いえーい！",image120a!)
                 case 121:
-                        return ("きっと\(name)は\(effort)の才能があるんだろうなー",image13!)
+                        return ("きっと\(name)は\(effort)の才能があるんだろうなー。",image13!)
                 case 122:
-                        return ("もし私みたいに、辞めたい時期がきたら私に相談してくれると嬉しいな。",image12!)
+                        return ("もし私みたいに、やめたい時期がきたら私に相談してくれると嬉しいな。",image9!)
                 case 123:
                         return ("でもこれは、その…\(name)のこといつか挫折するって疑っているわけじゃないからね。",image24!)
                 case 124:
@@ -506,11 +506,11 @@ class ImageViewController: UIViewController {
                 case 129:
                         return ("お疲れ様。ルーティン化されてきて、やらない日がほとんどなくなったね。",image15!)
                 case 130:
-                        return ("１３０日達成だよ！あと５０日。",image130a!)
+                        return ("ジャジャジャジャーン！１３０日達成だよ！あと５０日。",image130a!)
                 case 131:
                         return ("ここから先がファイトだよ！意外と前半頑張りすぎて後半しぼんできちゃう人もいるから。",image22!)
                 case 132:
-                        return ("お疲れ様。毎日頑張りすぎないように頑張ろうね笑",image10!)
+                        return ("お疲れ様。毎日頑張りすぎないように頑張ろうね笑",image8!)
                 case 133:
                         return ("すごいよ\(name)。本当にすごい。",image5!)
                 case 134:
@@ -524,21 +524,21 @@ class ImageViewController: UIViewController {
                 case 138:
                         return ("最後までやり遂げたらかっこいいかな？",image18!)
                 case 139:
-                        return ("もう心配無用だね。このままゴールまであと一息だよ",image6!)
+                        return ("もう心配無用だね。このままゴールまであと一息だよ。",image6!)
                 case 140:
                         return ("１４０日達成！！後４０日だよ。",image140a!)
                 case 141:
                         return ("これならゴールを半年じゃなくて１年でもいけそうだね。伸ばす？",image13!)
                 case 142:
-                        return ("冗談だよ。半年の目標を終わらせてから次は考えよ。",image17!)
+                        return ("冗談だよ。半年の目標を達成させてから次は考えよ。",image17!)
                 case 143:
                         return ("ねー。\(name)は好きな人とかいるの？",image3!)
                 case 144:
                         return ("えっ。いいじゃん。聞いたって。",image10!)
                 case 145:
-                        return ("逆に私はどうかって？うーん。いるよ。",image3!)
+                        return ("逆に私はどうかって？うーん。いるよ。",image12!)
                 case 146:
-                        return ("へへ、誰かは秘密。そのうち教えてあげてもいいけど、今は恥ずかしいな。",image12!)
+                        return ("へへ、誰かは秘密。そのうち教えてあげてもいいけど、今は恥ずかしいな。",image3!)
                 case 147:
                         return ("そのうちっていつかって？うーん。",image16!)
                 case 148:
@@ -556,7 +556,7 @@ class ImageViewController: UIViewController {
                 case 154:
                         return ("季節もすっかり変わっちゃったけどまだまだ行くよ！",image6!)
                 case 155:
-                        return( "今日もお疲れ様！このセリフ何回ぐらい言ったんだろう？",image15!)
+                        return( "今日もお疲れ様！このセリフ何回ぐらい言ったんだろうね？",image15!)
                 case 156:
                         return ("あとちょっとでお疲れ様って言えなくなっちゃうの寂しいな。",image16!)
                 case 157:
@@ -572,21 +572,21 @@ class ImageViewController: UIViewController {
                 case 162:
                         return ("最後までいっても応援し続けるからね。",image9!)
                 case 163:
-                        return ("すごいよ。もうゴールが近いのにどんどん集中力上がってきてるね。",image7!)
+                        return ("すごいよ。もうゴールが近いのにどんどん集中力が上がってきてるね。",image7!)
                 case 164:
                         return ("今日もお疲れ様！最後の最後までこのまま駆け抜けて。",image6!)
                 case 165:
-                        return ("ここだけの話、\(name)の努力する姿見てると私の方が励みになっているんだよ。",image12!)
+                        return ("ここだけの話、\(name)の努力する姿を見ていると私の方が励みになっているんだよ。",image12!)
                 case 166:
-                        return ("不思議だね。応援している私の方が力もらっちゃうなんて",image7!)
+                        return ("不思議だね。応援している私の方が力をもらっちゃうなんて。",image7!)
                 case 167:
-                        return( "\(name)の頑張る姿見るたびに私も頑張ってたんだよ。褒めて。",image17!)
+                        return( "\(name)の頑張る姿を見るたびに私も頑張ってたんだよ。私も褒めてー。",image17!)
                 case 168:
                         return ("自分より努力してる人に褒められると、嬉しいな。",image8!)
                 case 169:
                         return( "そういえば覚えてる？ゴールになったら私の好きな人いう話？",image16!)
                 case 170:
-                        return ("１７０日達成！ラスト１０日だよーー！",image170a!)
+                        return ("１７０日達成！ラスト１０日！いよいよだね。",image170a!)
                 case 171:
                         return ("ラスト９日！体調崩さないようにね！",image6!)
                 case 172:
@@ -604,9 +604,9 @@ class ImageViewController: UIViewController {
                 case 178:
                         return ("ラスト２日！ヘイ、ヘイ^^",image6!)
                 case 179:
-                        return ("ラスト１日！本当にお疲れ様！私に素敵な体験さえてくれてありがとう。",image17!)
+                        return ("ラスト１日！本当にお疲れ様！私に素敵な体験をさせてくれてありがとう。",image17!)
                 case 180:
-                        return ("おめでとう。\(name)のことが大好きです。",image19!)
+                        return ("180日達成おめでとう。\(name)のことが大好きです。",image19!)
                         
                 case 181:
                         return ("最後まで一緒に頑張ってくれて本当にありがとうございます。これからは私がいなくても一人で努力できるよね？もちろん私は\(name)のこと応援し続けるよ。",image17!)
