@@ -13,7 +13,7 @@
         <!--ホーム-->
         <scene sceneID="wq9-CM-uf0">
             <objects>
-                <viewController id="N5T-Gl-eeh" customClass="TopViewController" customModule="calendarapp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="a" id="N5T-Gl-eeh" customClass="TopViewController" customModule="calendarapp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="995-vX-CFe">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -266,7 +266,7 @@
         <!--カレンダー-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="CallenderViewController" customModule="calendarapp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="b" id="BYZ-38-t0r" customClass="CallenderViewController" customModule="calendarapp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -366,7 +366,7 @@
         <!--課金・その他-->
         <scene sceneID="EkD-um-8Ol">
             <objects>
-                <viewController id="gKa-DM-rea" customClass="tableViewViewController" customModule="calendarapp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="c" id="gKa-DM-rea" customClass="tableViewViewController" customModule="calendarapp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="hlj-KU-DyU">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -541,7 +541,7 @@
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.80000000000000004" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="classroom-2093743_1280" translatesAutoresizingMaskIntoConstraints="NO" id="JjD-WD-5tx">
                                 <rect key="frame" x="0.0" y="44" width="375" height="568.33333333333337"/>
                             </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="haruko1" translatesAutoresizingMaskIntoConstraints="NO" id="m7i-QS-dz4">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" restorationIdentifier="e" image="haruko1" translatesAutoresizingMaskIntoConstraints="NO" id="m7i-QS-dz4">
                                 <rect key="frame" x="0.0" y="52" width="375" height="406"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gbB-Zb-Mps">
@@ -814,7 +814,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="gakusei" translatesAutoresizingMaskIntoConstraints="NO" id="fbK-Wf-M59">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" restorationIdentifier="f" image="gakusei" translatesAutoresizingMaskIntoConstraints="NO" id="fbK-Wf-M59">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="487.33333333333331"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qfh-G6-M8W" customClass="CustomLabel" customModule="calendarapp" customModuleProvider="target">
@@ -913,7 +913,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.55000001192092896" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="balloon-2514738" translatesAutoresizingMaskIntoConstraints="NO" id="l20-h1-EiG">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.55000001192092896" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" restorationIdentifier="d" image="balloon-2514738" translatesAutoresizingMaskIntoConstraints="NO" id="l20-h1-EiG">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="どのくらいする？" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5tG-pa-yIH">

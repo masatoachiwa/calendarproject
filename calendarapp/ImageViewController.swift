@@ -568,7 +568,7 @@ class ImageViewController: UIViewController {
                 case 160:
                         return ("１６０日達成。あと２０日。ゴールが見えてきたね。",image160a!)
                 case 161:
-                        return ("なんだか\(name)か遠い存在の人になってきちゃったな。",image25!)
+                        return ("なんだか\(name)が遠い存在の人になってきちゃったな。",image25!)
                 case 162:
                         return ("最後までいっても応援し続けるからね。",image9!)
                 case 163:
@@ -1127,8 +1127,72 @@ class ImageViewController: UIViewController {
                         return ("休みだ！休みだー！イエーイ！",image6!)
                 case 427:
                         return ("自粛ムードだからこそ\(effort)頑張って！",image18!)
-                        
                 case 428:
+                        return ("\(name)は目標としている人っているの？いるならその人の真似をするといいかも。",image11!)
+                case 429:
+                        return ("ゆっくり休むのも大切だよね。",image15!)
+                case 430:
+                        return ("睡眠時間だけは削っちゃだめだよ。最低6時間は寝ること！",image22!)
+                case 431:
+                        return ("意外と努力してる人って、何か趣味とかで息抜きの時間があったりするみたいだよ。",image14!)
+                        
+                case 432:
+                        return ("自分の時間も少しは確保しないとね。",image10!)
+                case 433:
+                        return ("雨の音が集中するのにいいみたいだよ。アプリでも聴けるからよかったら試してみて。",image15!)
+                case 434:
+                        return ("どうしてお休みの日ってお腹が減るんだろうね？私だけかな？",image20!)
+                case 435:
+                        return ("息抜きの甘い物は最高に美味しいね。",image6!)
+                case 436:
+                        return ("お休みだー。マイペースに行くのも大事だよ。",image21!)
+                        
+                case 437:
+                        return ("私がお勧めした集中力UPの方法は興味がなかったらスルーしてね。",image18!)
+                case 438:
+                        return ("今日はお休みだね。たこパーしようよ。",image17!)
+                case 439:
+                        return ("努力で自分の運命は変えられるのか、努力できることが運命なのかどっちなんだろうね？",image11!)
+                case 440:
+                        return ("「達成できなかった」と、「本日はお休み」の違いが分からないって？雰囲気でいいよー（笑）",image6!)
+                case 441:
+                        return ("いい加減目覚めなさい。ふふ（笑）",image1!)
+                case 442:
+                        return ("クラシックとかって本当に集中力あがるのかな？",image2!)
+                case 443:
+                        return ("豆柴のアイカ可愛いよね〜。知ってるかな？",image5!)
+                case 444:
+                        return ("「本日はお休み」を押すのは土日のことじゃなくて、\(name)のタイミングでいいからね。",image8!)
+                case 445:
+                        return ("今日はお休み？なら一緒にドリフ見ようよ〜。",image14!)
+                case 446:
+                        return ("\(name)、何か面白い話してよー。",image3!)
+                        
+                case 447:
+                        return ("頑張った分だけお休みの日って充実するね。",image18!)
+                case 448:
+                        return ("毎日お休みはダメだからね（笑）",image13!)
+                case 449:
+                        return ("明日は頑張るンゴ。",image17!)
+                case 450:
+                        return ("\(name)は友達の友達と遊べるタイプ？私は全然大丈夫だよー。",image8!)
+                case 451:
+                        return ("休みの日って無性に部屋を掃除したくなるね。",image24!)
+                case 452:
+                        return ("今日はお休みだねー。何をしようかなー？",image5!)
+                case 453:
+                        return ("成果が出ない時って周りの目なんか気にならないっていったら嘘になるけど、気にしないようにした方がいいかも。",image10!)
+                case 454:
+                        return ("幸せは〜歩いてこない〜だ〜から、ラランララランララー♪",image8!)
+                case 455:
+                        return ("無駄じゃないよ〜経験したすべ〜て♪",image17!)
+                case 456:
+                        return ("\(name)と一緒にのんびり過ごすのも楽しいな。",image18!)
+                        
+                case 457:
+                        return ("私たちって絶対やればできるんだよ（笑）",image17!)
+
+                case 458:
                         return("",image1!)
               
                 default:
