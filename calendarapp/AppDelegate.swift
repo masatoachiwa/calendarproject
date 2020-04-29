@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import GoogleMobileAds
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -17,6 +18,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
                 // Override point for customization after application launch.
              
+                
+               GADMobileAds.configure(withApplicationID: "ca-app-pub-3957811942148546~1544887202")
+                
+                
                //使用するStoryBoardのインスタンス化
                 let storyboard = UIStoryboard(name: "Main", bundle: nil)
                 
@@ -39,7 +44,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                         
                 }
                 
-                
+
                 
                 
                 return true

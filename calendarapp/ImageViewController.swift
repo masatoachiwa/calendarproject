@@ -8,9 +8,10 @@
 
 import UIKit
 
-class ImageViewController: UIViewController {
 
-      
+class ImageViewController: UIViewController{
+
+    
         
         @IBOutlet var jkImage: UIImageView!
         
@@ -51,6 +52,8 @@ class ImageViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
      
+     
+        
 //        friendButton.imageView?.contentMode = .scaleAspectFit
 //     friendButton.contentHorizontalAlignment = .fill
 //        friendButton.contentVerticalAlignment = .fill
@@ -137,6 +140,10 @@ class ImageViewController: UIViewController {
                 }
         }
 
+        
+        
+        
+        
   
         @IBAction func goButton(_ sender: Any) {
         let outArray = (UserDefaults.standard.array(forKey: {"kakindayArray"}())as? [Int] ?? [0]) //達成できたボタン押した回数
@@ -1160,7 +1167,7 @@ class ImageViewController: UIViewController {
                 case 442:
                         return ("クラシックとかって本当に集中力あがるのかな？",image2!)
                 case 443:
-                        return ("豆柴のアイカ可愛いよね〜。知ってるかな？",image5!)
+                        return ("豆柴の大群のナオちゃん知ってる？可愛いよね〜",image5!)
                 case 444:
                         return ("「本日はお休み」を押すのは土日のことじゃなくて、\(name)のタイミングでいいからね。",image8!)
                 case 445:

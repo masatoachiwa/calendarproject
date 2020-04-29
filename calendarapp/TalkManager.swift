@@ -1176,7 +1176,7 @@ class TalkManager {
                 case 35:
                         return ("クラシックとかって本当に集中力あがるのかな？",image2!,442)
                 case 36:
-                        return ("豆柴のアイカ可愛いよね〜。知ってるかな？",image5!,443)
+                        return ("豆柴の大群のナオちゃん知ってる？可愛いよね〜",image5!,443)
                 case 37:
                         return ("「本日はお休み」を押すのは土日のことじゃなくて、\(name)のタイミングでいいからね。",image8!,444)
                 case 38:
