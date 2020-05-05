@@ -74,7 +74,7 @@ class DateManager {
                 let numberOfCells = numberOfWeeks(year, month) * 7  //１ヶ月の週の数かける７で全体のセルの数
                 let days = numberOfDays(year, month) //１ヶ月のマスの数
                self.daysArray = alignmentOfDays(firstDayOfWeek, numberOfCells, days)  //(１日の曜日、セルの数、マスの数 )
-             
+      
         }
  
         
@@ -85,8 +85,8 @@ class DateManager {
         func alignmentOfDays(_ firstDayOfWeek: Int, _ numberOfCells: Int, _ days: Int) -> [String] {
                 var daysArray: [String] = []
                 var dayCount = 0
-                for i in 0 ... numberOfCells {
-                        let diff = i - firstDayOfWeek  //(0-3,1-,3,2-3,3-３3,4 -3,5-3,35-3)
+                for i in 0 ... numberOfCells { //0日から今月の月の数まで繰り返す
+                        let diff = i - firstDayOfWeek  //(0-3,1-,3,2-3,3-３3,4 -3,5-3,35-3) 0から順に今月の日にち分まで、1日の曜日の番号をひく
                         if diff < 0 || dayCount >= days { //difが0より小さいまたは、dayCountが31以上の場合は配列に空欄を追加
                                 daysArray.append("")
                         } else {

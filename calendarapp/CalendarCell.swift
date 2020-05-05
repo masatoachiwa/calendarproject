@@ -66,6 +66,7 @@ class CalendarCell: UICollectionViewCell {
                 //   print(year)
                 //   print(month)
                    print(self.textLabel.text!) // ここにcellの日付が入る。(1,2,3,〜31,注意　一桁は0がつかない）
+             
                 //    print("\(String(datemanager.year))年\(String(datemanager.month))月\(String(datemanager.day))日")
                 // ここで保存した日付を取得する、今は仮に今日日付を取得
                 

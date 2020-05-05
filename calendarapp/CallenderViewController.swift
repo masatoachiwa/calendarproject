@@ -74,9 +74,18 @@ class CallenderViewController: UIViewController,UICollectionViewDataSource, UICo
         }
         
         func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {  //セルの数
-             //   return section == 0 ? 7 :datemanager.numberOfDays(datemanager.year,datemanager.month)
-                return section == 0 ? 7 : (datemanager.numberOfWeeks(datemanager.year, datemanager.month)*7)
+                if monthCounter != 0{  //先月か次月を押したら
+                       let moveDate = MoveMonthRequest(monthCounter)  //年月を再取得
+                return section == 0 ? 7 : (datemanager.numberOfWeeks(moveDate.year, moveDate.month)*7)
+              
+                }else{
+                        
+                         return section == 0 ? 7 : (datemanager.numberOfWeeks(datemanager.year, datemanager.month)*7)
+                        
                 }
+                
+                
+        }
         //データを返すメソッド
         func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
                 
@@ -97,9 +106,9 @@ class CallenderViewController: UIViewController,UICollectionViewDataSource, UICo
                       
                         cell.textLabel.text = datemanager.daysArray[indexPath.row]
                         //Index番号から表示する日を求める.getToday()
-                   //     cell.getToday(year: datemanager.year, month: datemanager.month,day: datemanager.day)
+                     //  cell.getToday(year: datemanager.year, month: datemanager.month,day: datemanager.day)
                         cell.getToday(year: nowYear, month: nowMonth,day: datemanager.day)
-                      //  print(nowYear, nowMonth,datemanager.day,String("ああ"))
+                  
                         
                        cell.cellImage.image = UIImage(named: "mark_maru")
                         
@@ -167,19 +176,25 @@ class CallenderViewController: UIViewController,UICollectionViewDataSource, UICo
         
         
         func commonSettingMoveMonth(){
-                datemanager.daysArray = nil
-                let moveDate = MoveMonthRequest(monthCounter)
-             
-                datemanager.dateManager(moveDate.year,moveDate.month)
-                if monthCounter != 0{
+               datemanager.daysArray = nil //配列をnilに
+                let moveDate = MoveMonthRequest(monthCounter)  //年月を再取得
+            
+               datemanager.dateManager(moveDate.year,moveDate.month)
+                
+                if monthCounter != 0{  //先月か次月を押したら
                         headTitle.text = "\(String(moveDate.year))年\(String(moveDate.month))月"
-                        //更新
-                        updateYearAndMonth(year: moveDate.year, month: moveDate.month)
-                }else{
-                        headTitle.text = "\(String(datemanager.year))年\(String(datemanager.month))月\(String(datemanager.day))日"
+                     
+                        updateYearAndMonth(year: moveDate.year, month: moveDate.month)  //更新MoveMonthRequest(monthCounter) で月が１±された数をもってくる
+                     //   headTitle.text = "\(String(datemanager.year))年\(String(datemanager.month))月\(String(datemanager.day))日"
                         // 更新
-                        updateYearAndMonth(year: datemanager.year, month: datemanager.month)
+             //         updateYearAndMonth(year: datemanager.year, month: datemanager.month)
+              
+                
+                }else if monthCounter == 0{
+                        headTitle.text = "\(String(moveDate.year))年\(String(moveDate.month))月"
+                        updateYearAndMonth(year: moveDate.year, month: moveDate.month)
                 }
+         
                 collectionView.reloadData()
         
         

@@ -8,6 +8,7 @@
 
 import UIKit
 import GoogleMobileAds
+import SwiftyStoreKit
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -17,14 +18,30 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
         func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
                 // Override point for customization after application launch.
-             
+                GADMobileAds.sharedInstance().start(completionHandler: nil)  //GoogleMobileAdsをつかえるようにする
                 
-               GADMobileAds.configure(withApplicationID: "ca-app-pub-3957811942148546~1544887202")
+                //アプリ内課金のシステムを使えるようにする
+                
+//                SwiftyStoreKit.completeTransactions(atomically: true) { purchases in
+//                        for purchase in purchases {
+//                                switch purchase.transaction.transactionState {
+//                                case .purchased, .restored:
+//                                        if purchase.needsFinishTransaction {
+//                                                SwiftyStoreKit.finishTransaction(purchase.transaction)
+//                                        }
+//                                // Unlock content
+//                                case .failed, .purchasing, .deferred:
+//                                        break // do nothing
+//                                @unknown default:
+//                                        <#fatalError()#>
+//                                }
+//                        }
+//                }
+                
                 
                 
                //使用するStoryBoardのインスタンス化
                 let storyboard = UIStoryboard(name: "Main", bundle: nil)
-                
                 // UserDefaultsにbool型のKey"launchedBefore"を用意
                 let launchedBefore = UserDefaults.standard.bool(forKey: "launchedBefore")
                 
