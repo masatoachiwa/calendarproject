@@ -10,14 +10,9 @@ import UIKit
 import GoogleMobileAds       ///////←←←←←←←←←←←←←←←←
 class TopViewController: UIViewController,GADInterstitialDelegate {
         
-     lazy   var interstitial: GADInterstitial! = {
-            
-                        var interstitial = GADInterstitial(adUnitID: "ca-app-pub-3940256099942544/4411468910")
-                        interstitial.delegate = self
-                        interstitial.load(GADRequest())
-                        return interstitial
+     var  interstitial: GADInterstitial!     ///////←←←←←←←←←←←←←←←←
 
-        }() ///////←←←←←←←←←←←←←←←←
+        
         
         @IBOutlet var yearLabel: UILabel!
         
@@ -65,7 +60,10 @@ class TopViewController: UIViewController,GADInterstitialDelegate {
         override func viewDidLoad() {
                 super.viewDidLoad()
                 
-           //     interstitial = createAndLoadInterstitial() ///////←←←←←←←←←←←←←←←←
+               interstitial = createAndLoadInterstitial() ///////←←←←←←←←←←←←←←←←
+              
+                
+                
                 
               kariLabel.isHidden = true
               pointLabel.isHidden = true
@@ -197,23 +195,40 @@ class TopViewController: UIViewController,GADInterstitialDelegate {
 //         restButton.isEnabled = false
 //         goodButton.isEnabled = false
 //
-                if interstitial.isReady {                                 ///////←←←←←←←←←←←←←←←← 広告の処理
-                        interstitial.present(fromRootViewController: self)
-                        let UINavigationController = tabBarController?.viewControllers?[3];       //タブバー コントローラの画面遷移
-                        tabBarController?.selectedViewController = UINavigationController;
-                } else {
-                        print("Ad wasn't ready")
-                        let UINavigationController = tabBarController?.viewControllers?[3];       //タブバー コントローラの画面遷移
-                        tabBarController?.selectedViewController = UINavigationController;
                 
                 
+                DispatchQueue.main.asyncAfter(deadline: .now() + 1.0){
+                        self.showAdmob(interstitial:  self.interstitial)
+                     
+              
                 }
                 
-        
-  
                 
-          
+                DispatchQueue.main.asyncAfter(deadline: .now() + 5.5){
+
+                        let UINavigationController = self.tabBarController?.viewControllers?[3];       //タブバー コントローラの画面遷移
+                        self.tabBarController?.selectedViewController = UINavigationController;
+                        
+                }
+                
+//                let UINavigationController = tabBarController?.viewControllers?[3];       //タブバー コントローラの画面遷移
+//                 tabBarController?.selectedViewController = UINavigationController;
+                
+                
+            
+//                if interstitial.isReady {                                 ///////←←←←←←←←←←←←←←←← 広告の処理
+//                        interstitial.present(fromRootViewController: self)
+//                        let UINavigationController = tabBarController?.viewControllers?[3];       //タブバー コントローラの画面遷移
+//                        tabBarController?.selectedViewController = UINavigationController;
+//                } else {
+//                        print("Ad wasn't ready")
+//                        let UINavigationController = tabBarController?.viewControllers?[3];       //タブバー コントローラの画面遷移
+//                        tabBarController?.selectedViewController = UINavigationController;
+//
+//
+//                }
         
+                
         }
         
         
@@ -290,7 +305,7 @@ class TopViewController: UIViewController,GADInterstitialDelegate {
        
 
         func createAndLoadInterstitial() -> GADInterstitial {              ///////←←←←←←←←←←←←←←←←
-                var interstitial = GADInterstitial(adUnitID: "ca-app-pub-3940256099942544/4411468910")
+                 interstitial = GADInterstitial(adUnitID: "ca-app-pub-3940256099942544/4411468910")
                 interstitial.delegate = self
                 interstitial.load(GADRequest())
                return interstitial
@@ -298,6 +313,19 @@ class TopViewController: UIViewController,GADInterstitialDelegate {
         func interstitialDidDismissScreen(_ ad: GADInterstitial) {         ///////←←←←←←←←←←←←←←←←
                 interstitial = createAndLoadInterstitial()
         }
-
+       
       
+        func showAdmob(interstitial: GADInterstitial){
+                if interstitial.isReady{
+                        interstitial.present(fromRootViewController: self)
+                }
+        
+        
+        }
+        
+        
+        
+        
+        
+        
 }
