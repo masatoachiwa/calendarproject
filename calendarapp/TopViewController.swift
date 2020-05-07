@@ -61,7 +61,7 @@ class TopViewController: UIViewController,GADInterstitialDelegate {
                 super.viewDidLoad()
                 
                interstitial = createAndLoadInterstitial() ///////←←←←←←←←←←←←←←←←
-              
+           
                 
                 
                 
@@ -195,38 +195,37 @@ class TopViewController: UIViewController,GADInterstitialDelegate {
 //         restButton.isEnabled = false
 //         goodButton.isEnabled = false
 //
+            
                 
-                
-                DispatchQueue.main.asyncAfter(deadline: .now() + 1.0){
-                        self.showAdmob(interstitial:  self.interstitial)
-                     
-              
-                }
-                
-                
-                DispatchQueue.main.asyncAfter(deadline: .now() + 5.5){
-
-                        let UINavigationController = self.tabBarController?.viewControllers?[3];       //タブバー コントローラの画面遷移
-                        self.tabBarController?.selectedViewController = UINavigationController;
-                        
-                }
+//                DispatchQueue.main.asyncAfter(deadline: .now() + 1.0){
+//                        self.showAdmob(interstitial:  self.interstitial)
+//
+//
+//                }
+//
+//
+//                DispatchQueue.main.asyncAfter(deadline: .now() + 5.5){
+//
+//                        let UINavigationController = self.tabBarController?.viewControllers?[3];       //タブバー コントローラの画面遷移
+//                        self.tabBarController?.selectedViewController = UINavigationController;
+//
+//                }
                 
 //                let UINavigationController = tabBarController?.viewControllers?[3];       //タブバー コントローラの画面遷移
 //                 tabBarController?.selectedViewController = UINavigationController;
                 
                 
-            
-//                if interstitial.isReady {                                 ///////←←←←←←←←←←←←←←←← 広告の処理
-//                        interstitial.present(fromRootViewController: self)
-//                        let UINavigationController = tabBarController?.viewControllers?[3];       //タブバー コントローラの画面遷移
-//                        tabBarController?.selectedViewController = UINavigationController;
-//                } else {
-//                        print("Ad wasn't ready")
-//                        let UINavigationController = tabBarController?.viewControllers?[3];       //タブバー コントローラの画面遷移
-//                        tabBarController?.selectedViewController = UINavigationController;
-//
-//
-//                }
+                           if self.interstitial.isReady {                                 ///////←←←←←←←←←←←←←←←← 広告の処理
+                      self.interstitial.present(fromRootViewController: self)
+                        let UINavigationController = tabBarController?.viewControllers?[3];       //タブバー コントローラの画面遷移
+                       tabBarController?.selectedViewController = UINavigationController;
+               } else {
+                       print("広告の準備がない")
+                       let UINavigationController = tabBarController?.viewControllers?[3];       //タブバー コントローラの画面遷移
+                       tabBarController?.selectedViewController = UINavigationController;
+
+
+               }
         
                 
         }
@@ -323,9 +322,31 @@ class TopViewController: UIViewController,GADInterstitialDelegate {
         
         }
         
+        func interstitialDidReceiveAd(_ ad: GADInterstitial) {
+                
+                print("interstitialDidReceiveAd")
+                
+        }
         
+        func interstitial(_ ad: GADInterstitial, didFailToReceiveAdWithError error: GADRequestError) {
+                print("interstitial:didFailToReceiveAdWithError: \(error.localizedDescription)")
+        }
         
+        /// Tells the delegate that an interstitial will be presented.
+        func interstitialWillPresentScreen(_ ad: GADInterstitial) {
+                print("interstitialWillPresentScreen")
+        }
         
+        /// Tells the delegate the interstitial is to be animated off the screen.
+        func interstitialWillDismissScreen(_ ad: GADInterstitial) {
+                print("interstitialWillDismissScreen")
+        }
+        
+        /// Tells the delegate that a user click will open another app
+        /// (such as the App Store), backgrounding the current app.
+        func interstitialWillLeaveApplication(_ ad: GADInterstitial) {
+                print("interstitialWillLeaveApplication")
+        }
         
         
 }
