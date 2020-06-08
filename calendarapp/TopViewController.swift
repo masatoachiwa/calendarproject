@@ -8,10 +8,13 @@
 
 import UIKit
 import GoogleMobileAds       ///////←←←←←←←←←←←←←←←←
-class TopViewController: UIViewController,GADInterstitialDelegate {
+class TopViewController: UIViewController,GADInterstitialDelegate, CatchProtocol{
+     
+        
         
      var  interstitial: GADInterstitial!     ///////←←←←←←←←←←←←←←←←
 
+        @IBOutlet var admobLabel: UILabel!
         
         
         @IBOutlet var yearLabel: UILabel!
@@ -60,11 +63,9 @@ class TopViewController: UIViewController,GADInterstitialDelegate {
         override func viewDidLoad() {
                 super.viewDidLoad()
                 
-               interstitial = createAndLoadInterstitial() ///////←←←←←←←←←←←←←←←←
-           
+            createAndLoadInterstitial() //広告のロード
                 
-                
-                
+        
               kariLabel.isHidden = true
               pointLabel.isHidden = true
               badLabel.isHidden = true
@@ -155,19 +156,6 @@ class TopViewController: UIViewController,GADInterstitialDelegate {
         NotificationCenter.default.addObserver(self, selector: #selector(significantTimeChangeNotification(_:)), name: UIApplication.significantTimeChangeNotification, object: nil)
         
         
-        if let buy = UserDefaults.standard.object(forKey: "buy"){
-           let  count = UserDefaults.standard.object(forKey: "buy") as! Int
-                if count == 1 {
-                        
-                }else{
-                        
-                        
-                }
-                
-        }else{
-                
-        }
-        
     }
         
     deinit {
@@ -197,36 +185,40 @@ class TopViewController: UIViewController,GADInterstitialDelegate {
 //
             
                 
-//                DispatchQueue.main.asyncAfter(deadline: .now() + 1.0){
-//                        self.showAdmob(interstitial:  self.interstitial)
-//
-//
-//                }
-//
-//
-//                DispatchQueue.main.asyncAfter(deadline: .now() + 5.5){
-//
-//                        let UINavigationController = self.tabBarController?.viewControllers?[3];       //タブバー コントローラの画面遷移
-//                        self.tabBarController?.selectedViewController = UINavigationController;
-//
-//                }
-                
-//                let UINavigationController = tabBarController?.viewControllers?[3];       //タブバー コントローラの画面遷移
-//                 tabBarController?.selectedViewController = UINavigationController;
-                
-                
-                           if self.interstitial.isReady {                                 ///////←←←←←←←←←←←←←←←← 広告の処理
-                      self.interstitial.present(fromRootViewController: self)
-                        let UINavigationController = tabBarController?.viewControllers?[3];       //タブバー コントローラの画面遷移
-                       tabBarController?.selectedViewController = UINavigationController;
-               } else {
-                       print("広告の準備がない")
-                       let UINavigationController = tabBarController?.viewControllers?[3];       //タブバー コントローラの画面遷移
-                       tabBarController?.selectedViewController = UINavigationController;
 
+                
+                if let buy = UserDefaults.standard.object(forKey: "buy"){  //"buy"がnilじゃなかったら、広告を除去する。
+                        let  count = UserDefaults.standard.object(forKey: "buy") as! Int
+                        if count == 1 { // 広告を除去する
+                                let UINavigationController = self.tabBarController?.viewControllers?[3];       //タブバー コントローラの画面遷移
+                                self.tabBarController?.selectedViewController = UINavigationController;
+                                
+                        }else{
+                                let UINavigationController = self.tabBarController?.viewControllers?[3];       //タブバー コントローラの画面遷移
+                                self.tabBarController?.selectedViewController = UINavigationController;
+                                
+                        }
+                        
+                }else{
+                        //広告を設定する
+                        if self.interstitial.isReady {                                 ///////←←←←←←←←←←←←←←←← 広告の処理
+                                self.interstitial.present(fromRootViewController: self)
+                                
+                                DispatchQueue.main.asyncAfter(deadline: .now() + 2.0){
+                                let UINavigationController = self.tabBarController?.viewControllers?[3];       //タブバー コントローラの画面遷移
+                                self.tabBarController?.selectedViewController = UINavigationController;
+                                }
+                                } else {
+                                admobLabel.text = ("広告の準備がない")
+                                let UINavigationController = tabBarController?.viewControllers?[3];       //タブバー コントローラの画面遷移
+                                tabBarController?.selectedViewController = UINavigationController;
+                                
+                        }
+                        
+                        
+                }
+           
 
-               }
-        
                 
         }
         
@@ -304,12 +296,18 @@ class TopViewController: UIViewController,GADInterstitialDelegate {
        
 
         func createAndLoadInterstitial() -> GADInterstitial {              ///////←←←←←←←←←←←←←←←←
-                 interstitial = GADInterstitial(adUnitID: "ca-app-pub-3940256099942544/4411468910")
+                
+                interstitial = GADInterstitial(adUnitID: "ca-app-pub-3940256099942544/4411468910")
                 interstitial.delegate = self
                 interstitial.load(GADRequest())
                return interstitial
         }
-        func interstitialDidDismissScreen(_ ad: GADInterstitial) {         ///////←←←←←←←←←←←←←←←←
+      
+        
+        
+        // デリゲートメソッド。インタースティシャル広告が閉じられた時にもう一度createAndLoadInterstitialメソッドを呼び出し、
+        // 新しい広告をロードしています。これを実装しないと、インタースティシャル広告は一度しか表示されなくなる。
+                func interstitialDidDismissScreen(_ ad: GADInterstitial) {         ///////←←←←←←←←←←←←←←←←
                 interstitial = createAndLoadInterstitial()
         }
        
@@ -323,13 +321,13 @@ class TopViewController: UIViewController,GADInterstitialDelegate {
         }
         
         func interstitialDidReceiveAd(_ ad: GADInterstitial) {
-                
+                admobLabel.text = "準備完了"
                 print("interstitialDidReceiveAd")
                 
         }
         
         func interstitial(_ ad: GADInterstitial, didFailToReceiveAdWithError error: GADRequestError) {
-                print("interstitial:didFailToReceiveAdWithError: \(error.localizedDescription)")
+                print("無理でした: \(error.localizedDescription)")
         }
         
         /// Tells the delegate that an interstitial will be presented.
@@ -347,6 +345,34 @@ class TopViewController: UIViewController,GADInterstitialDelegate {
         func interstitialWillLeaveApplication(_ ad: GADInterstitial) {
                 print("interstitialWillLeaveApplication")
         }
+        
+        
+        func catchDate(count: Int) {
+                if let buy = UserDefaults.standard.object(forKey: "buy"){
+                        
+                        let count = UserDefaults.standard.object(forKey: "buy") as! Int
+                        if count == 1{
+                                
+                                
+                                
+                                
+                        }
+                        
+                }else{
+                        
+                        
+                        interstitial = createAndLoadInterstitial() ///////←←←←←←←←←←←←←←←←
+                        
+                }
+                
+        }
+        
+        
+        
+        
+        
+        
+        
         
         
 }

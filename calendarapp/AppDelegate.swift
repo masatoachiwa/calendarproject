@@ -17,28 +17,29 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
         func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-                // Override point for customization after application launch.
+                sleep(UInt32(0.5)) // Override point for customization after application launch.
                 GADMobileAds.sharedInstance().start(completionHandler: nil)  //GoogleMobileAdsをつかえるようにする
                 
                 //アプリ内課金のシステムを使えるようにする
                 
-//                SwiftyStoreKit.completeTransactions(atomically: true) { purchases in
-//                        for purchase in purchases {
-//                                switch purchase.transaction.transactionState {
-//                                case .purchased, .restored:
-//                                        if purchase.needsFinishTransaction {
-//                                                SwiftyStoreKit.finishTransaction(purchase.transaction)
-//                                        }
-//                                // Unlock content
-//                                case .failed, .purchasing, .deferred:
-//                                        break // do nothing
-//                                @unknown default:
-//                                        <#fatalError()#>
-//                                }
-//                        }
-//                }
+               SwiftyStoreKit.completeTransactions(atomically: true) { purchases in
+                        for purchase in purchases {
+                              switch purchase.transaction.transactionState {
+                                case .purchased, .restored:
+                                        if purchase.needsFinishTransaction {
+                                               SwiftyStoreKit.finishTransaction(purchase.transaction)
+                                        }
+                                // Unlock content
+                                case .failed, .purchasing, .deferred:
+                                      break // do nothing
+                                @unknown default:
+                                        fatalError()
+                               }
+                        }
+                }
                 
-                
+    
+              
                 
                //使用するStoryBoardのインスタンス化
                 let storyboard = UIStoryboard(name: "Main", bundle: nil)
