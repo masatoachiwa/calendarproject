@@ -10,7 +10,7 @@ import UIKit
 import GoogleMobileAds       ///////←←←←←←←←←←←←←←←←
 class TopViewController: UIViewController,GADInterstitialDelegate, CatchProtocol{
      
-        
+        //pritn(テスト）　2020.6.9
         
      var  interstitial: GADInterstitial!     ///////←←←←←←←←←←←←←←←←
 
