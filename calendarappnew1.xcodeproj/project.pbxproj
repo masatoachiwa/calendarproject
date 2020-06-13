@@ -19,7 +19,6 @@
 		EE2A300223CDE1CB00001AC2 /* TypeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE2A300123CDE1CB00001AC2 /* TypeManager.swift */; };
 		EE2B3DFB243CBEC200F5B1E1 /* ImageSecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE2B3DFA243CBEC200F5B1E1 /* ImageSecondViewController.swift */; };
 		EE3336C624571E9A0065A4D5 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE3336C524571E9A0065A4D5 /* SystemConfiguration.framework */; };
-		EE3336C824571EC20065A4D5 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE3336C724571EC20065A4D5 /* StoreKit.framework */; };
 		EE3336CB24571F020065A4D5 /* EventKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE3336C924571F020065A4D5 /* EventKit.framework */; };
 		EE3336CC24571F020065A4D5 /* EventKitUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE3336CA24571F020065A4D5 /* EventKitUI.framework */; };
 		EE3336CE24571F1E0065A4D5 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE3336CD24571F1E0065A4D5 /* CoreTelephony.framework */; };
@@ -54,7 +53,6 @@
 		EE2A300123CDE1CB00001AC2 /* TypeManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypeManager.swift; sourceTree = "<group>"; };
 		EE2B3DFA243CBEC200F5B1E1 /* ImageSecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageSecondViewController.swift; sourceTree = "<group>"; };
 		EE3336C524571E9A0065A4D5 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
-		EE3336C724571EC20065A4D5 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		EE3336C924571F020065A4D5 /* EventKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EventKit.framework; path = System/Library/Frameworks/EventKit.framework; sourceTree = SDKROOT; };
 		EE3336CA24571F020065A4D5 /* EventKitUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EventKitUI.framework; path = System/Library/Frameworks/EventKitUI.framework; sourceTree = SDKROOT; };
 		EE3336CD24571F1E0065A4D5 /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
@@ -85,7 +83,6 @@
 				EE3336CB24571F020065A4D5 /* EventKit.framework in Frameworks */,
 				EE3336CC24571F020065A4D5 /* EventKitUI.framework in Frameworks */,
 				EEB5A19924489C150058F8A4 /* MessageUI.framework in Frameworks */,
-				EE3336C824571EC20065A4D5 /* StoreKit.framework in Frameworks */,
 				EE3336C624571E9A0065A4D5 /* SystemConfiguration.framework in Frameworks */,
 				7E300E0DD80E904A6817EB9B /* Pods_calendarapp.framework in Frameworks */,
 			);
@@ -156,7 +153,6 @@
 				EE3336CD24571F1E0065A4D5 /* CoreTelephony.framework */,
 				EE3336C924571F020065A4D5 /* EventKit.framework */,
 				EE3336CA24571F020065A4D5 /* EventKitUI.framework */,
-				EE3336C724571EC20065A4D5 /* StoreKit.framework */,
 				EE3336C524571E9A0065A4D5 /* SystemConfiguration.framework */,
 				EEB5A19824489C150058F8A4 /* MessageUI.framework */,
 				3B008F00BF0656B0A2AB789D /* Pods_calendarapp.framework */,

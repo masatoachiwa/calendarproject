@@ -71,16 +71,16 @@ class tableViewViewController: UIViewController ,UITableViewDelegate, UITableVie
                 switch indexPath.row {
                  case 0:
                    
-                        purchase(PRODUCT_ID: "53452809")
+                        purchase(PRODUCT_ID: "jp.masato.achiwa.calendarapp.adfree")
                       
                         
                         
                         
                 case 1:
-                     print("\(indexPath.row)番目の行が選択されました。aaaaaa")
+                     print("\(indexPath.row)番目の行が選択されました。")
              
                 default:
-                        print("\(indexPath.row)番目の行が選択されました。いううううう")
+                        print("\(indexPath.row)番目の行が選択されました。")
                         }
                 }
                         else if indexPath.section == 1{
@@ -173,8 +173,9 @@ class tableViewViewController: UIViewController ,UITableViewDelegate, UITableVie
                                 self.delegate?.catchDate(count: self.count)
                                 //購入を検証します
                         break
-                      case .error(_):
+                        case let .error(error):
                         print("失敗")
+                        print("\(error)")
                         //購入失敗
                    
                         break
