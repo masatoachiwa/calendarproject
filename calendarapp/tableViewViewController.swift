@@ -176,6 +176,7 @@ class tableViewViewController: UIViewController ,UITableViewDelegate, UITableVie
                         case let .error(error):
                         print("失敗")
                         print("\(error)")
+                        self.register(handler: nil)
                         //購入失敗
                    
                         break
@@ -219,7 +220,12 @@ class tableViewViewController: UIViewController ,UITableViewDelegate, UITableVie
 
         }
 
-        
+        private func register(handler: ((UIAlertAction) -> Void)? = nil) {
+                   let alert = UIAlertController(title: "購入の失敗", message: "問題が発生したため現在購入できません。しばらくしてから再度お試しください。", preferredStyle: .alert)
+                   alert.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
+                   present(alert,animated: true, completion: nil)
+                   return
+               }
         
         
         

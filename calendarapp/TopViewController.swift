@@ -218,9 +218,6 @@ class TopViewController: UIViewController,GADInterstitialDelegate, CatchProtocol
                         
                         
                 }
-           
-
-                
         }
         
         
@@ -245,8 +242,36 @@ class TopViewController: UIViewController,GADInterstitialDelegate, CatchProtocol
 //                           let goodButton2: Bool = defaults.bool(forKey: "goodButton")
 //                               goodButton.isEnabled = goodButton2
         
-                let UINavigationController = tabBarController?.viewControllers?[3];       //タブバー コントローラの画面遷移
-                tabBarController?.selectedViewController = UINavigationController;
+                if let buy = UserDefaults.standard.object(forKey: "buy"){  //"buy"がnilじゃなかったら、広告を除去する。
+                                   let  count = UserDefaults.standard.object(forKey: "buy") as! Int
+                                   if count == 1 { // 広告を除去する
+                                           let UINavigationController = self.tabBarController?.viewControllers?[3];       //タブバー コントローラの画面遷移
+                                           self.tabBarController?.selectedViewController = UINavigationController;
+                                           
+                                   }else{
+                                           let UINavigationController = self.tabBarController?.viewControllers?[3];       //タブバー コントローラの画面遷移
+                                           self.tabBarController?.selectedViewController = UINavigationController;
+                                           
+                                   }
+                                   
+                           }else{
+                                   //広告を設定する
+                                   if self.interstitial.isReady {                                 ///////←←←←←←←←←←←←←←←← 広告の処理
+                                           self.interstitial.present(fromRootViewController: self)
+                                           
+                                           DispatchQueue.main.asyncAfter(deadline: .now() + 2.0){
+                                           let UINavigationController = self.tabBarController?.viewControllers?[3];       //タブバー コントローラの画面遷移
+                                           self.tabBarController?.selectedViewController = UINavigationController;
+                                           }
+                                           } else {
+                                           admobLabel.text = ("広告の準備がない")
+                                           let UINavigationController = tabBarController?.viewControllers?[3];       //タブバー コントローラの画面遷移
+                                           tabBarController?.selectedViewController = UINavigationController;
+                                           
+                                   }
+                                   
+                                   
+                           }
               
              
         }
@@ -268,8 +293,36 @@ class TopViewController: UIViewController,GADInterstitialDelegate, CatchProtocol
 //               restButton.isEnabled = false
 //                goodButton.isEnabled = false
                 
-                let UINavigationController = tabBarController?.viewControllers?[3];       //タブバー コントローラの画面遷移
-                tabBarController?.selectedViewController = UINavigationController;
+               if let buy = UserDefaults.standard.object(forKey: "buy"){  //"buy"がnilじゃなかったら、広告を除去する。
+                                  let  count = UserDefaults.standard.object(forKey: "buy") as! Int
+                                  if count == 1 { // 広告を除去する
+                                          let UINavigationController = self.tabBarController?.viewControllers?[3];       //タブバー コントローラの画面遷移
+                                          self.tabBarController?.selectedViewController = UINavigationController;
+                                          
+                                  }else{
+                                          let UINavigationController = self.tabBarController?.viewControllers?[3];       //タブバー コントローラの画面遷移
+                                          self.tabBarController?.selectedViewController = UINavigationController;
+                                          
+                                  }
+                                  
+                          }else{
+                                  //広告を設定する
+                                  if self.interstitial.isReady {                                 ///////←←←←←←←←←←←←←←←← 広告の処理
+                                          self.interstitial.present(fromRootViewController: self)
+                                          
+                                          DispatchQueue.main.asyncAfter(deadline: .now() + 2.0){
+                                          let UINavigationController = self.tabBarController?.viewControllers?[3];       //タブバー コントローラの画面遷移
+                                          self.tabBarController?.selectedViewController = UINavigationController;
+                                          }
+                                          } else {
+                                          admobLabel.text = ("広告の準備がない")
+                                          let UINavigationController = tabBarController?.viewControllers?[3];       //タブバー コントローラの画面遷移
+                                          tabBarController?.selectedViewController = UINavigationController;
+                                          
+                                  }
+                                  
+                                  
+                          }
                 
                 
         }
