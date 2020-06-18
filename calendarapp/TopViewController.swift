@@ -188,7 +188,7 @@ class TopViewController: UIViewController,GADInterstitialDelegate, CatchProtocol
                 
 
                 
-                if let buy = UserDefaults.standard.object(forKey: "buy"){  //"buy"がnilじゃなかったら、広告を除去する。
+                 if UserDefaults.standard.object(forKey: "buy") != nil{  //"buy"がnilじゃなかったら、広告を除去する。
                         let  count = UserDefaults.standard.object(forKey: "buy") as! Int
                         if count == 1 { // 広告を除去する
                                 let UINavigationController = self.tabBarController?.viewControllers?[3];       //タブバー コントローラの画面遷移

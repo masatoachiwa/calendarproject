@@ -58,8 +58,9 @@ class ImageViewController: UIViewController{
 //     friendButton.contentHorizontalAlignment = .fill
 //        friendButton.contentVerticalAlignment = .fill
         
-        nextButton.isEnabled = false
-         backButton.isEnabled = false
+//        nextButton.isEnabled = false
+//         backButton.isEnabled = false
+//        firstButton.isHidden = true
         
         
         let talkManager = TalkManager()
@@ -114,6 +115,28 @@ class ImageViewController: UIViewController{
         
         override func viewWillAppear(_ animated: Bool) {
       
+                if UserDefaults.standard.object(forKey: "effortBuy") != nil{
+                        
+                       nextButton.isHidden = false
+                       backButton.isHidden = false
+                       firstButton.isHidden = false
+                        
+                }else{
+                        
+                        nextButton.isHidden = true
+                        backButton.isHidden = true
+                        firstButton.isHidden = true
+                       
+                        
+                }
+                
+                
+                
+
+                
+                
+                
+                
                 let talkManager = TalkManager()
               
                 

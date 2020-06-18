@@ -31,6 +31,7 @@
 		EE3F9F382459C25700777311 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE3F9F372459C25700777311 /* CoreGraphics.framework */; };
 		EE40D35D2368A9ED002F9AE8 /* DateManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE40D35C2368A9ED002F9AE8 /* DateManager.swift */; };
 		EE50D1902427C29E0021B126 /* CustomLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE50D18F2427C29E0021B126 /* CustomLabel.swift */; };
+		EE80DE9C249B334D00CB9210 /* kakinViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE80DE9B249B334D00CB9210 /* kakinViewController.swift */; };
 		EE8E15F7249464AE0075BC43 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE8E15F6249464AE0075BC43 /* StoreKit.framework */; };
 		EEA1164723A8B6C300213FBB /* TopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEA1164623A8B6C300213FBB /* TopViewController.swift */; };
 		EEA1164923A8BD1E00213FBB /* TalkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEA1164823A8BD1E00213FBB /* TalkManager.swift */; };
@@ -66,6 +67,7 @@
 		EE3F9F372459C25700777311 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		EE40D35C2368A9ED002F9AE8 /* DateManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateManager.swift; sourceTree = "<group>"; };
 		EE50D18F2427C29E0021B126 /* CustomLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomLabel.swift; sourceTree = "<group>"; };
+		EE80DE9B249B334D00CB9210 /* kakinViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = kakinViewController.swift; sourceTree = "<group>"; };
 		EE8E15F6249464AE0075BC43 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		EEA1164623A8B6C300213FBB /* TopViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopViewController.swift; sourceTree = "<group>"; };
 		EEA1164823A8BD1E00213FBB /* TalkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TalkManager.swift; sourceTree = "<group>"; };
@@ -139,6 +141,7 @@
 				EE50D18F2427C29E0021B126 /* CustomLabel.swift */,
 				EE23DF25242688ED00385E45 /* Button_Custom.swift */,
 				EE29EDF8241E5FF900F9BA15 /* tableViewViewController.swift */,
+				EE80DE9B249B334D00CB9210 /* kakinViewController.swift */,
 				EE0417DB235229040011D305 /* Assets.xcassets */,
 				EE0417E0235229040011D305 /* Info.plist */,
 				EE0417DD235229040011D305 /* LaunchScreen.storyboard */,
@@ -294,6 +297,7 @@
 				EE39752523FDA2E100DFBA8E /* SetupViewController.swift in Sources */,
 				EE29EDF9241E5FF900F9BA15 /* tableViewViewController.swift in Sources */,
 				EE0417D5235229010011D305 /* AppDelegate.swift in Sources */,
+				EE80DE9C249B334D00CB9210 /* kakinViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -453,7 +457,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "-jp.masato.achiwa.calendarapp.adfree";
+				PRODUCT_BUNDLE_IDENTIFIER = jp.masato.achiwa.calendarapp.adfree;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

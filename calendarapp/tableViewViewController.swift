@@ -10,10 +10,7 @@ import UIKit
 import MessageUI
 import SwiftyStoreKit
 
-protocol CatchProtocol{
 
-        func catchDate(count: Int)
-}
 
 let sectionTitle = ["課金","アプリについて",]
 let section0 = [("広告非表示"),("応援履歴を見れるようにしたい")]
@@ -25,9 +22,7 @@ let tableDate = [section0,section1]
 
 class tableViewViewController: UIViewController ,UITableViewDelegate, UITableViewDataSource,MFMailComposeViewControllerDelegate {
       
-        var delegate : CatchProtocol?
-        
-   var count :Int = 0
+
         
         @IBOutlet var tableView: UITableView!
       
@@ -71,14 +66,16 @@ class tableViewViewController: UIViewController ,UITableViewDelegate, UITableVie
                 switch indexPath.row {
                  case 0:
                    
-                        purchase(PRODUCT_ID: "jp.masato.achiwa.calendarapp.adfree")
-                      
-                        
+                    //    purchase(PRODUCT_ID: "jp.masato.achiwa.calendarapp.adfree")
+                      print("\(indexPath.row)番目の行が選択されました。")
+           self.performSegue(withIdentifier: "toSecond", sender: nil)
                         
                         
                 case 1:
                      print("\(indexPath.row)番目の行が選択されました。")
-             
+             self.performSegue(withIdentifier: "toSecond", sender: nil)
+                        
+                        
                 default:
                         print("\(indexPath.row)番目の行が選択されました。")
                         }
@@ -151,83 +148,18 @@ class tableViewViewController: UIViewController ,UITableViewDelegate, UITableVie
                 controller.dismiss(animated: true, completion: nil)
         }
      
-        func purchase(PRODUCT_ID:String){
-                
-                SwiftyStoreKit.purchaseProduct(PRODUCT_ID) { (result) in
-                        
-                        switch result{
-                                
-                        case .success(_):
-                                //購入が成功
-                                if let buy =   UserDefaults.standard.object(forKey: "buy"){       //"buy"がにnilでない場合
-                                        let  count = UserDefaults.standard.object(forKey: "buy") as! Int
-                                        
-                                }else{ //"buy"がnilの場合
-                                        self.count = 1
-                                        UserDefaults.standard.set(1,forKey: "buy")
-                                        
-                                        print("test")
-                                        
-                                }
-                                 self.verifyPurchase(PRODUCT_ID: PRODUCT_ID)
-                                self.delegate?.catchDate(count: self.count)
-                                //購入を検証します
-                        break
-                        case let .error(error):
-                        print("失敗")
-                        print("\(error)")
-                        self.register(handler: nil)
-                        //購入失敗
-                   
-                        break
-                  
-                        
-                                }
-                        
-                   
-                        }
-                
-                       
-                }
+      
         
-        func verifyPurchase(PRODUCT_ID:String){
-                //共有シークレット リストア
-                let appeValidator = AppleReceiptValidator(service: .production, sharedSecret: "94c2779e23074221962ea7e03075bc49")
-                SwiftyStoreKit.verifyReceipt(using: appeValidator) { (result) in
-
-                        switch result{
-                        case .success(let receipt):
-                                let purchaseResult = SwiftyStoreKit.verifyPurchase(productId: PRODUCT_ID, inReceipt: receipt)
-                                switch purchaseResult{
-                                case.purchased:
-                                        //リストア成功
-                                        self.count = 1
-                                        UserDefaults.standard.set(1, forKey: "buy")
-                                        break
-                                case .notPurchased:
-                                        //リストアされてない場合
-
-                                        UserDefaults.standard.set(nil, forKey: "buy")
-                                        break
-
-                                }
-                        case .error(let error):
-                                break
-                        }
-
-                }
-
-
+      
+        
+        
+        override func viewWillAppear(_ animated: Bool) {
+              super.viewWillAppear(animated)
+        
+        
+        self.tabBarController?.tabBar.isHidden = false
+        
         }
-
-        private func register(handler: ((UIAlertAction) -> Void)? = nil) {
-                   let alert = UIAlertController(title: "購入の失敗", message: "問題が発生したため現在購入できません。しばらくしてから再度お試しください。", preferredStyle: .alert)
-                   alert.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
-                   present(alert,animated: true, completion: nil)
-                   return
-               }
-        
-        
         
         
         
