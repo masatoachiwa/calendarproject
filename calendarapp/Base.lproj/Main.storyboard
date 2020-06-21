@@ -171,6 +171,36 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="y3X-Ip-3bv">
+                                <rect key="frame" x="0.0" y="24" width="375" height="788"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Je5-Am-ZCL">
+                                        <rect key="frame" x="44" y="504" width="300" height="168"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="44"/>
+                                        <state key="normal" title="スタート"/>
+                                        <connections>
+                                            <action selector="startButton1:" destination="N5T-Gl-eeh" eventType="touchUpInside" id="pBd-wn-Af5"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="努力値応援" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IAg-kC-bN2">
+                                        <rect key="frame" x="53" y="83" width="266" height="93"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="45"/>
+                                        <color key="textColor" systemColor="systemPinkColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="ロード中..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oYG-qS-eZW">
+                                        <rect key="frame" x="49" y="271" width="275" height="128"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="35"/>
+                                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -230,6 +260,7 @@
                         <viewLayoutGuide key="safeArea" id="eSX-bc-Ds7"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="ホーム" image="home1" id="2SG-vo-dFw"/>
+                    <navigationItem key="navigationItem" id="4SV-l9-Zr4"/>
                     <connections>
                         <outlet property="admobLabel" destination="Ox6-gS-s85" id="yfv-tm-ce8"/>
                         <outlet property="badButton" destination="MlC-ST-EN0" id="rMO-d3-nGl"/>
@@ -238,8 +269,11 @@
                         <outlet property="doLabel" destination="ea4-gH-Vk0" id="clA-AU-cJg"/>
                         <outlet property="goodButton" destination="Jkd-Pe-snm" id="Niq-p9-mfh"/>
                         <outlet property="kariLabel" destination="b4d-cq-Siq" id="uwu-y0-BZV"/>
+                        <outlet property="loadLabel" destination="oYG-qS-eZW" id="Qgn-zL-C6Z"/>
                         <outlet property="pointLabel" destination="few-VI-K9y" id="kHC-ba-Hp1"/>
                         <outlet property="restButton" destination="wa8-SS-Rw3" id="qeJ-GR-QA5"/>
+                        <outlet property="starttButton" destination="Je5-Am-ZCL" id="AhC-8Y-ZEw"/>
+                        <outlet property="statuImage" destination="y3X-Ip-3bv" id="ePT-A1-cEO"/>
                         <outlet property="testLabel" destination="NDb-Jg-nxk" id="R6Z-eO-ozR"/>
                         <outlet property="yearLabel" destination="vRf-k5-bds" id="SIo-hE-B1q"/>
                     </connections>
@@ -414,57 +448,90 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zvl-7j-1Mj">
-                                <rect key="frame" x="16" y="254" width="343" height="137"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zvl-7j-1Mj">
+                                <rect key="frame" x="52.666666666666657" y="344" width="270" height="53.666666666666686"/>
+                                <color key="backgroundColor" red="0.45009386540000001" green="0.98132258650000004" blue="0.4743030667" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <state key="normal" title="購入する（250円）"/>
+                                <state key="normal" title="購入する">
+                                    <color key="titleColor" systemColor="systemPinkColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
                                 <connections>
                                     <action selector="kakinButton:" destination="MOB-cz-EkB" eventType="touchUpInside" id="Yba-uD-Avp"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="全ての広告を削除します。一度の購入でアプリを削除しない限りずっとご利用できます。" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6yA-lb-mtH">
-                                <rect key="frame" x="55" y="166" width="290" height="97"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="全ての広告を削除します。一度の購入でアプリを削除しない限りずっとご利用できます。" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6yA-lb-mtH">
+                                <rect key="frame" x="52.666666666666657" y="171.66666666666663" width="270" height="162.33333333333337"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="広告の削除" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1W8-6E-wIL">
-                                <rect key="frame" x="16" y="101" width="343" height="53"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="広告の削除(250円)" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1W8-6E-wIL">
+                                <rect key="frame" x="52.666666666666657" y="108.00000000000001" width="270" height="53.666666666666671"/>
+                                <color key="backgroundColor" red="0.46202266219999999" green="0.83828371759999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="tintColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="応援履歴を見れるようにする" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nlY-iy-QtH">
-                                <rect key="frame" x="16" y="380" width="343" height="53"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="応援履歴の表示(490 円）" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nlY-iy-QtH">
+                                <rect key="frame" x="52.666666666666657" y="427.66666666666669" width="270" height="53.666666666666686"/>
+                                <color key="backgroundColor" red="1" green="0.5409764051" blue="0.84731429820000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="あなたこれまでに見てきた、クラスメートのコメントと画像の履歴を見れるようになります。" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tZi-vQ-pIk">
-                                <rect key="frame" x="42" y="441" width="290" height="97"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="あなたがこれまでに見てきた、クラスメートのコメントと画像の履歴を見れるようになります。" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tZi-vQ-pIk">
+                                <rect key="frame" x="52.666666666666657" y="491.33333333333331" width="270" height="162.33333333333331"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dc6-qW-xPA">
-                                <rect key="frame" x="16" y="587" width="343" height="55"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dc6-qW-xPA">
+                                <rect key="frame" x="52.666666666666657" y="663.66666666666663" width="270" height="53.666666666666629"/>
+                                <color key="backgroundColor" red="0.45009386540000001" green="0.98132258650000004" blue="0.4743030667" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <state key="normal" title="購入する(490円)"/>
+                                <state key="normal" title="購入する">
+                                    <color key="titleColor" systemColor="systemPinkColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
                                 <connections>
                                     <action selector="effortkakinButton:" destination="MOB-cz-EkB" eventType="touchUpInside" id="Ytg-Kg-wuS"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="tZi-vQ-pIk" firstAttribute="width" secondItem="zUv-Kr-v8s" secondAttribute="width" multiplier="0.72" id="244-JV-aZf"/>
+                            <constraint firstItem="1W8-6E-wIL" firstAttribute="height" secondItem="zUv-Kr-v8s" secondAttribute="height" multiplier="0.066" id="C4F-F0-LCi"/>
+                            <constraint firstItem="1W8-6E-wIL" firstAttribute="centerX" secondItem="zUv-Kr-v8s" secondAttribute="centerX" id="CcP-GZ-xGO"/>
+                            <constraint firstItem="6yA-lb-mtH" firstAttribute="top" secondItem="1W8-6E-wIL" secondAttribute="bottom" constant="10" id="FN8-gE-Cbw"/>
+                            <constraint firstItem="nlY-iy-QtH" firstAttribute="height" secondItem="zUv-Kr-v8s" secondAttribute="height" multiplier="0.066" id="GUS-oK-e5n"/>
+                            <constraint firstItem="tZi-vQ-pIk" firstAttribute="centerX" secondItem="zUv-Kr-v8s" secondAttribute="centerX" id="H8J-ej-kng"/>
+                            <constraint firstItem="dc6-qW-xPA" firstAttribute="centerX" secondItem="zUv-Kr-v8s" secondAttribute="centerX" id="Hz2-Zt-5Zn"/>
+                            <constraint firstItem="6yA-lb-mtH" firstAttribute="width" secondItem="zUv-Kr-v8s" secondAttribute="width" multiplier="0.72" id="JWH-j4-nqO"/>
+                            <constraint firstItem="Zvl-7j-1Mj" firstAttribute="centerX" secondItem="zUv-Kr-v8s" secondAttribute="centerX" id="Ltx-1K-fZC"/>
+                            <constraint firstItem="1W8-6E-wIL" firstAttribute="width" secondItem="zUv-Kr-v8s" secondAttribute="width" multiplier="0.72" id="OH8-th-zrT"/>
+                            <constraint firstItem="6yA-lb-mtH" firstAttribute="centerX" secondItem="zUv-Kr-v8s" secondAttribute="centerX" id="Qoo-tt-u3C"/>
+                            <constraint firstItem="Zvl-7j-1Mj" firstAttribute="width" secondItem="zUv-Kr-v8s" secondAttribute="width" multiplier="0.72" id="SKX-bV-Gyt"/>
+                            <constraint firstItem="nlY-iy-QtH" firstAttribute="top" secondItem="Zvl-7j-1Mj" secondAttribute="bottom" constant="30" id="VsU-Li-MZb"/>
+                            <constraint firstItem="nlY-iy-QtH" firstAttribute="width" secondItem="zUv-Kr-v8s" secondAttribute="width" multiplier="0.72" id="YXu-he-sLP"/>
+                            <constraint firstItem="Zvl-7j-1Mj" firstAttribute="top" secondItem="6yA-lb-mtH" secondAttribute="bottom" constant="10" id="ckU-VN-i7R"/>
+                            <constraint firstItem="tZi-vQ-pIk" firstAttribute="top" secondItem="nlY-iy-QtH" secondAttribute="bottom" constant="10" id="fNW-Hf-Snp"/>
+                            <constraint firstItem="nlY-iy-QtH" firstAttribute="centerX" secondItem="zUv-Kr-v8s" secondAttribute="centerX" id="fRP-b3-hYY"/>
+                            <constraint firstItem="dc6-qW-xPA" firstAttribute="top" secondItem="tZi-vQ-pIk" secondAttribute="bottom" constant="10" id="hmz-4o-YQ8"/>
+                            <constraint firstItem="tZi-vQ-pIk" firstAttribute="height" secondItem="zUv-Kr-v8s" secondAttribute="height" multiplier="0.2" id="nXJ-1s-pGW"/>
+                            <constraint firstItem="6yA-lb-mtH" firstAttribute="height" secondItem="zUv-Kr-v8s" secondAttribute="height" multiplier="0.2" id="phP-IH-UfG"/>
+                            <constraint firstItem="1W8-6E-wIL" firstAttribute="top" secondItem="J42-SM-5Wh" secondAttribute="top" constant="20" id="poP-gh-Hli"/>
+                            <constraint firstItem="dc6-qW-xPA" firstAttribute="width" secondItem="zUv-Kr-v8s" secondAttribute="width" multiplier="0.72" id="qTR-bB-YkV"/>
+                            <constraint firstItem="dc6-qW-xPA" firstAttribute="height" secondItem="zUv-Kr-v8s" secondAttribute="height" multiplier="0.066" id="vHF-Iz-f2n"/>
+                            <constraint firstItem="Zvl-7j-1Mj" firstAttribute="height" secondItem="zUv-Kr-v8s" secondAttribute="height" multiplier="0.066" id="ygR-J3-qog"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="J42-SM-5Wh"/>
                     </view>
                     <navigationItem key="navigationItem" id="0tw-rX-0zP"/>
+                    <connections>
+                        <outlet property="aLabel" destination="6yA-lb-mtH" id="U8r-RY-vEO"/>
+                        <outlet property="underLabel" destination="tZi-vQ-pIk" id="02C-jF-9ri"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mOf-5H-UBD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

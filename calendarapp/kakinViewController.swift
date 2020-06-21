@@ -19,14 +19,17 @@ class kakinViewController: UIViewController {
   
         var delegate : CatchProtocol?
         var count :Int = 0
+        @IBOutlet var aLabel: UILabel!
+        @IBOutlet var underLabel: UILabel!
         
         
         
     override func viewDidLoad() {
         super.viewDidLoad()
 
-     
-    }
+        aLabel.text = "全ての広告を削除します。一度の購入でアプリを削除しない限りずっとご利用できます。\nAppStoreのレートによって多少変動します。"
+  underLabel.text = "あなたこれまでに見てきた、クラスメートのコメントと画像の履歴を見れるようになります。\nAppStoreのレートによって多少変動します。"
+        }
     
         
         @IBAction func kakinButton(_ sender: Any) {

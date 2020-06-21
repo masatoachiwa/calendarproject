@@ -10,7 +10,7 @@ import UIKit
 import GoogleMobileAds       ///////←←←←←←←←←←←←←←←←
 class TopViewController: UIViewController,GADInterstitialDelegate, CatchProtocol{
      
-        //pritn(テスト）　2020.6.9
+   
        
         
      var  interstitial: GADInterstitial!     ///////←←←←←←←←←←←←←←←←
@@ -44,6 +44,15 @@ class TopViewController: UIViewController,GADInterstitialDelegate, CatchProtocol
         
         @IBOutlet var restButton: UIButton!
         
+        @IBOutlet var statuImage: UIView!
+        
+        @IBOutlet var starttButton: UIButton!
+        
+        @IBOutlet var loadLabel: UILabel!
+        
+        
+        
+        
         let defaults = UserDefaults.standard
         
         
@@ -66,12 +75,14 @@ class TopViewController: UIViewController,GADInterstitialDelegate, CatchProtocol
                 
             createAndLoadInterstitial() //広告のロード
                 
+         self.tabBarController?.tabBar.isHidden = true
         
-              kariLabel.isHidden = true
+                kariLabel.isHidden = true
               pointLabel.isHidden = true
               badLabel.isHidden = true
               testLabel.isHidden = true
-               
+               starttButton.isEnabled = false
+                
                 yearLabel.text = "\(String(datemanager.year))年\(String(datemanager.month))月\(String(datemanager.day))日"
                
                 let effort: String = (UserDefaults.standard.string(forKey: "effort") ?? "田中")
@@ -376,12 +387,16 @@ class TopViewController: UIViewController,GADInterstitialDelegate, CatchProtocol
         
         func interstitialDidReceiveAd(_ ad: GADInterstitial) {
                 admobLabel.text = "準備完了"
+               starttButton.isEnabled = true
+                loadLabel.isHidden = true
+                
                 print("interstitialDidReceiveAd")
                 
         }
         
         func interstitial(_ ad: GADInterstitial, didFailToReceiveAdWithError error: GADRequestError) {
-                print("無理でした: \(error.localizedDescription)")
+                self.error()
+                print("失敗: \(error.localizedDescription)")
         }
         
         /// Tells the delegate that an interstitial will be presented.
@@ -421,8 +436,19 @@ class TopViewController: UIViewController,GADInterstitialDelegate, CatchProtocol
                 
         }
         
+        @IBAction func startButton1(_ sender: Any) {
+                statuImage.isHidden = true
+                starttButton.isHidden = true
+        self.tabBarController?.tabBar.isHidden = false
         
+        }
         
+        private func error(handler: ((UIAlertAction) -> Void)? = nil) {
+                        let alert = UIAlertController(title: " エラー", message: "電波状況がよくありません。通信環境をご確認の上、再度お試しください", preferredStyle: .alert)
+                       // alert.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
+                        present(alert,animated: true, completion: nil)
+                        return
+                    }
         
         
         

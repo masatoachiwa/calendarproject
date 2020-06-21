@@ -120,7 +120,7 @@ class tableViewViewController: UIViewController ,UITableViewDelegate, UITableVie
                 if MFMailComposeViewController.canSendMail() {
                         let mail = MFMailComposeViewController()
                         mail.mailComposeDelegate = self
-                        mail.setToRecipients(["xxxx@yahoo.co.jp"]) // 宛先アドレス
+                        mail.setToRecipients(["reon.app.developer@gmail.com"]) // 宛先アドレス
                         mail.setSubject("お問い合わせ") // 件名
                         mail.setMessageBody("ここに本文が入ります。", isHTML: false) // 本文
                         present(mail, animated: true, completion: nil)

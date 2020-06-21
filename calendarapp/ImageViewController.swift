@@ -58,8 +58,8 @@ class ImageViewController: UIViewController{
 //     friendButton.contentHorizontalAlignment = .fill
 //        friendButton.contentVerticalAlignment = .fill
         
-//        nextButton.isEnabled = false
-//         backButton.isEnabled = false
+        nextButton.isEnabled = false
+         backButton.isEnabled = false
 //        firstButton.isHidden = true
         
         

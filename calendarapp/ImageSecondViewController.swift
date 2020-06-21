@@ -39,6 +39,23 @@ class ImageSecondViewController: UIViewController {
           let talkManager = TalkManager()
           gakuseiLabel.text = talkManager.gakuseiOfLabel()
         
+                if UserDefaults.standard.object(forKey: "effortBuy") != nil{
+                                       
+                                      nesuButton.isHidden = false
+                                      backButton.isHidden = false
+                                      firstButton.isHidden = false
+                                       
+                               }else{
+                                       
+                                       nesuButton.isHidden = true
+                                       backButton.isHidden = true
+                                       firstButton.isHidden = true
+                                      
+                                       
+                               }
+                
+                
+                
         
         }
         
