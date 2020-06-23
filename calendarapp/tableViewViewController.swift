@@ -87,7 +87,16 @@ class tableViewViewController: UIViewController ,UITableViewDelegate, UITableVie
                           self.sendMail()
                         case 1:
               
-                            print("おはよう")
+                                if let url = URL(string: "https://itunes.apple.com/jp/app/id1513032192action=write-review") {
+                                    UIApplication.shared.open(url)
+                                }
+                                
+                                
+                                
+                                
+                                
+                                
+                            print("レビューを書く")
                 
                         case 2:
                                 if UIApplication.shared.canOpenURL(URL(string: "twitter")!) {

@@ -1156,7 +1156,7 @@ class ImageViewController: UIViewController{
                 case 426:
                         return ("休みだ！休みだー！イエーイ！",image6!)
                 case 427:
-                        return ("自粛ムードだからこそ\(effort)頑張って！",image18!)
+                        return ("まだまだコロナで大変だけど、だからこそ\(effort)頑張って！",image18!)
                 case 428:
                         return ("\(name)は目標としている人っているの？いるならその人の真似をするといいかも。",image11!)
                 case 429:

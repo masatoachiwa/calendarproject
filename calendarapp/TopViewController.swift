@@ -15,9 +15,8 @@ class TopViewController: UIViewController,GADInterstitialDelegate, CatchProtocol
         
      var  interstitial: GADInterstitial!     ///////←←←←←←←←←←←←←←←←
 
-        @IBOutlet var admobLabel: UILabel!
         
-        
+                
         @IBOutlet var yearLabel: UILabel!
         
         @IBOutlet var doLabel: UILabel!
@@ -33,6 +32,7 @@ class TopViewController: UIViewController,GADInterstitialDelegate, CatchProtocol
         
         @IBOutlet var testLabel: UILabel!  //デバック用日付変更確認ラベル
         
+        @IBOutlet var risettButton: UIButton! //デバック用リセットボタン！
         
      var n = 0
         
@@ -66,6 +66,7 @@ class TopViewController: UIViewController,GADInterstitialDelegate, CatchProtocol
       
          let alldayArray =  UserDefaults.standard.array(forKey: {"alldayArray"}())as? [String]          //配列の呼び出し
         
+        @IBOutlet var ImageView: UIImageView!
         
       
    
@@ -73,6 +74,9 @@ class TopViewController: UIViewController,GADInterstitialDelegate, CatchProtocol
         override func viewDidLoad() {
                 super.viewDidLoad()
                 
+                risettButton.isHidden = true
+               
+
             createAndLoadInterstitial() //広告のロード
                 
          self.tabBarController?.tabBar.isHidden = true
@@ -127,9 +131,9 @@ class TopViewController: UIViewController,GADInterstitialDelegate, CatchProtocol
                         if alldayArray.contains(String(datemanager.year) + String(newMonth) + String(datemanager.day))   {
                                 //goodの配列の中の数字と、カレンダーの日付が同じ日に
                             
-//                                badButton.isEnabled = false
-//                                restButton.isEnabled = false
-//                                goodButton.isEnabled = false
+                                badButton.isEnabled = false
+                                restButton.isEnabled = false
+                                goodButton.isEnabled = false
                     
                         }else{ return
                         }
@@ -138,9 +142,9 @@ class TopViewController: UIViewController,GADInterstitialDelegate, CatchProtocol
                           let alldayArray =  UserDefaults.standard.array(forKey: {"alldayArray"}())as? [String] ??  [""]        //配列の呼び出し
                     
                     if    alldayArray.contains(String(datemanager.year) + String(datemanager.month) + String(datemanager.day)) {
-//                                badButton.isEnabled = false
-//                                restButton.isEnabled = false
-//                                goodButton.isEnabled = false
+                               badButton.isEnabled = false
+                               restButton.isEnabled = false
+                               goodButton.isEnabled = false
               
                         }
                         else{ return
@@ -163,7 +167,7 @@ class TopViewController: UIViewController,GADInterstitialDelegate, CatchProtocol
         let alldayArray =  UserDefaults.standard.array(forKey: {"alldayArray"}())as? [String]
         print([alldayArray])
      print( "\(String(datemanager.year))\(String(datemanager.month))\(String(datemanager.day))")
-        
+         yearLabel.text = "\(String(datemanager.year))年\(String(datemanager.month))月\(String(datemanager.day))日"
         
         NotificationCenter.default.addObserver(self, selector: #selector(significantTimeChangeNotification(_:)), name: UIApplication.significantTimeChangeNotification, object: nil)
         
@@ -191,10 +195,10 @@ class TopViewController: UIViewController,GADInterstitialDelegate, CatchProtocol
                 talkManager.allDate(abcd:dateFormatter.string(from: date) )
          talkManager.kakinDate(abcd: talkManager.numberOfLabel().2)
                 print(talkManager.kakindayArray)
-//         badButton.isEnabled = false   // ボタン無効
-//         restButton.isEnabled = false
-//         goodButton.isEnabled = false
-//
+         badButton.isEnabled = false   // ボタン無効
+         restButton.isEnabled = false
+         goodButton.isEnabled = false
+
             
                 
 
@@ -221,7 +225,7 @@ class TopViewController: UIViewController,GADInterstitialDelegate, CatchProtocol
                                 self.tabBarController?.selectedViewController = UINavigationController;
                                 }
                                 } else {
-                                admobLabel.text = ("広告の準備がない")
+                               
                                 let UINavigationController = tabBarController?.viewControllers?[3];       //タブバー コントローラの画面遷移
                                 tabBarController?.selectedViewController = UINavigationController;
                                 
@@ -246,9 +250,9 @@ class TopViewController: UIViewController,GADInterstitialDelegate, CatchProtocol
                  talkManager.allDate(abcd:dateFormatter.string(from: date) )
                  talkManager.kakinDate(abcd: talkManager.badOfLabel().2)
                 print(talkManager.kakindayArray)
-//                badButton.isEnabled = false // ボタン無効
-//               restButton.isEnabled = false
-//                goodButton.isEnabled = false
+               badButton.isEnabled = false // ボタン無効
+              restButton.isEnabled = false
+               goodButton.isEnabled = false
                 
 //                           let goodButton2: Bool = defaults.bool(forKey: "goodButton")
 //                               goodButton.isEnabled = goodButton2
@@ -275,7 +279,7 @@ class TopViewController: UIViewController,GADInterstitialDelegate, CatchProtocol
                                            self.tabBarController?.selectedViewController = UINavigationController;
                                            }
                                            } else {
-                                           admobLabel.text = ("広告の準備がない")
+                                          
                                            let UINavigationController = tabBarController?.viewControllers?[3];       //タブバー コントローラの画面遷移
                                            tabBarController?.selectedViewController = UINavigationController;
                                            
@@ -300,9 +304,9 @@ class TopViewController: UIViewController,GADInterstitialDelegate, CatchProtocol
                 talkManager.allDate(abcd:dateFormatter.string(from: date) )
                 talkManager.kakinDate(abcd: talkManager.restOfLabel().2)
                 
-//                badButton.isEnabled = false // ボタン無効
-//               restButton.isEnabled = false
-//                goodButton.isEnabled = false
+                badButton.isEnabled = false // ボタン無効
+              restButton.isEnabled = false
+               goodButton.isEnabled = false
                 
                if let buy = UserDefaults.standard.object(forKey: "buy"){  //"buy"がnilじゃなかったら、広告を除去する。
                                   let  count = UserDefaults.standard.object(forKey: "buy") as! Int
@@ -326,7 +330,7 @@ class TopViewController: UIViewController,GADInterstitialDelegate, CatchProtocol
                                           self.tabBarController?.selectedViewController = UINavigationController;
                                           }
                                           } else {
-                                          admobLabel.text = ("広告の準備がない")
+                                         
                                           let UINavigationController = tabBarController?.viewControllers?[3];       //タブバー コントローラの画面遷移
                                           tabBarController?.selectedViewController = UINavigationController;
                                           
@@ -354,9 +358,11 @@ class TopViewController: UIViewController,GADInterstitialDelegate, CatchProtocol
         
     @objc private func significantTimeChangeNotification(_ notification: Notification) {
         testLabel.text = "日付が変わりました"
+         yearLabel.text = "\(String(datemanager.year))年\(String(datemanager.month))月\(String(datemanager.day))日"
         badButton.isEnabled = true
         restButton.isEnabled = true
         goodButton.isEnabled = true
+        
     }
        
 
@@ -386,7 +392,7 @@ class TopViewController: UIViewController,GADInterstitialDelegate, CatchProtocol
         }
         
         func interstitialDidReceiveAd(_ ad: GADInterstitial) {
-                admobLabel.text = "準備完了"
+               
                starttButton.isEnabled = true
                 loadLabel.isHidden = true
                 
