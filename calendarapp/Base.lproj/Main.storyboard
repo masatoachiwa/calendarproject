@@ -167,7 +167,7 @@
                             <view contentMode="scaleAspectFill" translatesAutoresizingMaskIntoConstraints="NO" id="y3X-Ip-3bv">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="img3" translatesAutoresizingMaskIntoConstraints="NO" id="t9m-AW-lKs">
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="startImage" translatesAutoresizingMaskIntoConstraints="NO" id="t9m-AW-lKs">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="努力値応援" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IAg-kC-bN2">
@@ -1184,12 +1184,12 @@
         <image name="gia2" width="42.666667938232422" height="42.666667938232422"/>
         <image name="haruko1" width="400" height="300"/>
         <image name="home1" width="42.666667938232422" height="42.666667938232422"/>
-        <image name="img3" width="1024" height="1740"/>
         <image name="jk" width="64" height="64"/>
         <image name="karenda1" width="42.666667938232422" height="42.666667938232422"/>
         <image name="money1" width="42.666667938232422" height="42.666667938232422"/>
         <image name="next" width="150" height="115"/>
         <image name="saisei" width="115" height="115"/>
+        <image name="startImage" width="1024" height="1740"/>
         <image name="zyosi1" width="42.666667938232422" height="42.666667938232422"/>
     </resources>
 </document>

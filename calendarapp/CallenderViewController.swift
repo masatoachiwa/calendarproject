@@ -210,20 +210,14 @@ class CallenderViewController: UIViewController,UICollectionViewDataSource, UICo
         override func viewWillAppear(_ animated: Bool) {
                 super.viewWillAppear(animated)
                  correlction.reloadData()
-        }
-        
-        
-        
-        
-        
-        
-        
+                let datemanager = DateManager()
+                      headTitle.text = "\(String(datemanager.year))年 \(String(datemanager.month))月\(String(datemanager.day))日"
         
         
 }
 
 
-
+}
 
 
 

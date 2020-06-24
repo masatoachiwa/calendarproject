@@ -155,7 +155,8 @@ class TopViewController: UIViewController,GADInterstitialDelegate, CatchProtocol
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-     
+     let datemanager = DateManager()
+        
         let effort: String = (UserDefaults.standard.string(forKey: "effort") ?? "努力")
         let period: String = (UserDefaults.standard.string(forKey: "period") ?? "今すぐ")
         let unit: String = (UserDefaults.standard.string(forKey: "unit") ?? "")
@@ -167,12 +168,16 @@ class TopViewController: UIViewController,GADInterstitialDelegate, CatchProtocol
         let alldayArray =  UserDefaults.standard.array(forKey: {"alldayArray"}())as? [String]
         print([alldayArray])
      print( "\(String(datemanager.year))\(String(datemanager.month))\(String(datemanager.day))")
+        _ = DateManager()
          yearLabel.text = "\(String(datemanager.year))年\(String(datemanager.month))月\(String(datemanager.day))日"
         
         NotificationCenter.default.addObserver(self, selector: #selector(significantTimeChangeNotification(_:)), name: UIApplication.significantTimeChangeNotification, object: nil)
         
         
     }
+        
+     
+        
         
     deinit {
         NotificationCenter.default.removeObserver(self, name: UIApplication.significantTimeChangeNotification, object: nil)
@@ -358,7 +363,8 @@ class TopViewController: UIViewController,GADInterstitialDelegate, CatchProtocol
         
     @objc private func significantTimeChangeNotification(_ notification: Notification) {
         testLabel.text = "日付が変わりました"
-         yearLabel.text = "\(String(datemanager.year))年\(String(datemanager.month))月\(String(datemanager.day))日"
+        let datemanager = DateManager()
+        yearLabel.text = "\(String(datemanager.year))年\(String(datemanager.month))月\(String(datemanager.day))日"
         badButton.isEnabled = true
         restButton.isEnabled = true
         goodButton.isEnabled = true
