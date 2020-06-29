@@ -965,10 +965,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" restorationIdentifier="f" image="gakusei" translatesAutoresizingMaskIntoConstraints="NO" id="fbK-Wf-M59">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="454.66666666666669"/>
+                                <rect key="frame" x="0.0" y="-10" width="375" height="454.66666666666669"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qfh-G6-M8W" customClass="CustomLabel" customModule="calendarapp" customModuleProvider="target">
-                                <rect key="frame" x="9.3333333333333428" y="454.66666666666669" width="356.33333333333326" height="189.66666666666669"/>
+                                <rect key="frame" x="9.3333333333333428" y="444.66666666666669" width="356.33333333333326" height="189.66666666666669"/>
                                 <color key="backgroundColor" red="0.0" green="0.56284224989999998" blue="0.31881666180000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -986,28 +986,28 @@
                                 </userDefinedRuntimeAttributes>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cwT-8U-eai">
-                                <rect key="frame" x="10.000000000000004" y="644.33333333333337" width="56.333333333333343" height="113.66666666666663"/>
+                                <rect key="frame" x="10.000000000000004" y="634.33333333333337" width="56.333333333333343" height="113.66666666666663"/>
                                 <state key="normal" title="Button" image="jk"/>
                                 <connections>
                                     <action selector="jkButton:" destination="Qsl-7i-hef" eventType="touchUpInside" id="Yzv-Jx-b0j"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d6V-EH-U4X">
-                                <rect key="frame" x="76.333333333333329" y="654.33333333333337" width="74.999999999999986" height="60.666666666666629"/>
+                                <rect key="frame" x="76.333333333333329" y="644.33333333333337" width="74.999999999999986" height="60.666666666666629"/>
                                 <state key="normal" title="Button" image="back"/>
                                 <connections>
                                     <action selector="backButton:" destination="Qsl-7i-hef" eventType="touchUpInside" id="SW1-uI-ZVT"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5md-EV-8RG">
-                                <rect key="frame" x="180" y="654.33333333333337" width="75" height="60.666666666666629"/>
+                                <rect key="frame" x="180" y="644.33333333333337" width="75" height="60.666666666666629"/>
                                 <state key="normal" title="Button" image="saisei"/>
                                 <connections>
                                     <action selector="fristButton:" destination="Qsl-7i-hef" eventType="touchUpInside" id="kB3-kc-3Bg"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OUG-Wp-DH0">
-                                <rect key="frame" x="290" y="654.33333333333337" width="75" height="60.666666666666629"/>
+                                <rect key="frame" x="290" y="644.33333333333337" width="75" height="60.666666666666629"/>
                                 <state key="normal" title="Button" image="next"/>
                                 <connections>
                                     <action selector="nestButton:" destination="Qsl-7i-hef" eventType="touchUpInside" id="lc9-ZH-Rl6"/>
@@ -1040,7 +1040,7 @@
                             <constraint firstItem="cwT-8U-eai" firstAttribute="leading" secondItem="5kH-BD-vqF" secondAttribute="leading" constant="10" id="nRS-Xz-0Fz"/>
                             <constraint firstItem="fbK-Wf-M59" firstAttribute="trailing" secondItem="5kH-BD-vqF" secondAttribute="trailing" id="qOp-Qm-n6x"/>
                             <constraint firstItem="d6V-EH-U4X" firstAttribute="leading" secondItem="cwT-8U-eai" secondAttribute="trailing" constant="10" id="w3A-PV-kaa"/>
-                            <constraint firstItem="fbK-Wf-M59" firstAttribute="top" secondItem="zZ9-9u-CV9" secondAttribute="top" id="xxM-iC-LEQ"/>
+                            <constraint firstItem="fbK-Wf-M59" firstAttribute="top" secondItem="zZ9-9u-CV9" secondAttribute="top" constant="-10" id="xxM-iC-LEQ"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="5kH-BD-vqF"/>
                     </view>

@@ -131,7 +131,7 @@ class TopViewController: UIViewController,GADInterstitialDelegate, CatchProtocol
                         if alldayArray.contains(String(datemanager.year) + String(newMonth) + String(datemanager.day))   {
                                 //goodの配列の中の数字と、カレンダーの日付が同じ日に
                             
-                                badButton.isEnabled = false
+                               badButton.isEnabled = false
                                 restButton.isEnabled = false
                                 goodButton.isEnabled = false
                     
@@ -142,7 +142,7 @@ class TopViewController: UIViewController,GADInterstitialDelegate, CatchProtocol
                           let alldayArray =  UserDefaults.standard.array(forKey: {"alldayArray"}())as? [String] ??  [""]        //配列の呼び出し
                     
                     if    alldayArray.contains(String(datemanager.year) + String(datemanager.month) + String(datemanager.day)) {
-                               badButton.isEnabled = false
+                             badButton.isEnabled = false
                                restButton.isEnabled = false
                                goodButton.isEnabled = false
               
@@ -255,9 +255,9 @@ class TopViewController: UIViewController,GADInterstitialDelegate, CatchProtocol
                  talkManager.allDate(abcd:dateFormatter.string(from: date) )
                  talkManager.kakinDate(abcd: talkManager.badOfLabel().2)
                 print(talkManager.kakindayArray)
-               badButton.isEnabled = false // ボタン無効
+               badButton.isEnabled = false // ボタン無効  いったん消した
               restButton.isEnabled = false
-               goodButton.isEnabled = false
+              goodButton.isEnabled = false
                 
 //                           let goodButton2: Bool = defaults.bool(forKey: "goodButton")
 //                               goodButton.isEnabled = goodButton2
@@ -374,7 +374,8 @@ class TopViewController: UIViewController,GADInterstitialDelegate, CatchProtocol
 
         func createAndLoadInterstitial() -> GADInterstitial {              ///////←←←←←←←←←←←←←←←←
                 
-                interstitial = GADInterstitial(adUnitID: "ca-app-pub-3940256099942544/4411468910")
+           //     interstitial = GADInterstitial(adUnitID: "ca-app-pub-3940256099942544/4411468910") テスト用Id
+               
                 interstitial.delegate = self
                 interstitial.load(GADRequest())
                return interstitial
