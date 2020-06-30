@@ -374,8 +374,8 @@ class TopViewController: UIViewController,GADInterstitialDelegate, CatchProtocol
 
         func createAndLoadInterstitial() -> GADInterstitial {              ///////←←←←←←←←←←←←←←←←
                 
-           //     interstitial = GADInterstitial(adUnitID: "ca-app-pub-3940256099942544/4411468910") テスト用Id
-               
+                interstitial = GADInterstitial(adUnitID: "ca-app-pub-3940256099942544/4411468910") //テスト用Id
+              //interstitial = GADInterstitial(adUnitID: "ca-app-pub-3957811942148546/4318707430")
                 interstitial.delegate = self
                 interstitial.load(GADRequest())
                return interstitial

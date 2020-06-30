@@ -20,9 +20,10 @@ let section1 = [("お問い合わせ"),("レビューを書く"),("開発者の�
 let tableDate = [section0,section1]
 
 
-class tableViewViewController: UIViewController ,UITableViewDelegate, UITableViewDataSource,MFMailComposeViewControllerDelegate {
+class tableViewViewController: UIViewController ,UITableViewDelegate, UITableViewDataSource,MFMailComposeViewControllerDelegate{
       
-
+   
+     
         
         @IBOutlet var tableView: UITableView!
       
@@ -30,6 +31,10 @@ class tableViewViewController: UIViewController ,UITableViewDelegate, UITableVie
         super.viewDidLoad()
                 tableView.delegate = self
                 tableView.dataSource = self
+                
+             
+                
+                
         
     }
     
@@ -102,6 +107,11 @@ class tableViewViewController: UIViewController ,UITableViewDelegate, UITableVie
                                 if UIApplication.shared.canOpenURL(URL(string: "twitter")!) {
                                         // xxxアプリがインストールされている
                                         guard let twitterUrl = URL(string: "twitter://user?id=1073957131345260545") else { return }
+                                        
+                                        
+                                        
+                                        
+                                        
                                         UIApplication.shared.open(twitterUrl)
                                         
                                         
