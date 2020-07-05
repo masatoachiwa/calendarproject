@@ -27,6 +27,7 @@
 		EE3336D424571F720065A4D5 /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE3336D324571F720065A4D5 /* AdSupport.framework */; };
 		EE39752523FDA2E100DFBA8E /* SetupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE39752423FDA2E100DFBA8E /* SetupViewController.swift */; };
 		EE39752723FDA68000DFBA8E /* SetupManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE39752623FDA68000DFBA8E /* SetupManager.swift */; };
+		EE3DDC3724B1096E00795D19 /* KoukokuKakinViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE3DDC3624B1096E00795D19 /* KoukokuKakinViewController.swift */; };
 		EE3E7F852358CF8800C85FA2 /* CalendarCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE3E7F842358CF8800C85FA2 /* CalendarCell.swift */; };
 		EE3F9F382459C25700777311 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE3F9F372459C25700777311 /* CoreGraphics.framework */; };
 		EE40D35D2368A9ED002F9AE8 /* DateManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE40D35C2368A9ED002F9AE8 /* DateManager.swift */; };
@@ -63,6 +64,7 @@
 		EE3336D324571F720065A4D5 /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
 		EE39752423FDA2E100DFBA8E /* SetupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetupViewController.swift; sourceTree = "<group>"; };
 		EE39752623FDA68000DFBA8E /* SetupManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetupManager.swift; sourceTree = "<group>"; };
+		EE3DDC3624B1096E00795D19 /* KoukokuKakinViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KoukokuKakinViewController.swift; sourceTree = "<group>"; };
 		EE3E7F842358CF8800C85FA2 /* CalendarCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarCell.swift; sourceTree = "<group>"; };
 		EE3F9F372459C25700777311 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		EE40D35C2368A9ED002F9AE8 /* DateManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateManager.swift; sourceTree = "<group>"; };
@@ -142,6 +144,7 @@
 				EE23DF25242688ED00385E45 /* Button_Custom.swift */,
 				EE29EDF8241E5FF900F9BA15 /* tableViewViewController.swift */,
 				EE80DE9B249B334D00CB9210 /* kakinViewController.swift */,
+				EE3DDC3624B1096E00795D19 /* KoukokuKakinViewController.swift */,
 				EE0417DB235229040011D305 /* Assets.xcassets */,
 				EE0417E0235229040011D305 /* Info.plist */,
 				EE0417DD235229040011D305 /* LaunchScreen.storyboard */,
@@ -287,6 +290,7 @@
 			files = (
 				EE23DF26242688ED00385E45 /* Button_Custom.swift in Sources */,
 				EEA1164723A8B6C300213FBB /* TopViewController.swift in Sources */,
+				EE3DDC3724B1096E00795D19 /* KoukokuKakinViewController.swift in Sources */,
 				EE39752723FDA68000DFBA8E /* SetupManager.swift in Sources */,
 				EE2A300223CDE1CB00001AC2 /* TypeManager.swift in Sources */,
 				EE2B3DFB243CBEC200F5B1E1 /* ImageSecondViewController.swift in Sources */,
@@ -449,6 +453,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1.1;
 				DEVELOPMENT_TEAM = 4594L3GSN5;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -472,6 +477,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1.1;
 				DEVELOPMENT_TEAM = 4594L3GSN5;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",

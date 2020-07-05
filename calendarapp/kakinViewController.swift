@@ -10,14 +10,14 @@ import UIKit
 import MessageUI
 import SwiftyStoreKit
 
-protocol CatchProtocol{
-
-        func catchDate(count: Int)
-}
+//protocol CatchProtocol{
+//
+//        func catchDate(count: Int)
+//}
 
 class kakinViewController: UIViewController {
   
-        var delegate : CatchProtocol?
+   //     var delegate : CatchProtocol?
         var count :Int = 0
         @IBOutlet var aLabel: UILabel!
         @IBOutlet var underLabel: UILabel!
@@ -31,6 +31,7 @@ class kakinViewController: UIViewController {
   underLabel.text = "あなたこれまでに見てきた、クラスメートのコメントと画像の履歴を見れるようになります。\nAppStoreのレートによって多少変動します。"
         }
     
+        
         
         @IBAction func kakinButton(_ sender: Any) {
     purchase(PRODUCT_ID: "jp.masato.achiwa.calendarapp.adfree")
@@ -69,7 +70,7 @@ class kakinViewController: UIViewController {
                                         
                                 }
                         //         self.verifyPurchase(PRODUCT_ID: PRODUCT_ID) 広告が消えないバグが発生したのでコメントアウト
-                                self.delegate?.catchDate(count: self.count)
+                               // self.delegate?.catchDate(count: self.count)
                                 //購入を検証します
                         break
                         case let .error(error):
@@ -89,7 +90,7 @@ class kakinViewController: UIViewController {
                        
                 }
         
-        func verifyPurchase(PRODUCT_ID:String){
+        func effortVerifyPurchase(PRODUCT_ID:String){
                 //共有シークレット リストア
                 let appeValidator = AppleReceiptValidator(service: .production, sharedSecret: "94c2779e23074221962ea7e03075bc49")
                 SwiftyStoreKit.verifyReceipt(using: appeValidator) { (result) in
@@ -101,12 +102,12 @@ class kakinViewController: UIViewController {
                                 case.purchased:
                                         //リストア成功
                                         self.count = 1
-                                        UserDefaults.standard.set(1, forKey: "buy")
+                                        UserDefaults.standard.set(1, forKey: "effortBuy")
                                         break
                                 case .notPurchased:
                                         //リストアされてない場合
 
-                                        UserDefaults.standard.set(nil, forKey: "buy")
+                                        UserDefaults.standard.set(nil, forKey: "effortBuy")
                                         break
 
                                 }
@@ -146,6 +147,8 @@ class kakinViewController: UIViewController {
                                               
                                       }
                                       
+                        self.effortVerifyPurchase(PRODUCT_ID: "jp.masato.achiwa.effortkakin")
+                                
                                     
                               break
                               case let .error(error):
@@ -164,6 +167,29 @@ class kakinViewController: UIViewController {
                       
                              
                       }
+        
+        
+        
+        @IBAction func restore(_ sender: Any) {
+    
+                SwiftyStoreKit.restorePurchases{(results)in if
+                        results.restoreFailedPurchases.count > 0{
+                      //リストア失敗
+                        print("リストア失敗")
+                }else if results.restoredPurchases.count > 0{
+                        //リストア成功
+                       self.count = 1
+                       UserDefaults.standard.set(1, forKey: "effortBuy")
+                        print("リストア成功")
+                }else{
+                        print("リストアするものがない")
+                        }
+                        
+                        }
+                
+                        
+                        
+                }
         
         
         

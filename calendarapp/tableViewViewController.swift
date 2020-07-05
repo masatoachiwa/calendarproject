@@ -73,7 +73,7 @@ class tableViewViewController: UIViewController ,UITableViewDelegate, UITableVie
                    
                     //    purchase(PRODUCT_ID: "jp.masato.achiwa.calendarapp.adfree")
                       print("\(indexPath.row)番目の行が選択されました。")
-           self.performSegue(withIdentifier: "toSecond", sender: nil)
+           self.performSegue(withIdentifier: "toFirst", sender: nil)
                         
                         
                 case 1:
