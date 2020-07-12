@@ -14,7 +14,7 @@ import SwiftyStoreKit
 
 class KoukokuKakinViewController: UIViewController {
         
-        var number :Int = 0
+        
         @IBOutlet var topLabel: UILabel!
         
         @IBOutlet var middleLabel: UILabel!
@@ -25,7 +25,7 @@ class KoukokuKakinViewController: UIViewController {
         
         override func viewDidLoad() {
                 super.viewDidLoad()
-                topLabel.text = "全ての広告を削除します。一度の購入でアプリを削除しない限りずっとご利用できます。\nAppStoreのレートによって多少変動します。"
+                topLabel.text = "全ての広告を削除します。一度の購入でずっとご利用できます。\nAppStoreのレートによって多少変動します。"
                 
         }
         
@@ -39,26 +39,32 @@ class KoukokuKakinViewController: UIViewController {
         
         
         @IBAction func restoreButton(_ sender: Any) {
-                
-                SwiftyStoreKit.restorePurchases{(results)in if
-                        results.restoreFailedPurchases.self.number > 0{
-                        //リストア失敗
-                        print("リストア失敗")
-                        self.underLabel.text = "購入権の復元を失敗しました"
-                }else if results.restoredPurchases.self.number > 0{
-                        //リストア成功
-                        self.number = 1
-                        UserDefaults.standard.set(1, forKey: "buy")
-                        self.underLabel.text = "購入権が復元されました"
-                        print("リストア成功")
-                }else{
-                        print("リストアするものがない")
+                SwiftyStoreKit.restorePurchases{(results)in
+                        if Array(results.restoredPurchases.filter{ $0.productId == "jp.masato.achiwa.calendarapp.adfree"}).count > 0{
+                                //リストア成功
+                                
+                              
+                                UserDefaults.standard.set(1, forKey: "buy")
+                                self.underLabel.text = "購入権が復元されました"
+                                print("リストア成功")
+                                
+                        
                         }
                         
+                
+                else if results.restoreFailedPurchases.count > 0{
+                        //リストア失敗
+                        print("リストア失敗")
+                        self.underLabel.text = "購入権の復元を失敗をしました。"
+                                
+                        
+                } else{
+                      self.underLabel.text = "購入権の復元を失敗をしました。"
+                        print("購入権の復元を失敗をしました。")
                 }
         }
-        
-        
+        }
+
         
         
         
@@ -81,10 +87,10 @@ class KoukokuKakinViewController: UIViewController {
                         case .success(_):
                                 //購入が成功
                                 if UserDefaults.standard.object(forKey: "buy") != nil{       //"buy"がにnilでない場合
-                                        let number = UserDefaults.standard.object(forKey: "buy") as! Int
+                                        UserDefaults.standard.set(1,forKey: "buy")
                                         print("購入済み")
                                 }else{ //"buy"がnilの場合
-                                        self.number = 1
+                                        
                                         
                                         UserDefaults.standard.set(1,forKey: "buy")
                                         
@@ -122,7 +128,7 @@ class KoukokuKakinViewController: UIViewController {
                                 switch purchaseResult{
                                 case.purchased:
                                         //リストア成功
-                                        self.number = 1
+                                      
                                         UserDefaults.standard.set(1, forKey: "buy")
                                         break
                                 case .notPurchased:

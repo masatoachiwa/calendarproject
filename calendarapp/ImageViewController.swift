@@ -114,22 +114,28 @@ class ImageViewController: UIViewController{
 
         
         override func viewWillAppear(_ animated: Bool) {
-      
-                if UserDefaults.standard.object(forKey: "effortBuy") != nil{
-                        
-                       nextButton.isHidden = false
-                       backButton.isHidden = false
-                       firstButton.isHidden = false
-                        
-                }else{
-                        
+     if UserDefaults.standard.object(forKey: "effortBuy") != nil{
+                let  count = UserDefaults.standard.object(forKey: "effortBuy") as! Int
+                             if count == 1 { // 表示する
+                                   nextButton.isHidden = false
+                                   backButton.isHidden = false
+                                   firstButton.isHidden = false
+                             }else{
+                                     nextButton.isHidden = true
+                                                           backButton.isHidden = true
+                                                           firstButton.isHidden = true
+                             }
+                }
+               if UserDefaults.standard.object(forKey: "effortBuy") == nil{ //nillだったら
+
+
                         nextButton.isHidden = true
                         backButton.isHidden = true
                         firstButton.isHidden = true
-                       
-                        
+
+
                 }
-                
+              
                 
                 
 

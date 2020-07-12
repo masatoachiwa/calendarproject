@@ -462,46 +462,21 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="全ての広告を削除します。一度の購入でアプリを削除しない限りずっとご利用できます。" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6yA-lb-mtH">
-                                <rect key="frame" x="52.666666666666657" y="171.66666666666663" width="270" height="162.33333333333337"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zvl-7j-1Mj">
-                                <rect key="frame" x="52.666666666666657" y="344" width="270" height="53.666666666666686"/>
-                                <color key="backgroundColor" red="0.45009386540000001" green="0.98132258650000004" blue="0.4743030667" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="22"/>
-                                <state key="normal" title="購入する">
-                                    <color key="titleColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
-                                <connections>
-                                    <action selector="kakinButton:" destination="MOB-cz-EkB" eventType="touchUpInside" id="Yba-uD-Avp"/>
-                                </connections>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="広告の削除(250円)" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1W8-6E-wIL">
-                                <rect key="frame" x="52.666666666666657" y="108.00000000000001" width="270" height="53.666666666666671"/>
-                                <color key="backgroundColor" red="0.46202266219999999" green="0.83828371759999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <color key="tintColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="応援履歴の表示(490 円）" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nlY-iy-QtH">
-                                <rect key="frame" x="52.666666666666657" y="427.66666666666669" width="270" height="53.666666666666686"/>
+                                <rect key="frame" x="52.666666666666657" y="158.33333333333334" width="270" height="55.333333333333343"/>
                                 <color key="backgroundColor" red="1" green="0.5409764051" blue="0.84731429820000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="21"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="あなたがこれまでに見てきた、クラスメートのコメントと画像の履歴を見れるようになります。" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tZi-vQ-pIk">
-                                <rect key="frame" x="52.666666666666657" y="491.33333333333331" width="270" height="162.33333333333331"/>
+                                <rect key="frame" x="52.666666666666657" y="235" width="270" height="146"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dc6-qW-xPA">
-                                <rect key="frame" x="37.666666666666664" y="663.66666666666663" width="112.33333333333334" height="53.666666666666629"/>
+                                <rect key="frame" x="52.666666666666657" y="419.33333333333331" width="270" height="55"/>
                                 <color key="backgroundColor" red="0.45009386540000001" green="0.98132258650000004" blue="0.4743030667" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" weight="black" pointSize="19"/>
                                 <state key="normal" title="購入する">
@@ -511,52 +486,62 @@
                                     <action selector="effortkakinButton:" destination="MOB-cz-EkB" eventType="touchUpInside" id="Ytg-Kg-wuS"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E5y-RT-EK4">
+                                <rect key="frame" x="52.666666666666657" y="522" width="270" height="97.333333333333371"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o1b-ol-FSj">
-                                <rect key="frame" x="224.99999999999997" y="663.66666666666663" width="112.66666666666666" height="53.666666666666629"/>
+                                <rect key="frame" x="52.666666666666657" y="639.33333333333337" width="270" height="55.333333333333371"/>
                                 <color key="backgroundColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <state key="normal" title="リストア"/>
+                                <fontDescription key="fontDescription" type="system" weight="black" pointSize="19"/>
+                                <state key="normal" title="購入権を復元する"/>
                                 <connections>
                                     <action selector="restore:" destination="MOB-cz-EkB" eventType="touchUpInside" id="RL6-TC-Ebc"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k95-ni-dje">
+                                <rect key="frame" x="52.666666666666657" y="704.66666666666663" width="270" height="40.666666666666629"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="tZi-vQ-pIk" firstAttribute="width" secondItem="zUv-Kr-v8s" secondAttribute="width" multiplier="0.72" id="244-JV-aZf"/>
-                            <constraint firstItem="1W8-6E-wIL" firstAttribute="height" secondItem="zUv-Kr-v8s" secondAttribute="height" multiplier="0.066" id="C4F-F0-LCi"/>
-                            <constraint firstItem="1W8-6E-wIL" firstAttribute="centerX" secondItem="zUv-Kr-v8s" secondAttribute="centerX" id="CcP-GZ-xGO"/>
-                            <constraint firstItem="6yA-lb-mtH" firstAttribute="top" secondItem="1W8-6E-wIL" secondAttribute="bottom" constant="10" id="FN8-gE-Cbw"/>
-                            <constraint firstItem="nlY-iy-QtH" firstAttribute="height" secondItem="zUv-Kr-v8s" secondAttribute="height" multiplier="0.066" id="GUS-oK-e5n"/>
-                            <constraint firstItem="tZi-vQ-pIk" firstAttribute="centerX" secondItem="zUv-Kr-v8s" secondAttribute="centerX" id="H8J-ej-kng"/>
-                            <constraint firstItem="6yA-lb-mtH" firstAttribute="width" secondItem="zUv-Kr-v8s" secondAttribute="width" multiplier="0.72" id="JWH-j4-nqO"/>
-                            <constraint firstItem="Zvl-7j-1Mj" firstAttribute="centerX" secondItem="zUv-Kr-v8s" secondAttribute="centerX" id="Ltx-1K-fZC"/>
-                            <constraint firstItem="1W8-6E-wIL" firstAttribute="width" secondItem="zUv-Kr-v8s" secondAttribute="width" multiplier="0.72" id="OH8-th-zrT"/>
-                            <constraint firstItem="6yA-lb-mtH" firstAttribute="centerX" secondItem="zUv-Kr-v8s" secondAttribute="centerX" id="Qoo-tt-u3C"/>
-                            <constraint firstItem="Zvl-7j-1Mj" firstAttribute="width" secondItem="zUv-Kr-v8s" secondAttribute="width" multiplier="0.72" id="SKX-bV-Gyt"/>
-                            <constraint firstItem="nlY-iy-QtH" firstAttribute="top" secondItem="Zvl-7j-1Mj" secondAttribute="bottom" constant="30" id="VsU-Li-MZb"/>
-                            <constraint firstItem="nlY-iy-QtH" firstAttribute="width" secondItem="zUv-Kr-v8s" secondAttribute="width" multiplier="0.72" id="YXu-he-sLP"/>
-                            <constraint firstItem="Zvl-7j-1Mj" firstAttribute="top" secondItem="6yA-lb-mtH" secondAttribute="bottom" constant="10" id="ckU-VN-i7R"/>
-                            <constraint firstItem="tZi-vQ-pIk" firstAttribute="top" secondItem="nlY-iy-QtH" secondAttribute="bottom" constant="10" id="fNW-Hf-Snp"/>
-                            <constraint firstItem="nlY-iy-QtH" firstAttribute="centerX" secondItem="zUv-Kr-v8s" secondAttribute="centerX" id="fRP-b3-hYY"/>
-                            <constraint firstItem="dc6-qW-xPA" firstAttribute="top" secondItem="tZi-vQ-pIk" secondAttribute="bottom" constant="10" id="hmz-4o-YQ8"/>
-                            <constraint firstItem="o1b-ol-FSj" firstAttribute="top" secondItem="tZi-vQ-pIk" secondAttribute="bottom" constant="10" id="ieE-JM-JjH"/>
-                            <constraint firstItem="o1b-ol-FSj" firstAttribute="centerX" secondItem="zUv-Kr-v8s" secondAttribute="centerX" multiplier="1.5" id="nSI-sj-zkw"/>
-                            <constraint firstItem="tZi-vQ-pIk" firstAttribute="height" secondItem="zUv-Kr-v8s" secondAttribute="height" multiplier="0.2" id="nXJ-1s-pGW"/>
-                            <constraint firstItem="6yA-lb-mtH" firstAttribute="height" secondItem="zUv-Kr-v8s" secondAttribute="height" multiplier="0.2" id="phP-IH-UfG"/>
-                            <constraint firstItem="1W8-6E-wIL" firstAttribute="top" secondItem="J42-SM-5Wh" secondAttribute="top" constant="20" id="poP-gh-Hli"/>
-                            <constraint firstItem="dc6-qW-xPA" firstAttribute="width" secondItem="zUv-Kr-v8s" secondAttribute="width" multiplier="0.3" id="qTR-bB-YkV"/>
-                            <constraint firstItem="o1b-ol-FSj" firstAttribute="height" secondItem="zUv-Kr-v8s" secondAttribute="height" multiplier="0.066" id="qYO-X8-q9J"/>
-                            <constraint firstItem="o1b-ol-FSj" firstAttribute="width" secondItem="zUv-Kr-v8s" secondAttribute="width" multiplier="0.3" id="v1W-6s-OOu"/>
-                            <constraint firstItem="dc6-qW-xPA" firstAttribute="height" secondItem="zUv-Kr-v8s" secondAttribute="height" multiplier="0.066" id="vHF-Iz-f2n"/>
-                            <constraint firstItem="dc6-qW-xPA" firstAttribute="centerX" secondItem="zUv-Kr-v8s" secondAttribute="centerX" multiplier="0.5" id="wUN-OI-5be"/>
-                            <constraint firstItem="Zvl-7j-1Mj" firstAttribute="height" secondItem="zUv-Kr-v8s" secondAttribute="height" multiplier="0.066" id="ygR-J3-qog"/>
+                            <constraint firstItem="nlY-iy-QtH" firstAttribute="centerX" secondItem="zUv-Kr-v8s" secondAttribute="centerX" id="1yv-CU-SIJ"/>
+                            <constraint firstItem="nlY-iy-QtH" firstAttribute="top" secondItem="J42-SM-5Wh" secondAttribute="top" multiplier="1.8" id="3Gi-OY-Okp"/>
+                            <constraint firstItem="tZi-vQ-pIk" firstAttribute="height" secondItem="zUv-Kr-v8s" secondAttribute="height" multiplier="0.18" id="6k0-JZ-DKg"/>
+                            <constraint firstItem="E5y-RT-EK4" firstAttribute="width" secondItem="zUv-Kr-v8s" secondAttribute="width" multiplier="0.72" id="FbT-Gu-UZk"/>
+                            <constraint firstItem="tZi-vQ-pIk" firstAttribute="width" secondItem="zUv-Kr-v8s" secondAttribute="width" multiplier="0.72" id="Ick-bT-HjF"/>
+                            <constraint firstItem="dc6-qW-xPA" firstAttribute="top" secondItem="tZi-vQ-pIk" secondAttribute="bottom" multiplier="1.1" id="KSf-Qh-kHx"/>
+                            <constraint firstItem="tZi-vQ-pIk" firstAttribute="top" secondItem="nlY-iy-QtH" secondAttribute="bottom" multiplier="1.1" id="RQE-9k-1CH"/>
+                            <constraint firstItem="dc6-qW-xPA" firstAttribute="width" secondItem="zUv-Kr-v8s" secondAttribute="width" multiplier="0.72" id="Rga-Ez-ES7"/>
+                            <constraint firstItem="tZi-vQ-pIk" firstAttribute="centerX" secondItem="zUv-Kr-v8s" secondAttribute="centerX" id="UUK-sI-TMc"/>
+                            <constraint firstItem="E5y-RT-EK4" firstAttribute="height" secondItem="zUv-Kr-v8s" secondAttribute="height" multiplier="0.12" id="W2g-Dk-1j0"/>
+                            <constraint firstItem="nlY-iy-QtH" firstAttribute="width" secondItem="zUv-Kr-v8s" secondAttribute="width" multiplier="0.72" id="Xp4-qO-c0F"/>
+                            <constraint firstItem="o1b-ol-FSj" firstAttribute="centerX" secondItem="zUv-Kr-v8s" secondAttribute="centerX" id="YCd-dJ-1ka"/>
+                            <constraint firstItem="E5y-RT-EK4" firstAttribute="top" secondItem="dc6-qW-xPA" secondAttribute="bottom" multiplier="1.1" id="Zl6-UD-NVZ"/>
+                            <constraint firstItem="k95-ni-dje" firstAttribute="top" secondItem="o1b-ol-FSj" secondAttribute="bottom" constant="10" id="ct2-F1-e4Z"/>
+                            <constraint firstItem="k95-ni-dje" firstAttribute="width" secondItem="zUv-Kr-v8s" secondAttribute="width" multiplier="0.72" id="euN-dM-rEm"/>
+                            <constraint firstItem="dc6-qW-xPA" firstAttribute="centerX" secondItem="zUv-Kr-v8s" secondAttribute="centerX" id="hlb-TH-J6K"/>
+                            <constraint firstItem="o1b-ol-FSj" firstAttribute="width" secondItem="zUv-Kr-v8s" secondAttribute="width" multiplier="0.72" id="jBu-7c-iQu"/>
+                            <constraint firstItem="o1b-ol-FSj" firstAttribute="height" secondItem="zUv-Kr-v8s" secondAttribute="height" multiplier="0.068" id="jdB-D8-y90"/>
+                            <constraint firstItem="dc6-qW-xPA" firstAttribute="height" secondItem="zUv-Kr-v8s" secondAttribute="height" multiplier="0.068" id="kUM-Qf-sKx"/>
+                            <constraint firstItem="o1b-ol-FSj" firstAttribute="top" secondItem="E5y-RT-EK4" secondAttribute="bottom" constant="20" id="piz-RK-kS5"/>
+                            <constraint firstItem="E5y-RT-EK4" firstAttribute="centerX" secondItem="zUv-Kr-v8s" secondAttribute="centerX" id="rSv-FT-uoa"/>
+                            <constraint firstItem="k95-ni-dje" firstAttribute="height" secondItem="zUv-Kr-v8s" secondAttribute="height" multiplier="0.05" id="vwU-vW-cii"/>
+                            <constraint firstItem="k95-ni-dje" firstAttribute="centerX" secondItem="zUv-Kr-v8s" secondAttribute="centerX" id="x6K-Ry-hKg"/>
+                            <constraint firstItem="nlY-iy-QtH" firstAttribute="height" secondItem="zUv-Kr-v8s" secondAttribute="height" multiplier="0.068" id="xNV-Uc-36y"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="J42-SM-5Wh"/>
                     </view>
                     <navigationItem key="navigationItem" id="0tw-rX-0zP"/>
                     <connections>
-                        <outlet property="aLabel" destination="6yA-lb-mtH" id="U8r-RY-vEO"/>
-                        <outlet property="underLabel" destination="tZi-vQ-pIk" id="02C-jF-9ri"/>
+                        <outlet property="midleLabel" destination="E5y-RT-EK4" id="nFF-Th-PgV"/>
+                        <outlet property="onLabel" destination="tZi-vQ-pIk" id="dS8-wd-ADN"/>
+                        <outlet property="underLabel" destination="k95-ni-dje" id="mTa-7k-raW"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mOf-5H-UBD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -977,46 +962,30 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="広告の削除(250円)" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eXe-oh-CrS">
-                                <rect key="frame" x="52" y="140" width="270" height="53.666666666666671"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="広告の削除(250円)" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eXe-oh-CrS">
+                                <rect key="frame" x="52.666666666666657" y="158.33333333333334" width="270" height="55.333333333333343"/>
                                 <color key="backgroundColor" red="0.46202266219999999" green="0.83828371759999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="tintColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="23"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="全ての広告を削除します。一度の購入でアプリを削除しない限りずっとご利用できます。" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0l3-MZ-oKr">
-                                <rect key="frame" x="52" y="183" width="270" height="162.33333333333337"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="全ての広告を削除します。一度の購入でアプリを削除しない限りずっとご利用できます。" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0l3-MZ-oKr">
+                                <rect key="frame" x="52.666666666666657" y="235" width="270" height="146"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0l7-d3-Ni9">
-                                <rect key="frame" x="52" y="332" width="270" height="53.666666666666686"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.45009386540000001" green="0.98132258650000004" blue="0.4743030667" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="22"/>
-                                <state key="normal" title="購入する">
-                                    <color key="titleColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
-                                <connections>
-                                    <action selector="kakinButton:" destination="mkf-7s-wO9" eventType="touchUpInside" id="c3T-8d-8lc"/>
-                                </connections>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="広告の削除を購入されて、別端末で本アプリをDLしたか方はこちらで復元できます" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O1i-kr-fRP">
-                                <rect key="frame" x="52" y="393" width="270" height="162.33333333333337"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="広告の削除を購入されて、別端末で本アプリをDLした方はこちらで復元できます" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O1i-kr-fRP">
+                                <rect key="frame" x="57.666666666666657" y="522" width="260" height="97.333333333333371"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H7K-fl-8yC">
-                                <rect key="frame" x="52" y="517" width="270" height="53.666666666666686"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.45009386540000001" green="0.98132258650000004" blue="0.4743030667" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="22"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H7K-fl-8yC">
+                                <rect key="frame" x="52.666666666666657" y="639.33333333333337" width="270" height="55.333333333333371"/>
+                                <color key="backgroundColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" weight="black" pointSize="19"/>
                                 <state key="normal" title="購入権を復元する">
                                     <color key="titleColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
@@ -1024,15 +993,51 @@
                                     <action selector="restoreButton:" destination="mkf-7s-wO9" eventType="touchUpInside" id="McX-Aq-iEK"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Bp-1M-Umi">
-                                <rect key="frame" x="52" y="622" width="270" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0l7-d3-Ni9">
+                                <rect key="frame" x="52.666666666666657" y="419.33333333333331" width="270" height="55"/>
+                                <color key="backgroundColor" red="0.45009386540000001" green="0.98132258650000004" blue="0.4743030667" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" weight="black" pointSize="19"/>
+                                <state key="normal" title="購入する">
+                                    <color key="titleColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="kakinButton:" destination="mkf-7s-wO9" eventType="touchUpInside" id="c3T-8d-8lc"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Bp-1M-Umi">
+                                <rect key="frame" x="52.666666666666657" y="704.66666666666663" width="270" height="40.666666666666629"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="O1i-kr-fRP" firstAttribute="centerX" secondItem="paf-Jz-JM2" secondAttribute="centerX" id="07r-EI-gKQ"/>
+                            <constraint firstItem="3Bp-1M-Umi" firstAttribute="centerX" secondItem="paf-Jz-JM2" secondAttribute="centerX" id="3Nv-TW-yhM"/>
+                            <constraint firstItem="O1i-kr-fRP" firstAttribute="width" secondItem="paf-Jz-JM2" secondAttribute="width" multiplier="0.693333" id="5KK-b4-g87"/>
+                            <constraint firstItem="0l7-d3-Ni9" firstAttribute="height" secondItem="paf-Jz-JM2" secondAttribute="height" multiplier="0.068" id="5t4-qg-z8k"/>
+                            <constraint firstItem="3Bp-1M-Umi" firstAttribute="height" secondItem="paf-Jz-JM2" secondAttribute="height" multiplier="0.05" id="9QQ-XL-FtO"/>
+                            <constraint firstItem="H7K-fl-8yC" firstAttribute="width" secondItem="paf-Jz-JM2" secondAttribute="width" multiplier="0.72" id="A4E-uv-nRG"/>
+                            <constraint firstItem="0l3-MZ-oKr" firstAttribute="top" secondItem="eXe-oh-CrS" secondAttribute="bottom" multiplier="1.1" id="AFg-4W-YOv"/>
+                            <constraint firstItem="0l7-d3-Ni9" firstAttribute="centerX" secondItem="paf-Jz-JM2" secondAttribute="centerX" id="BaS-MD-sWz"/>
+                            <constraint firstItem="H7K-fl-8yC" firstAttribute="height" secondItem="paf-Jz-JM2" secondAttribute="height" multiplier="0.068" id="DGL-00-2XW"/>
+                            <constraint firstItem="0l3-MZ-oKr" firstAttribute="width" secondItem="paf-Jz-JM2" secondAttribute="width" multiplier="0.72" id="E6K-Cw-9lm"/>
+                            <constraint firstItem="O1i-kr-fRP" firstAttribute="height" secondItem="paf-Jz-JM2" secondAttribute="height" multiplier="0.12" id="Fc4-1Z-NyC"/>
+                            <constraint firstItem="0l7-d3-Ni9" firstAttribute="top" secondItem="0l3-MZ-oKr" secondAttribute="bottom" multiplier="1.1" id="Fu8-vV-9SX"/>
+                            <constraint firstItem="O1i-kr-fRP" firstAttribute="top" secondItem="0l7-d3-Ni9" secondAttribute="bottom" multiplier="1.1" id="IT8-7p-I8e"/>
+                            <constraint firstItem="eXe-oh-CrS" firstAttribute="height" secondItem="paf-Jz-JM2" secondAttribute="height" multiplier="0.068" id="OlV-HA-jht"/>
+                            <constraint firstItem="eXe-oh-CrS" firstAttribute="centerX" secondItem="paf-Jz-JM2" secondAttribute="centerX" id="QRk-eC-fxn"/>
+                            <constraint firstItem="eXe-oh-CrS" firstAttribute="top" secondItem="o89-f1-avT" secondAttribute="top" multiplier="1.8" id="TgD-z6-4hE"/>
+                            <constraint firstItem="0l7-d3-Ni9" firstAttribute="width" secondItem="paf-Jz-JM2" secondAttribute="width" multiplier="0.72" id="Wm2-fY-eNb"/>
+                            <constraint firstItem="H7K-fl-8yC" firstAttribute="top" secondItem="O1i-kr-fRP" secondAttribute="bottom" constant="20" id="XQZ-un-8Xs"/>
+                            <constraint firstItem="0l3-MZ-oKr" firstAttribute="centerX" secondItem="paf-Jz-JM2" secondAttribute="centerX" id="YGr-Lp-JI2"/>
+                            <constraint firstItem="3Bp-1M-Umi" firstAttribute="top" secondItem="H7K-fl-8yC" secondAttribute="bottom" constant="10" id="Z6j-Lp-5lE"/>
+                            <constraint firstItem="0l3-MZ-oKr" firstAttribute="height" secondItem="paf-Jz-JM2" secondAttribute="height" multiplier="0.18" id="ZCS-4H-snq"/>
+                            <constraint firstItem="3Bp-1M-Umi" firstAttribute="width" secondItem="paf-Jz-JM2" secondAttribute="width" multiplier="0.72" id="cAw-g9-NQ8"/>
+                            <constraint firstItem="eXe-oh-CrS" firstAttribute="width" secondItem="paf-Jz-JM2" secondAttribute="width" multiplier="0.72" id="xK4-MU-Fbs"/>
+                            <constraint firstItem="H7K-fl-8yC" firstAttribute="centerX" secondItem="paf-Jz-JM2" secondAttribute="centerX" id="xgl-Lj-qEo"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="o89-f1-avT"/>
                     </view>
                     <navigationItem key="navigationItem" id="9rA-CW-0x5"/>
