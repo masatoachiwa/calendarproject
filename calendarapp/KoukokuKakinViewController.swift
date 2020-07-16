@@ -130,7 +130,10 @@ class KoukokuKakinViewController: UIViewController {
                                         //リストア成功
                                       
                                         UserDefaults.standard.set(1, forKey: "buy")
+                                   //     print("receiptの内容")
+                                   //    print(receipt)
                                         break
+                                        
                                 case .notPurchased:
                                         //リストアされてない場合
                                         
@@ -139,6 +142,7 @@ class KoukokuKakinViewController: UIViewController {
                                         
                                 }
                         case .error(let error):
+                                print(error)
                                 break
                         }
                         
